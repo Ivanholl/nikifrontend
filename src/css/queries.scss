@@ -1,0 +1,337 @@
+$mediaAverageScreen: 1600px;
+$mediaDesktop: 1280px;
+$mediaTablet: 960px;
+$mediaMobile: 640px;
+
+
+@media (max-width: $mediaAverageScreen) {
+    body .thirdSlide .box-contents .box {
+        width: 20vw;
+    }
+}
+@media (max-width: $mediaDesktop) {
+    body .App-header {
+        padding: 2vw 5vw;
+
+        .App-logo {
+            margin: 1vh 0;
+            height: 5vmin;
+        }
+        .nav {
+            padding: 0.2rem;
+        }
+    }
+    body .box-contents {
+        margin: 2vw 10vw;
+    }
+    body .firstSlide {
+        background-size: initial;
+
+        h1 {
+            font-size: calc(14px + 1vmin);
+            line-height: calc(16px + 2vmin);
+            margin: 0 0 7vw;
+            padding: 0 38vw 0 10vw;
+        }
+        .box {
+            width: 21vw;
+            margin-bottom: 1rem;
+            p {
+                padding: 0.3rem;
+                margin: 0;
+            }
+            img {
+                padding: 2rem 0rem 0rem;
+            }
+        }
+    }
+    body .secondSlide {
+        padding: 3vw 0;
+
+        .container{
+            max-width: 90vw;
+            height: 87%;
+
+            .about-text {
+                height: 100%;
+
+                .left-side {
+                    justify-content: center;
+                }
+            }
+            .right-side {
+                width: 50%;
+                margin-top: -6vw;
+            }
+        }
+    }
+    body .thirdSlide {
+        .box-contents {
+            padding-top: 5vw;
+            .box {
+                // width: 23vw;
+                width: 21.2vw;
+            }
+        }
+    }
+    body .back-to-top {
+        margin: 2.5vw;
+    }
+}
+
+@media (max-width: $mediaTablet) {
+    body .App-header {
+        .App-logo {
+            margin: 1vh 0;
+            height: 3.5vmin;
+        }
+        .nav {
+            padding: .1rem .5rem;
+            font-size: 1rem;
+            .nav-link {
+                padding: .1rem .4rem;
+            }
+        }
+    }
+    body .firstSlide {
+        background-position: initial;
+        background-size: 100vw;
+        background-color: #000116;
+
+        h1 {
+            font-size: 1.2rem;
+            line-height: 2.5rem;
+            padding: 0 28vw 0 10vw;
+        }
+        .box {
+            img {
+                width: 4vw;
+                padding: 1rem 0 0.5rem 0;
+            }
+            p {
+                padding: 0.3rem;
+                font-size: .8rem;
+            }
+        }
+    }
+    body .secondSlide {
+        background-size: 135vw 105vw;
+        background-position: -115px 0;
+
+        .container .right-side {
+            font-size: .8rem;
+        }
+        .container .about-text .left-side {
+            justify-content: end;
+            p span {
+                font-size: calc(12px + 1.4vmin);
+            }
+        }
+    }
+    body .thirdSlide {
+        padding: 3vh 0;
+
+        .container {
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            h2 {
+                width: fit-content;
+            }
+            .box-contents .box {
+                width: 23vw;
+
+                img {
+                    width: 4vw;
+                    padding: 1.6rem 1px 0.5rem 0;
+                }
+                p {
+                    padding: 0;
+                }
+            }
+        }
+    }
+    body .fifthSlide {
+        justify-content: center;
+        max-width: initial;
+        padding: 1vh 4vw 6vh 4vw;
+        margin: 0;
+
+        .contact-info {
+            .contact-map {
+                margin-top: 10vh;
+                width: 47%;
+            }
+            .right-side {
+                width: 47%;
+                text-align: left;
+            }
+        }
+    }
+}
+
+@media (max-width: $mediaMobile) {
+    body .App-header {
+        .bm-burger-button  {
+            display: block;
+        }
+        .App-logo {
+            margin: 3vh 6vw;
+            height: 7vmin;
+        }
+        .nav {
+            display: none;
+        }
+    }
+    body .firstSlide {
+        h1 {
+            font-size: .8rem;
+            line-height: 1.2rem;
+            padding: 0 30vw 0 10vw;
+        }
+        .box-contents {
+            margin: 0;
+            justify-content: space-evenly;
+
+            .box {
+                width: 26vw;
+            }
+        }
+    }
+    body .secondSlide {
+        background-size: 130vw 102vw;
+        background-position: -20vw 7vw;
+        background-image: url("../images/SecondSlideBackground.png"), linear-gradient(rgba(2,0,36,1), rgba(9,9,121,1));
+
+        h2 {
+            font-size: 1.5rem;
+        }
+        .container {
+            height: 0;
+        }
+        .container.second-container {
+            padding: 0;
+            height: 100%;
+
+            .about-text {
+                flex-direction: column;
+
+                .left-side {
+                    align-self: flex-end;
+                    width: 60%;
+                    p span {
+                       font-size: 1rem;
+                       line-height: 1.4rem;
+                    }
+                }
+                .right-side {
+                    width: 100%;
+                    margin: 0;
+                    font-size: 0.7rem;
+                }
+            }
+        }
+    }
+    body .thirdSlide {
+        .container {
+            h2 {
+                margin-left: 7vw;
+            }
+
+            .box-contents {
+                justify-content: space-evenly;
+
+                .box {
+                    width: 40vw;
+                    img {
+                        width: 6vw;
+                    }
+                    p {
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+    body .fifthSlide {
+        padding: 0 4vw;
+        justify-content: space-evenly;
+
+        h2 {
+            font-size: 1.5rem;
+            padding-bottom: 1vh;
+        }
+        .contact-info {
+            flex-direction: column;
+            font-size: 0.8rem;
+            height: 85%;
+
+            .contact-map {
+                margin-top: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+
+                .left-side {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 40%;
+
+                    .adress p,
+                    .phones p{
+                        text-align: left;
+                        margin: 0
+                    }
+                    .phones h3 {
+                        display: none;
+                    }
+                }
+                .map-component {
+                    height: 100%;
+                    width: 60%;
+                    margin-top: 0;
+                    min-height: 25vh;
+
+                    p {
+                        display: none;
+                    }
+                }
+            }
+            .right-side {
+                width: 100%;
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    flex-wrap: wrap;
+
+                    p {
+                        width: 100%;
+                    }
+                    .form-group {
+                        width: 100%;
+
+                        label {
+                            font-size: .6rem;
+                        }
+                        input, textarea {
+                            height: calc(1rem + 2px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    body .back-to-top {
+        height: 14vw;
+        width: 14vw;
+
+        img {
+            height: 12vw;
+            width: 12vw;
+        }
+    }
+}

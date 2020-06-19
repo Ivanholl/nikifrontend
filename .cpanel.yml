@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/user/nikisproject.denislavakoeva.com/
+    - /bin/cp cd frontend
+    - /bin/cp npm install
