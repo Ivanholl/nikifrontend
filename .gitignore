@@ -24,6 +24,5 @@ yarn-error.log*
 
 
 .vs
-**.css
 compilerconfig.json
 compilerconfig.json.defaults
