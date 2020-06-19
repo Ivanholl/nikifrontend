@@ -9,7 +9,10 @@
 /coverage
 
 # production
+.env
 /build
+/src/css/*.css
+/src/css/*.css.map
 
 # misc
 .DS_Store
@@ -21,7 +24,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
 
 .vs
 compilerconfig.json

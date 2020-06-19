@@ -6,7 +6,7 @@ import logo from '../images/Logo-proakt.png';
 
 export default function Navbar(props) {
     function handleClick(num) {
-        debugger
+        
         props.setBoxToShow(num)
     }
     return (<header className="App-header">
