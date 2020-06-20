@@ -32,6 +32,7 @@ body {
     transition: 0.6s;
     background-color: #030a2b;
     text-align: center;
+    width: 100%;
 
     .back-to-top {
         &:focus {
@@ -46,10 +47,46 @@ body {
             }
         }
     }
+    .fullpage {
+        margin-left: 30vw !important;
+        width: 100%;
+    }
+    .side-menu-container {
+        width: 0;
+        height: 100vh;
+        position: fixed;
+        background: #ccc;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .open-menu {
+           border: 2px solid red;
+            border-radius: 50%;
+            background-color: transparent;
+            color: white;
+            width: 3vw;
+            height: 3vw;
+            text-align: right;
+            align-self: flex-end;
+            margin-right: -1.5vw;
+            z-index: 1;
+        }
+    }
+    .side-menu-container.opened {
+        width: 30vw;
+    }
 }
+.App.MenuOpened {
+    width: 130vw !important;
+    .side-menu-container {
+        width: 30vw;
+    }
+}
+
 .App-header {
     min-height: 10vh;
-    width: 100vw;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -107,7 +144,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     height: 100%;
-    width: 100vw;
+    width: 100%;
     padding: 3vh 0;
 }
 
@@ -116,7 +153,6 @@ body {
     background: url("../images/slide1-background.png") no-repeat;
     background-position: center;
     background-size: 100vw;
-    background-attachment: fixed;
 
     h1 {
         color: #fff;
@@ -241,7 +277,7 @@ body {
 }
 .fifthSlide {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     color: #FFFFFF;
     display: flex;
     flex-direction: column;

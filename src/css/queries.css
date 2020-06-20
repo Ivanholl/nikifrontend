@@ -3,6 +3,7 @@
     width: 20vw;
   }
 }
+
 @media (max-width: 1280px) {
   body .App-header {
     padding: 2vw 5vw;
@@ -14,11 +15,9 @@
   body .App-header .nav {
     padding: 0.2rem;
   }
-
   body .box-contents {
     margin: 2vw 10vw;
   }
-
   body .firstSlide {
     background-size: initial;
   }
@@ -39,7 +38,6 @@
   body .firstSlide .box img {
     padding: 2rem 0rem 0rem;
   }
-
   body .secondSlide {
     padding: 3vw 0;
   }
@@ -51,37 +49,37 @@
     height: 100%;
   }
   body .secondSlide .container .about-text .left-side {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   body .secondSlide .container .right-side {
     width: 50%;
     margin-top: -6vw;
   }
-
   body .thirdSlide .box-contents {
     padding-top: 5vw;
   }
   body .thirdSlide .box-contents .box {
     width: 21.2vw;
   }
-
   body .back-to-top {
     margin: 2.5vw;
   }
 }
+
 @media (max-width: 960px) {
   body .App-header .App-logo {
     margin: 1vh 0;
     height: 3.5vmin;
   }
   body .App-header .nav {
-    padding: 0.1rem 0.5rem;
+    padding: .1rem .5rem;
     font-size: 1rem;
   }
   body .App-header .nav .nav-link {
-    padding: 0.1rem 0.4rem;
+    padding: .1rem .4rem;
   }
-
   body .firstSlide {
     background-position: initial;
     background-size: 100vw;
@@ -98,33 +96,42 @@
   }
   body .firstSlide .box p {
     padding: 0.3rem;
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
-
   body .secondSlide {
     background-size: 135vw 105vw;
     background-position: -115px 0;
   }
   body .secondSlide .container .right-side {
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
   body .secondSlide .container .about-text .left-side {
-    justify-content: end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
   }
   body .secondSlide .container .about-text .left-side p span {
     font-size: calc(12px + 1.4vmin);
   }
-
   body .thirdSlide {
     padding: 3vh 0;
   }
   body .thirdSlide .container {
     padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   body .thirdSlide .container h2 {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
   }
   body .thirdSlide .container .box-contents .box {
@@ -137,9 +144,10 @@
   body .thirdSlide .container .box-contents .box p {
     padding: 0;
   }
-
   body .fifthSlide {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     max-width: initial;
     padding: 1vh 4vw 6vh 4vw;
     margin: 0;
@@ -153,6 +161,7 @@
     text-align: left;
   }
 }
+
 @media (max-width: 640px) {
   body .App-header .bm-burger-button {
     display: block;
@@ -164,23 +173,24 @@
   body .App-header .nav {
     display: none;
   }
-
   body .firstSlide h1 {
-    font-size: 0.8rem;
+    font-size: .8rem;
     line-height: 1.2rem;
     padding: 0 30vw 0 10vw;
   }
   body .firstSlide .box-contents {
     margin: 0;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   body .firstSlide .box-contents .box {
     width: 26vw;
   }
-
   body .secondSlide {
     background-size: 130vw 102vw;
     background-position: -20vw 7vw;
+    background-image: url("../images/SecondSlideBackground.png"), -webkit-gradient(linear, left top, left bottom, from(#020024), to(#090979));
     background-image: url("../images/SecondSlideBackground.png"), linear-gradient(#020024, #090979);
   }
   body .secondSlide h2 {
@@ -194,10 +204,14 @@
     height: 100%;
   }
   body .secondSlide .container.second-container .about-text {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   body .secondSlide .container.second-container .about-text .left-side {
-    align-self: flex-end;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
     width: 60%;
   }
   body .secondSlide .container.second-container .about-text .left-side p span {
@@ -209,12 +223,13 @@
     margin: 0;
     font-size: 0.7rem;
   }
-
   body .thirdSlide .container h2 {
     margin-left: 7vw;
   }
   body .thirdSlide .container .box-contents {
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   body .thirdSlide .container .box-contents .box {
     width: 40vw;
@@ -223,36 +238,52 @@
     width: 6vw;
   }
   body .thirdSlide .container .box-contents .box p {
-    font-size: 0.8rem;
+    font-size: .8rem;
   }
-
   body .fifthSlide {
     padding: 0 4vw;
-    justify-content: space-evenly;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
   body .fifthSlide h2 {
     font-size: 1.5rem;
     padding-bottom: 1vh;
   }
   body .fifthSlide .contact-info {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     font-size: 0.8rem;
     height: 85%;
   }
   body .fifthSlide .contact-info .contact-map {
     margin-top: 0;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   body .fifthSlide .contact-info .contact-map .left-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 40%;
   }
   body .fifthSlide .contact-info .contact-map .left-side .adress p,
-body .fifthSlide .contact-info .contact-map .left-side .phones p {
+  body .fifthSlide .contact-info .contact-map .left-side .phones p {
     text-align: left;
     margin: 0;
   }
@@ -272,10 +303,18 @@ body .fifthSlide .contact-info .contact-map .left-side .phones p {
     width: 100%;
   }
   body .fifthSlide .contact-info .right-side form {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   body .fifthSlide .contact-info .right-side form p {
     width: 100%;
@@ -284,12 +323,11 @@ body .fifthSlide .contact-info .contact-map .left-side .phones p {
     width: 100%;
   }
   body .fifthSlide .contact-info .right-side form .form-group label {
-    font-size: 0.6rem;
+    font-size: .6rem;
   }
   body .fifthSlide .contact-info .right-side form .form-group input, body .fifthSlide .contact-info .right-side form .form-group textarea {
     height: calc(1rem + 2px);
   }
-
   body .back-to-top {
     height: 14vw;
     width: 14vw;
@@ -299,5 +337,4 @@ body .fifthSlide .contact-info .contact-map .left-side .phones p {
     width: 12vw;
   }
 }
-
 /*# sourceMappingURL=queries.css.map */
