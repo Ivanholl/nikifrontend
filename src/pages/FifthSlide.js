@@ -28,15 +28,15 @@ export default function FifthSlide(props) {
                             </div>
                         </div>
                     <div className="map-component">
-                    <p>ПОКАЖИ НА КАРТАТА</p>
-                    <MapComponent
-                        isMarkerShown
-                        googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
-                        loadingElement={<div style={{ height: `100%` }} />}
-                        containerElement={<div style={{ height: `100%`, width: '100%' }} />}
-                        mapElement={<div style={{ height: `100%` }} />}
+                        <p>ПОКАЖИ НА КАРТАТА</p>
+                        <MapComponent
+                            isMarkerShown
+                            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+                            loadingElement={<div style={{ height: `100%` }} />}
+                            containerElement={<div style={{ height: `100%`, width: '100%' }} />}
+                            mapElement={<div style={{ height: `100%` }} />}
                         />
-                        </div>
+                    </div>
                     </div>
                     <div className="right-side">
                         <ContactForm />
