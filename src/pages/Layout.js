@@ -18,7 +18,7 @@ export default function Layout(props) {
     return (<>
         <SideMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
         <Navbar setBoxToShow={id => setBoxToShow(id)}/>
-        <div className={openMenu && 'fullpage'}>
+        <div className={openMenu ? 'fullpage' : ''}>
             <FullPage 
                 initialSlide={0}
                 duration={300}

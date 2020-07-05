@@ -35,7 +35,7 @@ export default function Navbar(props) {
                 <p><a href="#">BG</a></p>
             </div>
         </Nav>
-        <Menu right={'right'} fallDown={'fallDown'}>
+        <Menu right={true} fallDown={'fallDown'}>
             <a onClick={() => handleClick(1)} className="menu-item" href="#about">За Нас</a>
             <a onClick={() => handleClick(2)} className="menu-item" href="#services">Услуги</a>
             <a onClick={() => handleClick(3)} className="menu-item" href="#jobs">Кариери</a>

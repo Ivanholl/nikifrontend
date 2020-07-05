@@ -15,7 +15,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.raw());
 app.use(cors());
 
-const ContentManager = require('./backend/ContentManager')(app);
+// const ContentManager = require('./backend/ContentManager')(app);
+const ContentManager = require('./backend/ContentManager');
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/build', 'index.html'));
@@ -30,6 +31,12 @@ app.post('/sendContactUsMail', async (req, res) => {
         res.status(400).end({msg})
     }
 });
+
+app.get('/content', ContentManager.content );
+app.post('/editContent', ContentManager.editContent);
+
+
+// require('./backend/ContentManager')(app);
 
 app.listen(port);
 
