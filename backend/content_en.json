@@ -1,0 +1,24 @@
+[{
+    "firstPage": {
+        "title": "title",
+        "cardsArr": [{
+            "image": "Accounting _icon1.png",
+            "text": "asd"
+        }, {
+            "image": "Accounting _icon2.png",
+            "text": "dsa"
+        }, {
+            "image": "Accounting _icon3.png",
+            "text": "asd"
+        }, {
+            "image": "Accounting _icon4.png",
+            "text": "dsa"
+        }, {
+            "image": "Accounting _icon5.png",
+            "text": "asd"
+        }, {
+            "image": "Accounting _icon6.png",
+            "text": "текст6"
+        }]
+    }
+}]
