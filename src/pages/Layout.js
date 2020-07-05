@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {FullPage, Slide} from 'react-full-page';
 
 import FirstSlide from './FirstSlide';
@@ -25,19 +25,19 @@ export default function Layout(props) {
                 afterChange={args => setBoxToShow(args.to)}
                 >
                 <Slide style={{width: '100%'}}>
-                    {boxToShow == 0 && <FirstSlide />}
+                    {boxToShow === 0 && <FirstSlide />}
                 </Slide>
                 <Slide style={{width: '100%'}}>
-                    {boxToShow == 1 && <SecondSlide/>}
+                    {boxToShow === 1 && <SecondSlide/>}
                 </Slide>
                 <Slide style={{width: '100%'}}>
-                    {boxToShow == 2 && <ThirdSlide/>}
+                    {boxToShow === 2 && <ThirdSlide/>}
                 </Slide>
                 <Slide style={{width: '100%'}}>
-                    {boxToShow == 3 && <FourthSlide/>}
+                    {boxToShow === 3 && <FourthSlide/>}
                 </Slide>
                 <Slide style={{width: '100%'}}>
-                    <FifthSlide animate={boxToShow == 4} />
+                    <FifthSlide animate={boxToShow === 4} />
                 </Slide>
             </FullPage>
         </div>

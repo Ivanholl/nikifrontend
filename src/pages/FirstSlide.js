@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 export default function FirstSlide() {
     const title = useSelector((state) => state.contentReducer.firstPage.title);
-    const infos = useSelector((state) => state.contentReducer.firstPage.inforArr);
+    const infos = useSelector((state) => state.contentReducer.firstPage.cardsArr);
 
     return (
         <div id="firstSlide" className='firstSlide content-slide' >

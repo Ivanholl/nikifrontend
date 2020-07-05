@@ -50,45 +50,40 @@ function userReducer(state = initialState, action) {
 
 const initialContent = {
 	firstPage: {
-		title: defaultContent.firstPageTitle || "",
-		inforArr: defaultContent.firstPageInforArr || "",
+		title: defaultContent.firstPage.title || "",
+		cardsArr: defaultContent.firstPage.cardsArr || [],
 	},
 	secondPage: {
-		title: {
-			small: defaultContent.secondPageTitleSmall || "",
-			main: defaultContent.secondPageTitleMain || "",
-		},
-		article: {
-			Bold: defaultContent.secondPageTitleArticleBold || "",
-			First: defaultContent.secondPageTitleArticleFirst || "",
-			Second: defaultContent.secondPageTitleArticleSecond || "",
-			Tirth: defaultContent.secondPageTitleArticleTirth || "",
-		},
+		small: defaultContent.secondPage.small || "",
+		main: defaultContent.secondPage.main || "",
+		Bold: defaultContent.secondPage.Bold || "",
+		First: defaultContent.secondPage.First || "",
+		Second: defaultContent.secondPage.Second || "",
+		Tirth: defaultContent.secondPage.Tirth || "",
 	},
-	thirdPage: {
-		infosArr: defaultContent.thirdPageInfosArr || "",
+	tirthPage: {
+		cardsArr: defaultContent.tirthPage.cardsArr || "",
+	},
+	fourthPaga: {
+		title: defaultContent.fourthPaga.title || ""
 	},
 	fifthPage: {
-		city: defaultContent.fifthPageCity || "",
-		zip: defaultContent.fifthPageZip || "",
-		str: defaultContent.fifthPageStr || "",
-		number: defaultContent.fifthPageNumber || "",
-		building: defaultContent.fifthPageBuilding || "",
-		floor: defaultContent.fifthPageFloor || "",
-		phoneOne: defaultContent.fifthPagePhoneOne || "",
-		phoneTwo: defaultContent.fifthPagePhoneTwo || "",
-		phoneThree: defaultContent.fifthPagePhoneThree || "",
+		city: defaultContent.fifthPage.city || "",
+		zip: defaultContent.fifthPage.zip || "",
+		str: defaultContent.fifthPage.str || "",
+		number: defaultContent.fifthPage.number || "",
+		building: defaultContent.fifthPage.building || "",
+		floor: defaultContent.fifthPage.floor || "",
+		phoneOne: defaultContent.fifthPage.phoneOne || "",
+		phoneTwo: defaultContent.fifthPage.phoneTwo || "",
+		phoneThree: defaultContent.fifthPage.phoneThree || "",
 	},
 };
 
 function contentReducer(state = initialContent, action) {
     switch (action.type) {
         case SET_CONTENT:
-            let firstPageSet = { 
-                title: action.firstPage.title,
-                inforArr: action.firstPage.inforArr
-            };
-            return { ...state, firstPage: firstPageSet };
+			return { ...action.content }
         default:
             return state;
     }

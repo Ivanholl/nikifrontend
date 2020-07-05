@@ -3,6 +3,7 @@
 //   setTokenInterseptor,
 // } from "../api/axiosConfig";
 // import * as userApi from "../api/userApi.js";
+// import * as Config from "../conf.js";
 
 
 /*
@@ -15,6 +16,9 @@ export const SET_IS_AUTHENTICATED = "SET_IS_AUTHENTICATED";
 // export const TOGGLE_TODO = 'TOGGLE_TODO'
 // export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const SET_CONTENT = "SET_CONTENT";
+
+
+const backendURL = process.env.NODE_ENV === "production" ? '' : 'http://localhost:9000';
 /*
  * other constants
  */
@@ -83,6 +87,7 @@ export function checkIfAuth() {
       // }
     });
 }
+
 export function logout() {
   return (dispatch) =>
     new Promise((resolve, reject) => {
@@ -112,4 +117,24 @@ export function logout() {
 
 export function setContent(content) {
 	return { type: SET_CONTENT, content };
+}
+
+
+export function getContent(lang) {
+	return (dispatch) => 
+		new Promise((resolve, reject) => {
+			console.log('get config')
+			fetch(backendURL + '/content?lang=' + lang)
+				.then(response => response.json())
+				.then(content => {
+					console.log('server response')			
+					console.log(content)
+					dispatch(setContent(content))
+					resolve(content)
+				})
+				.catch(err => {
+					console.error(err)
+					reject(err)
+				})
+		});
 }

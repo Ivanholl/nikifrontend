@@ -3,8 +3,12 @@ import {Container} from 'react-bootstrap';
 import { useSelector } from "react-redux";
 
 export default function SecondSlide() {
-    const title = useSelector((state) => state.contentReducer.secondPage.title);
-    const article = useSelector((state) => state.contentReducer.secondPage.article);
+    const small = useSelector((state) => state.contentReducer.secondPage.small);
+    const main = useSelector((state) => state.contentReducer.secondPage.main);
+    const Bold = useSelector((state) => state.contentReducer.secondPage.Bold);
+    const First = useSelector((state) => state.contentReducer.secondPage.First);
+    const Second = useSelector((state) => state.contentReducer.secondPage.Second);
+    const Tirth = useSelector((state) => state.contentReducer.secondPage.Tirth);
     
     return (<div id="about" className="secondSlide content-slide">
         <Container>
@@ -16,16 +20,16 @@ export default function SecondSlide() {
             <div className="about-text">
                 <div className="left-side animated bounceInRight">
                     <p>
-                        {title.small}
-                        <span>{title.main}</span>
+                        {small}
+                        <span>{main}</span>
                     </p>
                 </div>
                 <div className={`right-side animated bounceInLeft  `}>
                     <p>
-                        <strong>{article.Bold}</strong>
-                        {article.First}</p>
-                    <p>{article.Second}</p>
-                    <p>{article.Tirth}</p>
+                        <strong>{Bold}</strong>
+                        {First}</p>
+                    <p>{Second}</p>
+                    <p>{Tirth}</p>
                 </div>
             </div>
         </Container>
