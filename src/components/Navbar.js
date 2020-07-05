@@ -5,8 +5,7 @@ import { slide as Menu } from 'react-burger-menu'
 import logo from '../images/Logo-proakt.png';
 
 export default function Navbar(props) {
-    function handleClick(num) {
-        
+    function handleClick(num) {        
         props.setBoxToShow(num)
     }
     return (<header className="App-header">
@@ -32,7 +31,7 @@ export default function Navbar(props) {
                 </Nav.Item>
             </div>
             <div className="lang">
-                <p><a href="#">BG</a></p>
+                <p><a>BG</a></p>
             </div>
         </Nav>
         <Menu right={true} fallDown={'fallDown'}>
