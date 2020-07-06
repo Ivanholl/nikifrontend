@@ -1119,6 +1119,10 @@ body a:active, body a:focus, body a:hover {
   z-index: 1;
 }
 
+.App .side-menu-container .form-container {
+  margin: 1vw;
+}
+
 .App .side-menu-container.opened {
   width: 30vw;
 }

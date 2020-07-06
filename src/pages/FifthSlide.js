@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
+import { useSelector } from "react-redux";
 
 import ContactForm from '../components/ContactForm';
 import MapComponent from '../components/MapComponent';
 
 export default function FifthSlide(props) {
-    const [adress] = useState(dummyAdress)
+    // const [adress] = useState(dummyAdress)
+    const adress = useSelector((state) => state.contentReducer.fifthPage);
+
 
     return (
         <Container id="contacts" className="fifthSlide content-slide">
@@ -44,16 +47,4 @@ export default function FifthSlide(props) {
             </div>
         </Container >
     );
-}
-
-const dummyAdress = {
-    city: 'София',
-    zip: 1421,
-    str: 'ул. Крум Попов',
-    number: 44,
-    building: '',
-    floor: 'етаж 1',
-    phoneOne: '+359 2 963 08 81',
-    phoneTwo: '+359 896 720 616',
-    phoneThree: '',
-}
+};

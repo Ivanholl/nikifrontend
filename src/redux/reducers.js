@@ -37,7 +37,6 @@ const initialState = {
 function userReducer(state = initialState, action) {
   switch (action.type) {
     case SET_USER:
-      // debugger
       return { ...state, user: action.user };
     case SET_IS_AUTHENTICATED:
       return { ...state, isAuthenticated: action.isAuthenticated };
@@ -83,7 +82,8 @@ const initialContent = {
 function contentReducer(state = initialContent, action) {
     switch (action.type) {
         case SET_CONTENT:
-			return { ...action.content }
+			let temp = { ...state, ...action.content };
+			return temp;
         default:
             return state;
     }

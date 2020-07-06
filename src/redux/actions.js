@@ -19,6 +19,7 @@ export const SET_CONTENT = "SET_CONTENT";
 
 
 const backendURL = process.env.NODE_ENV === "production" ? '' : 'http://localhost:9000';
+console.log(process.env);
 /*
  * other constants
  */

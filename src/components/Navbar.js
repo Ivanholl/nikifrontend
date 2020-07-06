@@ -31,7 +31,7 @@ export default function Navbar(props) {
                 </Nav.Item>
             </div>
             <div className="lang">
-                <p><a>BG</a></p>
+                <p><a href="/">BG</a></p>
             </div>
         </Nav>
         <Menu right={true} fallDown={'fallDown'}>
