@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const Mailer = require('./backend/Mailer');
 const ContentManager = require('./backend/ContentManager');
+const conf = require('./conf.js');
 
 const app = express();
 const port = process.env.PORT || 9000;
@@ -25,6 +26,9 @@ app.post('/sendContactUsMail', async (req, res) => {
     } else {
         res.status(400).end({msg})
     }
+});
+app.get('/getLanguages', (req, res) => {
+    res.send(conf.languages);
 });
 
 app.get('/content', ContentManager.content );

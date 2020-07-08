@@ -25,7 +25,6 @@ export default function ContactForm() {
             subject: 'Свържете се с нас',
             text: text
         }
-        console.log(process.env)
         // Default options are marked with *
         const response = await fetch(backend + "/sendContactUsMail", {
           method: "POST", // *GET, POST, PUT, DELETE, etc.

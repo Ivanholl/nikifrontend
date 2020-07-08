@@ -10,6 +10,8 @@ import {
 	//
 	//
 	SET_CONTENT,
+	SET_LANGUAGES,
+	SET_SELECTED_LANGUAGE,
 } from "./actions";
 
 import defaultContent from "../defaultContent.js";
@@ -77,16 +79,26 @@ const initialContent = {
 		phoneTwo: defaultContent.fifthPage.phoneTwo || "",
 		phoneThree: defaultContent.fifthPage.phoneThree || "",
 	},
+	languages: ['en'],
+	selectedLang: localStorage.getItem('language') || 'en'
 };
 
 function contentReducer(state = initialContent, action) {
     switch (action.type) {
-        case SET_CONTENT:
+		case SET_CONTENT:
 			let temp = { ...state, ...action.content };
 			return temp;
-        default:
-            return state;
-    }
+		case SET_LANGUAGES:
+			let languagesContent = { ...state };
+			languagesContent.languages = action.languages;
+			return languagesContent;
+		case SET_SELECTED_LANGUAGE:
+			let seslectedLang = { ...state };
+			seslectedLang.selectedLang = action.selectedLang;
+			return seslectedLang;
+		default:
+			return state;
+	}
 }
 
 const combinedReducers = combineReducers({

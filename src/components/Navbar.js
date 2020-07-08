@@ -1,13 +1,29 @@
-﻿import React from 'react';
-import { Nav } from 'react-bootstrap';
+﻿import React, { useEffect, useState } from 'react';
+import { Nav, DropdownButton, Dropdown } from 'react-bootstrap';
 import { slide as Menu } from 'react-burger-menu'
+import { useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 import logo from '../images/Logo-proakt.png';
+import * as Actions from '../redux/actions';
 
 export default function Navbar(props) {
+    const dispatch = useDispatch();
+    const [madeRequest, setMadeRequest] = useState(false);
+    const languages = useSelector((state) => state.contentReducer.languages);
+    const selectedLang = useSelector((state) => state.contentReducer.selectedLang);
+
     function handleClick(num) {        
         props.setBoxToShow(num)
     }
+
+    useEffect(() => {
+		if (!madeRequest) {
+			setMadeRequest(true);
+			dispatch(Actions.getLanguages());
+		}
+	});
+
     return (<header className="App-header">
         <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
         <Nav activeKey="/home" >
@@ -30,9 +46,16 @@ export default function Navbar(props) {
                     <Nav.Link eventKey="link-4">Комуникатор</Nav.Link>
                 </Nav.Item>
             </div>
-            <div className="lang">
-                <p><a href="/">BG</a></p>
-            </div>
+            {/* <div className="lang">
+                <p key={index}><a href="/">{lang}</a></p>
+            </div> */}
+            <DropdownButton className="lang" id="dropdown-basic-button" title={selectedLang} 
+                onSelect={(e) => dispatch(Actions.setUpSelectedLanguage(e))}
+            >
+                {languages.map((lang, index) => 
+                    <Dropdown.Item key={index} eventKey={lang}>{lang}</Dropdown.Item>
+                )}
+            </DropdownButton>
         </Nav>
         <Menu right={true} fallDown={'fallDown'}>
             <a onClick={() => handleClick(1)} className="menu-item" href="#about">За Нас</a>

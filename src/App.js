@@ -13,7 +13,8 @@ export default function App() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(Actions.getContent("en"));
+		let lang = localStorage.getItem("language") || "en";
+		dispatch(Actions.getContent(lang));
 	});
 
 	return (
