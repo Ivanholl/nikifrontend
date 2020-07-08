@@ -32,7 +32,10 @@ app.get('/getLanguages', (req, res) => {
 });
 
 app.get('/content', ContentManager.content );
+app.get("/getAllVariants", ContentManager.getAllVariants);
 app.post('/editContent', ContentManager.editContent);
+app.post("/editContentVariant", ContentManager.editContentVariant);
+;
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/build', 'index.html'));

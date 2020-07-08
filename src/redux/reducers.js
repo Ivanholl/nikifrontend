@@ -12,6 +12,9 @@ import {
 	SET_CONTENT,
 	SET_LANGUAGES,
 	SET_SELECTED_LANGUAGE,
+	SET_LANGUAGE_VARIANTS,
+	SET_SELECTED_VARIANT,
+	FILTER_VARIANT,
 } from "./actions";
 
 import defaultContent from "../defaultContent.js";
@@ -80,7 +83,9 @@ const initialContent = {
 		phoneThree: defaultContent.fifthPage.phoneThree || "",
 	},
 	languages: ['en'],
-	selectedLang: localStorage.getItem('language') || 'en'
+	selectedLang: localStorage.getItem('language') || 'en',
+	languageVariants: [],
+	selectedVariant: 'default'
 };
 
 function contentReducer(state = initialContent, action) {
@@ -89,13 +94,17 @@ function contentReducer(state = initialContent, action) {
 			let temp = { ...state, ...action.content };
 			return temp;
 		case SET_LANGUAGES:
-			let languagesContent = { ...state };
-			languagesContent.languages = action.languages;
-			return languagesContent;
+			return { ...state, languages: action.languages };
 		case SET_SELECTED_LANGUAGE:
-			let seslectedLang = { ...state };
-			seslectedLang.selectedLang = action.selectedLang;
-			return seslectedLang;
+			return { ...state, selectedLang: action.selectedLang };
+		case SET_LANGUAGE_VARIANTS:
+			return { ...state, languageVariants: action.languageVariants };
+		case SET_SELECTED_VARIANT:
+			return { ...state, selectedVariant: action.selectedVariant };
+		case FILTER_VARIANT:
+			if(action.variant == "default") return state;
+			let content = state.languageVariants[action.variant - 1];
+			return { ...state, ...content };
 		default:
 			return state;
 	}

@@ -5,10 +5,10 @@ export default function InfoBox(props) {
     const [showBox, setShowBox] = useState(false)
 
     useEffect(() => {
-        setTimeout(function () {
-            setShowBox(true)
-        }, props.timer);
-    })
+		setTimeout(function () {
+			setShowBox(true);
+		}, props.timer);
+	});
 
     return (
         <div className={showBox ? 'animated bounceInLeft' : 'animatable'}>

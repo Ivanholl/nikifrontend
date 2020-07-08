@@ -9,14 +9,16 @@ import Layout from './pages/Layout';
 import SecretLogin from "./pages/SecretLogin";
 import * as Actions from './redux/actions';
 
-export default function App() {
+export default function App() {    
+	// const [madeRequest, setMadeRequest] = useState(false);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		let lang = localStorage.getItem("language") || "en";
 		dispatch(Actions.getContent(lang));
+		dispatch(Actions.getLanguages());
 	});
-
+	
 	return (
 		<Router>
 			<div className="App">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
 import { useSelector } from "react-redux";
 
@@ -8,7 +8,6 @@ import MapComponent from '../components/MapComponent';
 export default function FifthSlide(props) {
     // const [adress] = useState(dummyAdress)
     const adress = useSelector((state) => state.contentReducer.fifthPage);
-
 
     return (
         <Container id="contacts" className="fifthSlide content-slide">

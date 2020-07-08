@@ -1105,6 +1105,10 @@ body a:active, body a:focus, body a:hover {
           justify-content: center;
 }
 
+.App .side-menu-container h3 {
+  display: none;
+}
+
 .App .side-menu-container .open-menu {
   border: 2px solid red;
   border-radius: 50%;
@@ -1124,8 +1128,16 @@ body a:active, body a:focus, body a:hover {
   overflow: hidden;
 }
 
+.App .side-menu-container .form-container .form-inner {
+  margin: 2vw 0;
+}
+
 .App .side-menu-container.opened {
   width: 30vw;
+}
+
+.App .side-menu-container.opened h3 {
+  display: block;
 }
 
 .App.MenuOpened {
@@ -1134,6 +1146,10 @@ body a:active, body a:focus, body a:hover {
 
 .App.MenuOpened .side-menu-container {
   width: 30vw;
+}
+
+.App.MenuOpened .side-menu-container h3 {
+  display: block;
 }
 
 .App-header {

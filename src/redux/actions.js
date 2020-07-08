@@ -18,6 +18,9 @@ export const SET_IS_AUTHENTICATED = "SET_IS_AUTHENTICATED";
 export const SET_CONTENT = "SET_CONTENT";
 export const SET_LANGUAGES = "SET_LANGUAGES";
 export const SET_SELECTED_LANGUAGE = "SET_SELECTED_LANGUAGE";
+export const SET_LANGUAGE_VARIANTS = "SET_LANGUAGE_VARIANTS";
+export const SET_SELECTED_VARIANT = "SET_SELECTED_VARIANT";
+export const FILTER_VARIANT = "FILTER_VARIANT";
 
 const backendURL = process.env.NODE_ENV === "production" ? '' : 'http://localhost:9000';
 console.log(process.env);
@@ -135,12 +138,22 @@ export function setLanguages(languages) {
 export function setSelectedLang(selectedLang) {	
 	return { type: SET_SELECTED_LANGUAGE, selectedLang };
 }
+export function setLanguageVariants(languageVariants) {
+	return { type: SET_LANGUAGE_VARIANTS, languageVariants };
+}
+export function setSelectedVariant(selectedVariant) {
+	return { type: SET_SELECTED_VARIANT, selectedVariant };
+}
+export function filterVariant(variant) {
+	return { type: FILTER_VARIANT, variant };
+}
 
 export function setUpSelectedLanguage(lang) {
 	return (dispatch) => {
 		saveToLocalStorage('language', lang)
 		dispatch(getContent(lang));
 		dispatch(setSelectedLang(lang));
+		dispatch(getLanguageVariants(lang));
 	}
 }
 
@@ -182,23 +195,83 @@ export function getContent(lang) {
 		});
 }
 
-export function editContent(content, lang) {
+export function editContent(content, lang, variant) {
 	return (dispatch) =>
 		new Promise((resolve, reject) => {
 			console.log("post config");
 			content.lang = lang;
+			let sendParams = {
+				firstPage: content.firstPage,
+				secondPage: content.secondPage,
+				tirthPage: content.tirthPage,
+				fourthPaga: content.fourthPaga,
+				fifthPage: content.fifthPage,
+				lang: content.lang,
+			}
 			fetch(backendURL + "/editContent?lang=" + lang, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify(content),
+				body: JSON.stringify(sendParams),
 			})
 				.then((response) => response.json())
 				.then((res) => {
 					console.log("server response");
 					console.log(content);
 					dispatch(setContent(content));
+					resolve(content);
+				})
+				.catch((err) => {
+					console.error(err);
+					reject(err);
+				});
+		});
+}
+export function editContentVariant(content, lang, variant) {
+	return (dispatch) =>
+		new Promise((resolve, reject) => {
+			console.log("post config");
+			content.lang = lang;
+			let sendParams = {
+				firstPage: content.firstPage,
+				secondPage: content.secondPage,
+				tirthPage: content.tirthPage,
+				fourthPaga: content.fourthPaga,
+				fifthPage: content.fifthPage,
+				lang: content.lang,
+			};
+			fetch(backendURL + `/editContentVariant?lang=${lang}&variant=${variant}`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(sendParams),
+			})
+				.then((response) => response.json())
+				.then((res) => {
+					console.log("server response");
+					console.log(content);
+					dispatch(setContent(content));
+					resolve(content);
+				})
+				.catch((err) => {
+					console.error(err);
+					reject(err);
+				});
+		});
+}
+
+export function getLanguageVariants(lang) {
+	return (dispatch) =>
+		new Promise((resolve, reject) => {
+			console.log("get Language Variants");
+			fetch(backendURL + "/getAllVariants?lang=" + lang)
+				.then((response) => response.json())
+				.then((content) => {
+					console.log("server response");
+					console.log(content);
+					dispatch(setLanguageVariants(content));
 					resolve(content);
 				})
 				.catch((err) => {

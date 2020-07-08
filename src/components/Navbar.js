@@ -1,28 +1,19 @@
-﻿import React, { useEffect, useState } from 'react';
+﻿import React from 'react';
 import { Nav, DropdownButton, Dropdown } from 'react-bootstrap';
 import { slide as Menu } from 'react-burger-menu'
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import logo from '../images/Logo-proakt.png';
 import * as Actions from '../redux/actions';
 
 export default function Navbar(props) {
     const dispatch = useDispatch();
-    const [madeRequest, setMadeRequest] = useState(false);
     const languages = useSelector((state) => state.contentReducer.languages);
     const selectedLang = useSelector((state) => state.contentReducer.selectedLang);
 
     function handleClick(num) {        
         props.setBoxToShow(num)
     }
-
-    useEffect(() => {
-		if (!madeRequest) {
-			setMadeRequest(true);
-			dispatch(Actions.getLanguages());
-		}
-	});
 
     return (<header className="App-header">
         <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
@@ -49,7 +40,7 @@ export default function Navbar(props) {
             {/* <div className="lang">
                 <p key={index}><a href="/">{lang}</a></p>
             </div> */}
-            <DropdownButton className="lang" id="dropdown-basic-button" title={selectedLang} 
+            <DropdownButton className="lang" title={selectedLang} 
                 onSelect={(e) => dispatch(Actions.setUpSelectedLanguage(e))}
             >
                 {languages.map((lang, index) => 

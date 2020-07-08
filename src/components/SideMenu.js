@@ -9,12 +9,17 @@ var images = [];
 export default function SideMenu(props) {
     const dispatch = useDispatch();
     const allContent = useSelector((state) => state.contentReducer);
-    
+    const langVariants = useSelector((state) => state.contentReducer.languageVariants);    
+    const selectedLang = useSelector((state) => state.contentReducer.selectedLang);
+    const languages = useSelector((state) => state.contentReducer.languages);
+    const selectedVariant = useSelector((state) => state.contentReducer.selectedVariant);
+        
     function getFullPageArr(array, val, key, index) {
 		let arr = [...array];
         arr[index] = { ...arr[index], [key]: val };
         return arr;
-	}
+    }
+    
     function firstPageFields() {
         var arrayToMap = allContent.firstPage.cardsArr;
         return (<>
@@ -30,7 +35,7 @@ export default function SideMenu(props) {
                         onChange={(event) => dispatch({ type: "SET_CONTENT", content: { firstPage: { ...allContent.firstPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'text', index) } } })}
                         value={item.text}
                     />
-                    <DropdownButton id="dropdown-basic-button" title={item.image}  as={InputGroup.Prepend}
+                    <DropdownButton  title={item.image}  as={InputGroup.Prepend}
                         onSelect={(e) => dispatch({ type: "SET_CONTENT", content: { firstPage: { ...allContent.firstPage, cardsArr: getFullPageArr(arrayToMap, e, 'image', index) } } })}
                     >
                         {images.map((itemInner, indexInner) => 
@@ -72,7 +77,7 @@ export default function SideMenu(props) {
                         onChange={(event) => dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'text', index) } } })}
                         value={item.text}   placeholder="content"
                     />
-                    <DropdownButton id="dropdown-basic-button" title={item.image}  as={InputGroup.Prepend}
+                    <DropdownButton  title={item.image}  as={InputGroup.Prepend}
                         onSelect={(e) => dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, e, 'image', index) } } })}
                     >
                         {images.map((itemInner, indexInner) => 
@@ -150,25 +155,90 @@ export default function SideMenu(props) {
         var r = window.confirm("Are you sure you want to save?");
         
         if(r) {
-            dispatch(Actions.editContent(allContent, 'en'));
+            if (selectedVariant != "default") {
+				dispatch(Actions.editContentVariant(allContent, selectedLang, selectedVariant));
+			} else {
+				dispatch(Actions.editContent(allContent,selectedLang)
+				);
+			}
         }  
     }
+    function onMakeDefault() {
+        var r = window.confirm("Are you sure you want to make this variant default?");
+
+        if (r) {
+            dispatch(Actions.editContent(allContent, selectedLang));
+        }
+    }
     useEffect(() => {
-        if(!images.length) {
-            images = allContent.firstPage.cardsArr.map((item) => item.image);
-        }  
-    })
+		if(!images.length) {
+		    images = allContent.firstPage.cardsArr.map((item) => item.image);
+		}
+		if (langVariants && !langVariants.length) dispatch(Actions.getLanguageVariants(selectedLang));
+	});
     return (
-		<div className={`side-menu-container ${props.openMenu ? "opened" : ""}`} >
-			<button className="open-menu" onClick={() => props.setOpenMenu(!props.openMenu)} >
+		<div
+			className={`side-menu-container ${props.openMenu ? "opened" : ""}`}
+		>
+			<h3>Language Versions</h3>
+			<button
+				className="open-menu"
+				onClick={() => props.setOpenMenu(!props.openMenu)}
+			>
 				{" > "}
 			</button>
-            <div className="form-container">
-                {props.openMenu && 
-                    renderField()
-                }
-                <Button variant="success" onClick={() => onSave()}>Save Changes</Button>
-            </div>
+			<div className="form-container">
+				<p>Get Specific Variant</p>
+				<InputGroup className="w-100 mb-1">
+					<DropdownButton
+						className="lang"
+						title={"selected language: " + selectedLang}
+						onSelect={(e) =>
+							dispatch(Actions.setUpSelectedLanguage(e))
+						}
+					>
+						{languages.map((lang, index) => (
+							<Dropdown.Item key={index} eventKey={lang}>
+								{lang}
+							</Dropdown.Item>
+						))}
+					</DropdownButton>
+					<DropdownButton
+						title={"selected variant: " + selectedVariant}
+						as={InputGroup.Prepend}
+						onSelect={(e) =>
+							dispatch(Actions.setSelectedVariant(e))
+						}
+					>
+						{[1, 2, 3].map((item, index) => (
+							<Dropdown.Item key={index} eventKey={item}>
+								{" "}
+								{item}{" "}
+							</Dropdown.Item>
+						))}
+					</DropdownButton>
+
+					<Button
+						variant="success"
+						onClick={() =>
+							dispatch(Actions.filterVariant(selectedVariant))
+						}
+					>
+						Filter
+					</Button>
+				</InputGroup>
+				<hr />
+				<div className="form-inner">
+					{props.openMenu && renderField()}
+				</div>
+				<hr />
+				<Button variant="success" onClick={() => onSave()}>
+					Save Changes
+				</Button>
+				<Button variant="warning" onClick={() => onMakeDefault()}>
+					Make this version default
+				</Button>
+			</div>
 		</div>
 	);
 }

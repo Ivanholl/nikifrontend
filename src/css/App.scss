@@ -61,6 +61,9 @@ body {
         flex-direction: column;
         justify-content: center;
 
+        h3 {
+            display: none;
+        }
         .open-menu {
            border: 2px solid red;
             border-radius: 50%;
@@ -77,20 +80,26 @@ body {
         .form-container {
             margin: 1vw;
             overflow: hidden;
-
-            .btn {
-                
+            .form-inner {
+                margin: 2vw 0;
             }
         }
     }
     .side-menu-container.opened {
         width: 30vw;
+        h3 {
+                display: block;
+        }
     }
 }
 .App.MenuOpened {
     width: 130vw !important;
     .side-menu-container {
         width: 30vw;
+
+        h3 {
+                display: block;
+        }
     }
 }
 
