@@ -1,179 +1,109 @@
-@-webkit-keyframes wiggle {
+﻿@keyframes wiggle {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    top: 0px;
-  }
+    transform: rotate(0deg);
+    top: 0px; }
   15% {
-    top: 2px;
-  }
+    top: 2px; }
   30% {
-    -webkit-transform: rotate(1.5deg);
-            transform: rotate(1.5deg);
-  }
+    transform: rotate(1.5deg); }
   45% {
-    top: 0px;
-  }
+    top: 0px; }
   60% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg);
-  }
+    transform: rotate(-1.5deg); }
   75% {
-    top: 2px;
-  }
+    top: 2px; }
   90% {
-    -webkit-transform: rotate(2.5deg);
-            transform: rotate(2.5deg);
-  }
+    transform: rotate(2.5deg); }
   100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    top: 0px;
-  }
-}
+    transform: rotate(0deg);
+    top: 0px; } }
 
-@keyframes wiggle {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    top: 0px;
-  }
-  15% {
-    top: 2px;
-  }
-  30% {
-    -webkit-transform: rotate(1.5deg);
-            transform: rotate(1.5deg);
-  }
-  45% {
-    top: 0px;
-  }
-  60% {
-    -webkit-transform: rotate(-1.5deg);
-            transform: rotate(-1.5deg);
-  }
-  75% {
-    top: 2px;
-  }
-  90% {
-    -webkit-transform: rotate(2.5deg);
-            transform: rotate(2.5deg);
-  }
-  100% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-    top: 0px;
-  }
-}
-
-.firstSlide .box {
+.box {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(0.25px) translateZ(0);
   transform: perspective(0.25px) translateZ(0);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px transparent;
   position: relative;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.6s;
-  transition-duration: 0.6s;
-}
-
-.firstSlide .box:hover {
-  border-top: 3px solid #0b8289;
-  animation: wiggle .96s;
-  -webkit-animation: wiggle .96s;
-}
-
-.firstSlide .box:hover:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-}
-
-.firstSlide .box:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #f15d53;
-  -webkit-transform: scaleY(0);
-  transform: scaleY(0);
-  -webkit-transform-origin: 50% 0;
-  transform-origin: 50% 0;
-  -webkit-transition-property: transform;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
-  -webkit-transition-duration: 0.5s;
-  transition-duration: 0.5s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-
-.firstSlide .box:focus {
-  color: white;
-}
-
-.firstSlide .box:focus:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-}
-
-.firstSlide .box:active {
-  color: white;
-}
-
-.firstSlide .box:active:before {
-  -webkit-transform: scaleY(1);
-  transform: scaleY(1);
-  -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
-}
+  transition-duration: 0.6s; }
+  .box:hover {
+    border-top: 3px solid #0b8289;
+    animation: wiggle .96s;
+    -webkit-animation: wiggle .96s; }
+    .box:hover:before {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
+  .box:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f15d53;
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out; }
+  .box:focus {
+    color: white; }
+    .box:focus:before {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
+  .box:active {
+    color: white; }
+    .box:active:before {
+      -webkit-transform: scaleY(1);
+      transform: scaleY(1);
+      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+      transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
 
 @-webkit-keyframes mover {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-}
+    transform: translateY(-20px); } }
 
 @keyframes mover {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+    transform: translateY(0); }
   100% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-}
+    transform: translateY(-20px); } }
 
 /* Bounce To Bottom */
 .animated {
   visibility: visible;
+  padding: 5px;
   -webkit-animation-duration: .5s;
+  -moz-animation-duration: .5s;
+  -ms-animation-duration: .5s;
+  -o-animation-duration: .5s;
   animation-duration: .5s;
   -webkit-animation-play-state: running;
-  animation-play-state: running;
-}
+  -moz-animation-play-state: running;
+  -ms-animation-play-state: running;
+  -o-animation-play-state: running;
+  animation-play-state: running; }
 
 .bounceInLeft {
   -webkit-animation-name: bounceIn;
-  animation-name: bounceInLeft;
-}
+  -moz-animation-name: bounceIn;
+  -o-animation-name: bounceIn;
+  animation-name: bounceInLeft; }
 
 /*bounceInLeft*/
 .animatable {
@@ -181,233 +111,97 @@
   visibility: hidden;
   /* initially pause animatable objects their animations */
   -webkit-animation-play-state: paused;
-  animation-play-state: paused;
-}
-
-@-webkit-keyframes bounceInLeft {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(-2000px);
-            transform: translateX(-2000px);
-  }
-  60% {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
-  }
-  80% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
+  -moz-animation-play-state: paused;
+  -ms-animation-play-state: paused;
+  -o-animation-play-state: paused;
+  animation-play-state: paused; }
 
 @keyframes bounceInLeft {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(-2000px);
-            transform: translateX(-2000px);
-  }
+    transform: translateX(-2000px); }
   60% {
-    -webkit-transform: translateX(20px);
-            transform: translateX(20px);
-  }
+    transform: translateX(20px); }
   80% {
-    -webkit-transform: translateX(-5px);
-            transform: translateX(-5px);
-  }
+    transform: translateX(-5px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 .fadeInUp {
   -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
+  -moz-animation-name: fadeInUp;
+  -o-animation-name: fadeInUp;
+  animation-name: fadeInUp; }
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(20px);
-            transform: translateY(20px);
-  }
+    transform: translateY(20px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
+    transform: translateY(0); } }
 
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown; }
 
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
+    transform: translateY(-20px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
+    transform: translateY(0); } }
 
 .bounceInRight {
   -webkit-animation-name: bounceInRight;
-  animation-name: bounceInRight;
-}
-
-@-webkit-keyframes bounceInRight {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
-  }
-  60% {
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
-  }
-  80% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
+  -moz-animation-name: bounceInRight;
+  -o-animation-name: bounceInRight;
+  animation-name: bounceInRight; }
 
 @keyframes bounceInRight {
   0% {
     opacity: 0;
-    -webkit-transform: translateX(2000px);
-            transform: translateX(2000px);
-  }
+    transform: translateX(2000px); }
   60% {
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
-  }
+    transform: translateX(-20px); }
   80% {
-    -webkit-transform: translateX(5px);
-            transform: translateX(5px);
-  }
+    transform: translateX(5px); }
   100% {
     opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-}
-
-@-webkit-keyframes bounceIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: scale(0.3);
-            transform: scale(0.3);
-  }
-  50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
-  70% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes bounceIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.3);
-            transform: scale(0.3);
-  }
+    transform: scale(0.3); }
   50% {
-    -webkit-transform: scale(1.05);
-            transform: scale(1.05);
-  }
+    transform: scale(1.05); }
   70% {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
-  }
+    transform: scale(0.9); }
   100% {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
+    transform: scale(1); } }
 
 .bounceIn {
   -webkit-animation-name: bounceIn;
-  animation-name: bounceIn;
-}
-
-@-webkit-keyframes fadeBgColor {
-  0% {
-    background: none;
-  }
-  70% {
-    background: none;
-  }
-  100% {
-    background: #464646;
-  }
-}
+  -moz-animation-name: bounceIn;
+  -o-animation-name: bounceIn;
+  animation-name: bounceIn; }
 
 @keyframes fadeBgColor {
   0% {
-    background: none;
-  }
+    background: none; }
   70% {
-    background: none;
-  }
+    background: none; }
   100% {
-    background: #464646;
-  }
-}
+    background: #464646; } }
 
 .fadeBgColor {
   -webkit-animation-name: fadeBgColor;
-  animation-name: fadeBgColor;
-}
-/*# sourceMappingURL=animations.css.map */
+  -moz-animation-name: fadeBgColor;
+  -o-animation-name: fadeBgColor;
+  animation-name: fadeBgColor; }

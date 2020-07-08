@@ -33,9 +33,9 @@ export default function Navbar(props) {
                 </Nav.Item>
             </div>
             <div className="outsorce">
-                <Nav.Item>
+                {/* <Nav.Item>
                     <Nav.Link eventKey="link-4">Комуникатор</Nav.Link>
-                </Nav.Item>
+                </Nav.Item>*/}
             </div>
             {/* <div className="lang">
                 <p key={index}><a href="/">{lang}</a></p>

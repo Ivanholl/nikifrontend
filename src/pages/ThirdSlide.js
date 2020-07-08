@@ -12,7 +12,7 @@ export default function ThirdSlide() {
         <div id="services" className="thirdSlide content-slide" >
           <Container>
             <h2>УСЛУГИ</h2>
-               <div className="box-contents">
+                <div className="box-contents">
                 {
                      infos.map((item, index) => {
                          return (<InfoBox key={index} image={item.image} text={item.text}  timer={(index + 1) * 100}/>)
