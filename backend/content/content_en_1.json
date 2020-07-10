@@ -1,4 +1,10 @@
 {
+	"menus": {
+		"menuOne": "About us",
+		"menuTwo": "Services",
+		"menuThree": "Careers",
+		"menuFour": "Contacts"
+	},
 	"firstPage": {
 		"title": "ALWAYS GIVE THE WORLD AND THE PEOPLE AROUND YOU THE BEST YOU CAN AND HAVE ... DESPITE EVERYTHING!",
 		"cardsArr": [
@@ -53,7 +59,10 @@
 		]
 	},
 	"fourthPaga": {
-		"title": "Вижте обявите за работа на www.jobs.bg или се свържете с нас."
+		        "partOne": "Вижте обявите за работа на",
+        "partTwo": "или се свържете с нас.",
+        "link": "https://www.jobs.bg/company/19480",
+        "linkText": "www.jobs.bg"
 	},
 	"fifthPage": {
 		"city": "София",
@@ -64,7 +73,18 @@
 		"floor": "етаж 1",
 		"phoneOne": "",
 		"phoneTwo": "+359 2 963 08 81",
-		"phoneThree": "+359 896 720 616"
-	},
-	"lang": "en"
+        "phoneThree": "+359 896 720 616",
+		"showOnMap": "ПОКАЖИ НА КАРТАТА",
+		"mapCoordinatesLong": "23.3240",
+		"mapCoordinatesLat": "42.6812",
+		"formFields": {
+			"title": "Свържете се с нас:",
+			"name": "Име",
+			"phone": "Телефон",
+			"email": "E-mail",
+            "msg": "Съобщение",
+                        "error": "Моля попълнете всички полета!",
+            "send": "ИЗПРАТИ"
+		}
+	}
 }

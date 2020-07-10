@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from "react-redux";
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
 export default GoogleApiWrapper({
@@ -6,14 +7,17 @@ export default GoogleApiWrapper({
 })(MapComponent);
 
 function MapComponent (props) {
+    const lat = useSelector((state) => Number(state.contentReducer.fifthPage.mapCoordinatesLat));
+    const lng = useSelector((state) => Number(state.contentReducer.fifthPage.mapCoordinatesLong));
+    
     return (
         <Map
             google={props.google}
             zoom={16}
             style={{ width: '100%', height: '100%', }}
-            initialCenter={{ lat: 42.6812, lng: 23.3240 }}
+            initialCenter={{ lat, lng }}
         >
-            <Marker position={{ lat: 42.6812, lng: 23.3240 }} />
+            <Marker position={{ lat, lng }} />
       </Map>
     )
 };

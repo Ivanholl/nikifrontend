@@ -24,6 +24,20 @@ export default function SideMenu(props) {
         var arrayToMap = allContent.firstPage.cardsArr;
         return (<>
             <InputGroup className="mb-3">
+                <FormControl value={allContent.menus.menuOne}  placeholder="menu One"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { menus: { ...allContent.menus, menuOne: event.target.value }} }) }                
+                />
+                <FormControl value={allContent.menus.menuTwo}  placeholder="menu Two"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { menus: { ...allContent.menus, menuTwo: event.target.value }} }) }                
+                />
+                <FormControl value={allContent.menus.menuThree}  placeholder="menu Three"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { menus: { ...allContent.menus, menuThree: event.target.value }} }) }                
+                />
+                <FormControl value={allContent.menus.menuFour}  placeholder="menu Four"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { menus: { ...allContent.menus, menuFour: event.target.value }} }) }                
+                />
+            </InputGroup>
+            <InputGroup className="mb-3">
                 <FormControl value={allContent.firstPage.title} placeholder="title"
                     onChange={(event) => dispatch({ type: "SET_CONTENT", content: { firstPage: { ...allContent.firstPage, title: event.target.value }} }) }                    
                 />
@@ -90,8 +104,17 @@ export default function SideMenu(props) {
     }
     function forthPageFields () {
         return (<>
-            <FormControl value={allContent.fourthPaga.title}   placeholder="text"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, title: event.target.value }} }) }                
+            <FormControl value={allContent.fourthPaga.partOne}   placeholder="text"
+                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, partOne: event.target.value }} }) }                
+            />
+            <FormControl value={allContent.fourthPaga.partTwo}   placeholder="text"
+                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, partTwo: event.target.value }} }) }                
+            />
+            <FormControl value={allContent.fourthPaga.link}   placeholder="text"
+                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, link: event.target.value }} }) }                
+            />
+            <FormControl value={allContent.fourthPaga.linkText}   placeholder="text"
+                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, linkText: event.target.value }} }) }                
             />
         </>)
     }
@@ -132,7 +155,43 @@ export default function SideMenu(props) {
                     onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage, phoneThree: event.target.value }} }) }                
                 />
             </InputGroup>
-            
+            <InputGroup className="w-100 mb-1">
+                <FormControl value={allContent.fifthPage.showOnMap}   placeholder="phone one (empty by design)"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage, showOnMap: event.target.value }} }) }                
+                />
+                <FormControl value={allContent.fifthPage.mapCoordinatesLong}   placeholder="phone two"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage, mapCoordinatesLong: event.target.value }} }) }                
+                />
+                <FormControl value={allContent.fifthPage.mapCoordinatesLat}   placeholder="phone three"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage, mapCoordinatesLat: event.target.value }} }) }                
+                />
+            </InputGroup>
+            <h5>FORM</h5>
+             <InputGroup className="w-100 mb-1">
+                <FormControl value={allContent.fifthPage.formFields.title}   placeholder="phone one (empty by design)"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage.formFields, formFields: { ...allContent.fifthPage.formFields, title: event.target.value }}} }) }                
+                />
+                <FormControl value={allContent.fifthPage.formFields.error}   placeholder="phone two"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage.formFields, formFields: { ...allContent.fifthPage.formFields, error: event.target.value }}} }) }                
+                />
+                <FormControl value={allContent.fifthPage.formFields.send}   placeholder="phone three"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage.formFields, formFields: { ...allContent.fifthPage.formFields, send: event.target.value }}} }) }                
+                />
+            </InputGroup>            
+            <InputGroup className="w-100 mb-1">
+                <FormControl value={allContent.fifthPage.formFields.name}   placeholder="phone one (empty by design)"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage.formFields, formFields: { ...allContent.fifthPage.formFields, name: event.target.value }}} }) }                
+                />
+                <FormControl value={allContent.fifthPage.formFields.phone}   placeholder="phone two"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage.formFields, formFields: { ...allContent.fifthPage.formFields, phone: event.target.value }}} }) }                
+                />
+                <FormControl value={allContent.fifthPage.formFields.email}   placeholder="phone three"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage.formFields, formFields: { ...allContent.fifthPage.formFields, email: event.target.value }}} }) }                
+                />
+                <FormControl value={allContent.fifthPage.formFields.msg}   placeholder="phone three"
+                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fifthPage: { ...allContent.fifthPage.formFields, formFields: { ...allContent.fifthPage.formFields, msg: event.target.value }}} }) }                
+                />
+            </InputGroup>
         </>)
     }
     function renderField() {

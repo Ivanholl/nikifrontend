@@ -1,14 +1,24 @@
 import React, { useState } from "react";
+import * as Actions from "../redux/actions";
+import { useDispatch } from "react-redux"
+import { useHistory } from "react-router-dom";;
 
 export default function SecretLogin(){
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+	const dispatch = useDispatch();
+	let history = useHistory();
+    const [user, setUser] = useState("");
+    const [pass, setPass] = useState("");
     const [submitted, setSubmitted] = useState(false)
-
-
+	
+	
 	function handleSubmit(event) {
 		event.preventDefault();
-        setSubmitted(true);
+		dispatch(Actions.login(user, pass))
+			.then(res => {
+				history.push("/");
+				setSubmitted(true);
+			})
+			.catch(err => setSubmitted(true))
 	}
 
     return (
@@ -25,9 +35,9 @@ export default function SecretLogin(){
 							id="email"
 							name="email"
 							placeholder="user@example.com"
-							type="email"
-							value={email}
-							onChange={setEmail}
+							type="text"
+							value={user}
+							onChange={(e) => setUser(e.target.value)}
 							required
 						/>
 					</div>
@@ -37,8 +47,8 @@ export default function SecretLogin(){
 							id="password"
 							placeholder="password"
 							type="password"
-							value={password}
-							onChange={setPassword}
+							value={pass}
+							onChange={(e) => setPass(e.target.value)}
 							required
 						/>
 					</div>
@@ -47,7 +57,7 @@ export default function SecretLogin(){
 							Incorrect email or password
 						</div>
 					)}
-					<button type="submit">
+					<button type="submit" >
 						LOGIN
 						<i className="fa fa-fw fa-chevron-right" />
 					</button>

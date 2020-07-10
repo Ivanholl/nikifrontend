@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { useSelector } from "react-redux";
 
 // import {backend} from '../../conf.js'
 const backend = process.env.NODE_ENV === "production" ? '' : 'http://localhost:9000';
@@ -11,7 +12,8 @@ export default function ContactForm() {
     const [text, setText] = useState('');
     const [name, setName] = useState('');
     const [showError, setShowError] = useState(false);
-    
+	const contentForm = useSelector((state) => state.contentReducer.fifthPage.formFields);
+
     let sendMail = async (e) => {
         e.preventDefault();
         if (!from || !phone || !text || !name) {
@@ -46,28 +48,28 @@ export default function ContactForm() {
     
     return (
         <Form>
-            <p>Свържете се с нас:</p>
+            <p>{contentForm.title}</p>
             <Form.Group>
-                <Form.Label>Име</Form.Label>
+                <Form.Label>{contentForm.name}</Form.Label>
                 <Form.Control type="text" onChange={e => setName(e.target.value) } value={name}/>
             </Form.Group>
             <Form.Group>
-                <Form.Label>Телефон</Form.Label>
+                <Form.Label>{contentForm.phone}</Form.Label>
                 <Form.Control type="phone" onChange={e => setPhone(e.target.value) } value={phone}/>
             </Form.Group>
             <Form.Group>
-                <Form.Label>E-mail</Form.Label>
+                <Form.Label>{contentForm.email}</Form.Label>
                 <Form.Control type="email" onChange={e => setFrom(e.target.value) } value={from}/>
             </Form.Group>
             <Form.Group>
-                <Form.Label>Съобщение</Form.Label>
+                <Form.Label>{contentForm.msg}</Form.Label>
                 <Form.Control as="textarea" rows="3" onChange={e => setText(e.target.value) } value={text}/>
             </Form.Group>
             {showError &&
-                <p>Моля попълнете всички полета!</p>
+                <p>{contentForm.error}</p>
             }
             <Button variant="success" type="submit" onClick={sendMail}>
-                ИЗПРАТИ
+                {contentForm.send}
             </Button>
         </Form>
     )

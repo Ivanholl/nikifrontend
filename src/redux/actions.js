@@ -5,7 +5,7 @@
 // import * as userApi from "../api/userApi.js";
 // import * as Config from "../conf.js";
 
-
+import axios from 'axios';
 /*
  * action types
  */
@@ -23,7 +23,7 @@ export const SET_SELECTED_VARIANT = "SET_SELECTED_VARIANT";
 export const FILTER_VARIANT = "FILTER_VARIANT";
 
 const backendURL = process.env.NODE_ENV === "production" ? '' : 'http://localhost:9000';
-console.log(process.env);
+
 /*
  * other constants
  */
@@ -33,6 +33,22 @@ console.log(process.env);
 //   SHOW_COMPLETED: 'SHOW_COMPLETED',
 //   SHOW_ACTIVE: 'SHOW_ACTIVE'
 // }
+
+export const axiosInstance = axios.create({
+	baseURL: backendURL,
+});
+export function setTokenInterseptor(token) {
+    saveToLocalStorage('token', token);
+
+    // const interceptor = axiosInstance.interceptors.request.use(config => {
+    //     config.headers.token = token;
+    //     return config
+    // })
+    axiosInstance.interceptors.request.use(config => {
+        config.headers.token = token;
+        return config
+    })
+};
 
 /*
  * action creators
@@ -45,10 +61,30 @@ export function setIsAuthenticated(isAuthenticated) {
   return { type: SET_IS_AUTHENTICATED, isAuthenticated };
 }
 
-export function login(email, pass) {
+export function login(user, pass) {
   return (dispatch) =>
     new Promise((resolve, reject) => {
-        resolve()
+		fetch(backendURL + `/login`, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({user, pass}),
+			})
+			.then((response) => response.json())
+			.then((res) => {
+				console.log("server response");
+				console.log(res);
+				dispatch(setIsAuthenticated(true));
+				// dispatch(setUser(res.token));
+				setTokenInterseptor(res.token);
+				resolve();
+			})
+			.catch((err) => {
+				console.error(err);
+				reject(err);
+			});
+        // resolve()
     //   authenticate(email, pass)
     //     .then((res) => {
     //       if (res.data) {
@@ -66,25 +102,24 @@ export function login(email, pass) {
 export function getUserInfo() {
   return (dispatch) =>
     new Promise((resolve, reject) => {
-    //   userApi
-    //     .me()
-    //     .then((res) => {
-    //       if (res.data) {
-    //         dispatch(setUser(res.data));
-    //         dispatch(setIsAuthenticated(true));
-    //         resolve(res);
-    //       } else {
-    //         reject();
-    //       }
-    //     })
-    //     .catch((err) => console.error(err));
+		axiosInstance.get("/me")
+			.then((res) => {
+				if (res.data) {
+					// dispatch(setUser(res.data));
+					dispatch(setIsAuthenticated(true));
+					resolve(res);
+				} else {
+					reject();
+				}
+			})
+			.catch((err) => console.error(err));
     });
 }
 export function checkIfAuth() {
   return (dispatch) =>
     new Promise((resolve, reject) => {
       if (localStorage && localStorage.token) {
-        // setTokenInterseptor(localStorage.token);
+        setTokenInterseptor(localStorage.token);
         dispatch(getUserInfo()).then(() => resolve());
       }
       // else {
@@ -161,13 +196,14 @@ export function getLanguages() {
 	return (dispatch) =>
 		new Promise((resolve, reject) => {
 			console.log("get languages");
-			fetch(backendURL + "/getLanguages")
-				.then((response) => response.json())
+			// fetch(backendURL + "/getLanguages")
+			// .then((response) => response.json())
+			axiosInstance.get("/getLanguages")
 				.then((languages) => {
 					console.log("server response");
-					console.log(languages);
-					dispatch(setLanguages(languages));
-					resolve(languages);
+					console.log(languages.data);
+					dispatch(setLanguages(languages.data));
+					resolve(languages.data);
 				})
 				.catch((err) => {
 					console.error(err);
@@ -180,13 +216,14 @@ export function getContent(lang) {
 	return (dispatch) => 
 		new Promise((resolve, reject) => {
 			console.log('get config')
-			fetch(backendURL + '/content?lang=' + lang)
-				.then(response => response.json())
+			// fetch(backendURL + '/content?lang=' + lang)
+			// 	.then(response => response.json())
+			axiosInstance.get("/content?lang=" + lang)
 				.then(content => {
 					console.log('server response')			
-					console.log(content)
-					dispatch(setContent(content))
-					resolve(content)
+					console.log(content.data);
+					dispatch(setContent(content.data))
+					resolve(content.data);
 				})
 				.catch(err => {
 					console.error(err)
@@ -207,20 +244,22 @@ export function editContent(content, lang, variant) {
 				fourthPaga: content.fourthPaga,
 				fifthPage: content.fifthPage,
 				lang: content.lang,
-			}
-			fetch(backendURL + "/editContent?lang=" + lang, {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(sendParams),
-			})
-				.then((response) => response.json())
+				menus: content.menus,
+			};
+			// fetch(backendURL + "/editContent?lang=" + lang, {
+			// 	method: "POST",
+			// 	headers: {
+			// 		"Content-Type": "application/json",
+			// 	},
+			// 	body: JSON.stringify(sendParams),
+			// })
+				// .then((response) => response.json())
+			axiosInstance.post("/editContent?lang=" + lang, sendParams)
 				.then((res) => {
 					console.log("server response");
-					console.log(content);
-					dispatch(setContent(content));
-					resolve(content);
+					console.log(content.data);
+					dispatch(setContent(content.data));
+					resolve(content.data);
 				})
 				.catch((err) => {
 					console.error(err);
@@ -233,6 +272,7 @@ export function editContentVariant(content, lang, variant) {
 		new Promise((resolve, reject) => {
 			console.log("post config");
 			content.lang = lang;
+
 			let sendParams = {
 				firstPage: content.firstPage,
 				secondPage: content.secondPage,
@@ -240,20 +280,24 @@ export function editContentVariant(content, lang, variant) {
 				fourthPaga: content.fourthPaga,
 				fifthPage: content.fifthPage,
 				lang: content.lang,
+				menus: content.menus,
 			};
-			fetch(backendURL + `/editContentVariant?lang=${lang}&variant=${variant}`, {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify(sendParams),
-			})
-				.then((response) => response.json())
+			// debugger
+			// fetch(backendURL + `/editContentVariant?lang=${lang}&variant=${variant}`, {
+			// 	method: "POST",
+			// 	headers: {
+			// 		"token": "",
+			// 		"Content-Type": "application/json",
+			// 	},
+			// 	body: JSON.stringify(sendParams),
+			// })
+			// 	.then((response) => response.json())
+			axiosInstance.post(`/editContentVariant?lang=${lang}&variant=${variant}`, sendParams)
 				.then((res) => {
 					console.log("server response");
-					console.log(content);
-					dispatch(setContent(content));
-					resolve(content);
+					console.log(content.data);
+					dispatch(setContent(content.data));
+					resolve(content.data);
 				})
 				.catch((err) => {
 					console.error(err);
@@ -266,17 +310,21 @@ export function getLanguageVariants(lang) {
 	return (dispatch) =>
 		new Promise((resolve, reject) => {
 			console.log("get Language Variants");
-			fetch(backendURL + "/getAllVariants?lang=" + lang)
-				.then((response) => response.json())
-				.then((content) => {
-					console.log("server response");
-					console.log(content);
-					dispatch(setLanguageVariants(content));
-					resolve(content);
-				})
-				.catch((err) => {
-					console.error(err);
-					reject(err);
-				});
+			// fetch(backendURL + "/getAllVariants?lang=" + lang,{
+
+			// })
+			// .then((response) => response.json())
+			axiosInstance.get("/getAllVariants?lang=" + lang)			
+			.then((content) => {
+				console.log("server response");
+				console.log(content.data);
+				dispatch(setLanguageVariants(content.data));
+				resolve(content.data);
+			})
+			.catch((err) => {
+				dispatch(setLanguageVariants([{}]));
+				console.error(err);
+				reject(err);
+			});
 		});
 }
