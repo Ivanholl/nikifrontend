@@ -73,8 +73,7 @@ export function login(user, pass) {
 			})
 			.then((response) => response.json())
 			.then((res) => {
-				console.log("server response");
-				console.log(res);
+				
 				dispatch(setIsAuthenticated(true));
 				// dispatch(setUser(res.token));
 				setTokenInterseptor(res.token);
@@ -195,13 +194,10 @@ export function setUpSelectedLanguage(lang) {
 export function getLanguages() {
 	return (dispatch) =>
 		new Promise((resolve, reject) => {
-			console.log("get languages");
-			// fetch(backendURL + "/getLanguages")
-			// .then((response) => response.json())
+			
 			axiosInstance.get("/getLanguages")
 				.then((languages) => {
-					console.log("server response");
-					console.log(languages.data);
+					
 					dispatch(setLanguages(languages.data));
 					resolve(languages.data);
 				})
@@ -215,13 +211,9 @@ export function getLanguages() {
 export function getContent(lang) {
 	return (dispatch) => 
 		new Promise((resolve, reject) => {
-			console.log('get config')
-			// fetch(backendURL + '/content?lang=' + lang)
-			// 	.then(response => response.json())
 			axiosInstance.get("/content?lang=" + lang)
 				.then(content => {
-					console.log('server response')			
-					console.log(content.data);
+					
 					dispatch(setContent(content.data))
 					resolve(content.data);
 				})
@@ -235,7 +227,7 @@ export function getContent(lang) {
 export function editContent(content, lang, variant) {
 	return (dispatch) =>
 		new Promise((resolve, reject) => {
-			console.log("post config");
+			
 			content.lang = lang;
 			let sendParams = {
 				firstPage: content.firstPage,
@@ -256,8 +248,7 @@ export function editContent(content, lang, variant) {
 				// .then((response) => response.json())
 			axiosInstance.post("/editContent?lang=" + lang, sendParams)
 				.then((res) => {
-					console.log("server response");
-					console.log(content.data);
+					
 					dispatch(setContent(content.data));
 					resolve(content.data);
 				})
@@ -270,7 +261,7 @@ export function editContent(content, lang, variant) {
 export function editContentVariant(content, lang, variant) {
 	return (dispatch) =>
 		new Promise((resolve, reject) => {
-			console.log("post config");
+			
 			content.lang = lang;
 
 			let sendParams = {
@@ -294,8 +285,7 @@ export function editContentVariant(content, lang, variant) {
 			// 	.then((response) => response.json())
 			axiosInstance.post(`/editContentVariant?lang=${lang}&variant=${variant}`, sendParams)
 				.then((res) => {
-					console.log("server response");
-					console.log(content.data);
+					
 					dispatch(setContent(content.data));
 					resolve(content.data);
 				})
@@ -309,15 +299,10 @@ export function editContentVariant(content, lang, variant) {
 export function getLanguageVariants(lang) {
 	return (dispatch) =>
 		new Promise((resolve, reject) => {
-			console.log("get Language Variants");
-			// fetch(backendURL + "/getAllVariants?lang=" + lang,{
-
-			// })
-			// .then((response) => response.json())
+			
 			axiosInstance.get("/getAllVariants?lang=" + lang)			
 			.then((content) => {
-				console.log("server response");
-				console.log(content.data);
+				
 				dispatch(setLanguageVariants(content.data));
 				resolve(content.data);
 			})

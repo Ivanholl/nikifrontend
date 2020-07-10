@@ -61,8 +61,7 @@ exports.editContentVariant = async (req, res) => {
 
 
 exports.editContent = async function (req, res) {
-    console.log(req.body);
-    // let lang = req.body.lang;
+    
     let parsedUrl = url.parse(req.url, true);
     let lang = parsedUrl.query.lang;
 

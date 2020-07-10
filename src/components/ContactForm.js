@@ -42,8 +42,6 @@ export default function ContactForm() {
           body: JSON.stringify(data), // body data type must match "Content-Type" header
         });
         response.json() // parses JSON response into native JavaScript objects       
-        console.log(response);
-        
     }
     
     return (
