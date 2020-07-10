@@ -1,14 +1,7 @@
 import { combineReducers } from "redux";
 import {
-	// ADD_TODO,
-	// TOGGLE_TODO,
-	// SET_VISIBILITY_FILTER,
-	// VisibilityFilters
 	SET_USER,
 	SET_IS_AUTHENTICATED,
-	//
-	//
-	//
 	SET_CONTENT,
 	SET_LANGUAGES,
 	SET_SELECTED_LANGUAGE,
@@ -18,19 +11,6 @@ import {
 } from "./actions";
 
 import defaultContent from "../defaultContent.js";
-
-// const {
-//     SHOW_ALL
-// } = VisibilityFilters
-
-// function visibilityFilter(state = SHOW_ALL, action) {
-//     switch (action.type) {
-//         case SET_VISIBILITY_FILTER:
-//             return action.filter
-//         default:
-//             return state
-//     }
-// }
 
 const initialState = {
   user: {
@@ -132,8 +112,6 @@ function contentReducer(state = initialContent, action) {
 }
 
 const combinedReducers = combineReducers({
-	// visibilityFilter,
-	// todos
 	userReducer,
 	contentReducer,
 });

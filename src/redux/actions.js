@@ -1,20 +1,7 @@
-// import {
-//   authenticate,
-//   setTokenInterseptor,
-// } from "../api/axiosConfig";
-// import * as userApi from "../api/userApi.js";
-// import * as Config from "../conf.js";
-
 import axios from 'axios';
-/*
- * action types
- */
 
 export const SET_USER = "SET_USER";
 export const SET_IS_AUTHENTICATED = "SET_IS_AUTHENTICATED";
-// export const ADD_TODO = 'ADD_TODO'
-// export const TOGGLE_TODO = 'TOGGLE_TODO'
-// export const SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER'
 export const SET_CONTENT = "SET_CONTENT";
 export const SET_LANGUAGES = "SET_LANGUAGES";
 export const SET_SELECTED_LANGUAGE = "SET_SELECTED_LANGUAGE";
@@ -24,35 +11,17 @@ export const FILTER_VARIANT = "FILTER_VARIANT";
 
 const backendURL = process.env.NODE_ENV === "production" ? '' : 'http://localhost:9000';
 
-/*
- * other constants
- */
-
-// export const VisibilityFilters = {
-//   SHOW_ALL: 'SHOW_ALL',
-//   SHOW_COMPLETED: 'SHOW_COMPLETED',
-//   SHOW_ACTIVE: 'SHOW_ACTIVE'
-// }
-
 export const axiosInstance = axios.create({
 	baseURL: backendURL,
 });
+
 export function setTokenInterseptor(token) {
     saveToLocalStorage('token', token);
-
-    // const interceptor = axiosInstance.interceptors.request.use(config => {
-    //     config.headers.token = token;
-    //     return config
-    // })
     axiosInstance.interceptors.request.use(config => {
         config.headers.token = token;
         return config
     })
 };
-
-/*
- * action creators
- */
 
 export function setUser(user) {
   return { type: SET_USER, user };
@@ -83,18 +52,6 @@ export function login(user, pass) {
 				console.error(err);
 				reject(err);
 			});
-        // resolve()
-    //   authenticate(email, pass)
-    //     .then((res) => {
-    //       if (res.data) {
-    //         var token = res.data.token;
-    //         setTokenInterseptor(token);
-    //         dispatch(getUserInfo()).then(() => resolve());
-    //       } else {
-    //         reject();
-    //       }
-    //     })
-    //     .catch((err) => console.error(err));
     });
 }
 
@@ -104,7 +61,6 @@ export function getUserInfo() {
 		axiosInstance.get("/me")
 			.then((res) => {
 				if (res.data) {
-					// dispatch(setUser(res.data));
 					dispatch(setIsAuthenticated(true));
 					resolve(res);
 				} else {
@@ -121,9 +77,6 @@ export function checkIfAuth() {
         setTokenInterseptor(localStorage.token);
         dispatch(getUserInfo()).then(() => resolve());
       }
-      // else {
-      //     reject()
-      // }
     });
 }
 
@@ -131,7 +84,6 @@ export function logout() {
   return (dispatch) =>
     new Promise((resolve, reject) => {
       if (localStorage && localStorage.token) {
-        // setTokenInterseptor("");
         dispatch(setUser({}));
         resolve();
       } else {
@@ -139,18 +91,6 @@ export function logout() {
       }
     });
 }
-
-// export function addTodo(text) {
-//   return { type: ADD_TODO, text }
-// }
-//
-// export function toggleTodo(index) {
-//   return { type: TOGGLE_TODO, index }
-// }
-//
-// export function setVisibilityFilter(filter) {
-//   return { type: SET_VISIBILITY_FILTER, filter }
-// }
 function saveToLocalStorage(key, value) {
 	// Check browser support
 	if (typeof(Storage) !== "undefined") {
@@ -238,14 +178,6 @@ export function editContent(content, lang, variant) {
 				lang: content.lang,
 				menus: content.menus,
 			};
-			// fetch(backendURL + "/editContent?lang=" + lang, {
-			// 	method: "POST",
-			// 	headers: {
-			// 		"Content-Type": "application/json",
-			// 	},
-			// 	body: JSON.stringify(sendParams),
-			// })
-				// .then((response) => response.json())
 			axiosInstance.post("/editContent?lang=" + lang, sendParams)
 				.then((res) => {
 					
@@ -273,16 +205,6 @@ export function editContentVariant(content, lang, variant) {
 				lang: content.lang,
 				menus: content.menus,
 			};
-			// debugger
-			// fetch(backendURL + `/editContentVariant?lang=${lang}&variant=${variant}`, {
-			// 	method: "POST",
-			// 	headers: {
-			// 		"token": "",
-			// 		"Content-Type": "application/json",
-			// 	},
-			// 	body: JSON.stringify(sendParams),
-			// })
-			// 	.then((response) => response.json())
 			axiosInstance.post(`/editContentVariant?lang=${lang}&variant=${variant}`, sendParams)
 				.then((res) => {
 					
