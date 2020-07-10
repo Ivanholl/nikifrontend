@@ -299,7 +299,8 @@ body {
 
 .firstSlide {
     justify-content: flex-end;
-    background: url("../images/slide1-background.png") no-repeat;
+    // background-image: url("../images/slide1-background.png");
+    background-repeat: no-repeat;
     background-position: center;
     background-size: 100vw;
 
@@ -314,7 +315,9 @@ body {
 }
 
 .secondSlide {
-    background: url("../images/SecondSlideBackground.png") no-repeat;
+    // background: url("../images/SecondSlideBackground.png") no-repeat;
+    // background-image: url("../images/SecondSlideBackground.png");
+    background-repeat: no-repeat;
     background-size: 100vw;
     padding: 1vw 0;
 
@@ -361,7 +364,10 @@ body {
 }
 
 .thirdSlide {
-    background: #030a2b;
+    // background-image: url("../images/thirdSlideBackground.png");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    // background-color: #030a2b;
     padding: 10vh 0;
 
     .box-contents {
@@ -374,7 +380,8 @@ body {
     }
 }
 .fourthSlide {
-    background: url("../images/FourthSlideBackground.png") no-repeat;
+    // background: url("../images/FourthSlideBackground.png") no-repeat;
+    background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100vw;
     text-align: left;
@@ -426,6 +433,8 @@ body {
     }
 }
 .fifthSlide {
+    background-repeat: no-repeat;
+    background-size: 100vw;
     height: 100vh;
     width: 100%;
     color: #FFFFFF;

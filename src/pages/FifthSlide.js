@@ -9,9 +9,10 @@ export default function FifthSlide(props) {
     // const [adress] = useState(dummyAdress)
     const adress = useSelector((state) => state.contentReducer.fifthPage);
     const menu = useSelector((state) => state.contentReducer.menus.menuFour);
-
+	const background = useSelector((state) => state.contentReducer.fifthPage.background); 
+	
     return (
-		<Container id="contacts" className="fifthSlide content-slide">
+		<Container id="contacts" className="fifthSlide content-slide" style={{backgroundImage: `url(${require(`../images/${background}`)}`}}>
 			<div className="contact-title">
 				<h2>{menu}</h2>
 			</div>

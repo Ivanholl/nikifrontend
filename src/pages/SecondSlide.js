@@ -10,8 +10,9 @@ export default function SecondSlide() {
     const Second = useSelector((state) => state.contentReducer.secondPage.Second);
     const Tirth = useSelector((state) => state.contentReducer.secondPage.Tirth);
     const menu = useSelector((state) => state.contentReducer.menus.menuOne);
+    const background = useSelector((state) => state.contentReducer.secondPage.background); 
     
-    return (<div id="about" className="secondSlide content-slide">
+    return (<div id="about" className="secondSlide content-slide"  style={{backgroundImage: `url(${require(`../images/${background}`)}`}}>
         <Container>
             <h2>
                 {menu}

@@ -40,10 +40,12 @@ const initialContent = {
 		menuFour: defaultContent.menus.menuFour || "",
 	},
 	firstPage: {
+		background: defaultContent.firstPage.background || "",
 		title: defaultContent.firstPage.title || "",
 		cardsArr: defaultContent.firstPage.cardsArr || [],
 	},
 	secondPage: {
+		background: defaultContent.secondPage.background || "",
 		small: defaultContent.secondPage.small || "",
 		main: defaultContent.secondPage.main || "",
 		Bold: defaultContent.secondPage.Bold || "",
@@ -52,15 +54,18 @@ const initialContent = {
 		Tirth: defaultContent.secondPage.Tirth || "",
 	},
 	tirthPage: {
+		background: defaultContent.tirthPage.background || "",
 		cardsArr: defaultContent.tirthPage.cardsArr || "",
 	},
 	fourthPaga: {
+		background: defaultContent.fourthPaga.background || "",
 		partOne: defaultContent.fourthPaga.partOne || "",
 		partTwo: defaultContent.fourthPaga.partTwo || "",
 		link: defaultContent.fourthPaga.link || "",
 		linkText: defaultContent.fourthPaga.linkText || "",
 	},
 	fifthPage: {
+		background: defaultContent.fifthPage.background || "",
 		city: defaultContent.fifthPage.city || "",
 		zip: defaultContent.fifthPage.zip || "",
 		str: defaultContent.fifthPage.str || "",
@@ -83,8 +88,8 @@ const initialContent = {
 			send: defaultContent.fifthPage.formFields.send || "",
 		},
 	},
-	languages: ["en"],
-	selectedLang: localStorage.getItem("language") || "en",
+	languages: ["bg", "en", "fr"],
+	selectedLang: localStorage.getItem("language") || "bg",
 	languageVariants: [],
 	selectedVariant: "default",
 };

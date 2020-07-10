@@ -1,5 +1,6 @@
 {
     "firstPage": {
+                "background": "slide1-background.png",
         "title": "ALWAYS GIVE THE WORLD AND THE PEOPLE AROUND YOU THE BEST YOU CAN AND HAVE ... DESPITE EVERYTHING!",
         "cardsArr": [
             {
@@ -29,6 +30,7 @@
         ]
     },
     "secondPage": {
+                "background": "SecondSlideBackground.png",     
         "small": "We offer",
         "main": "\nInnovative and original business solutions that provide a number of advantages in the formation of competitiveness.",
         "Bold": " ProAct Accounting and Finance EOOD",
@@ -37,6 +39,8 @@
         "Tirth": "Today the company applies its experience, acquires new knowledge and daily proves its qualifications and loyalty to its customers to be able as a consulting company to offer a wide range of services in the field of corporate governance."
     },
     "tirthPage": {
+        "background": "thirdSlideBackground.png",
+
         "cardsArr": [
             {
                 "image": "Accounting _icon1.png",
@@ -65,12 +69,14 @@
         ]
     },
     "fourthPaga": {
+                "background": "FourthSlideBackground.png",
         "partOne": "See job postings on ",
         "partTwo": " or contact us.",
         "link": "https://www.jobs.bg/company/19480",
         "linkText": "www.jobs.bg"
     },
     "fifthPage": {
+                "background": "fifthSlideBackground.png",
         "city": "Sofia",
         "zip": "1421",
         "str": "Krum Popov Street",

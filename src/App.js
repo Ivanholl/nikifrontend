@@ -14,7 +14,7 @@ export default function App() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		let lang = localStorage.getItem("language") || "en";
+		let lang = localStorage.getItem("language") || "bg";
 		dispatch(Actions.getContent(lang));
 		dispatch(Actions.getLanguages());
 		dispatch(Actions.checkIfAuth());

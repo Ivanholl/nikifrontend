@@ -6,6 +6,7 @@ const defaultContent = {
 		menuFour: "Контакти",
 	},
 	firstPage: {
+		background: "slide1-background.png",
 		title:
 			"ВИНАГИ ДАВАЙ НА СВЕТА И ХОРАТА ОКОЛО ТЕБ НАЙ-ДОБРОТО, КОЕТО МОЖЕШ И ИМАШ...ВЪПРЕКИ ВСИЧКО!",
 		cardsArr: [
@@ -36,6 +37,7 @@ const defaultContent = {
 		],
 	},
 	secondPage: {
+		background: "SecondSlideBackground.png",
 		small: "Ние ви предлагаме",
 		main:
 			"Новаторски и оригинални бизнес решения, които дават редица предимства при формиране на конкурентноспособност.",
@@ -48,6 +50,7 @@ const defaultContent = {
 			"Днес фирмата прилага натрупания си опит, придобива нови познания и ежедневно доказва своята квалификация и лоялност към клиентите си, за да може като консултантско дружество да предлага широк спектър услуги в областта на фирменото управление.",
 	},
 	tirthPage: {
+		background: "thirdSlideBackground.png",
 		cardsArr: [
 			{
 				image: "Accounting _icon1.png",
@@ -76,12 +79,14 @@ const defaultContent = {
 		],
 	},
 	fourthPaga: {
+		background: "FourthSlideBackground.png",
 		partOne: "Вижте обявите за работа на",
 		partTwo: "или се свържете с нас.",
 		link: "https://www.jobs.bg/company/19480",
 		linkText: "www.jobs.bg",
 	},
 	fifthPage: {
+		background: "fifthSlideBackground.png",
 		city: "София",
 		zip: "1421",
 		str: "ул. Крум Попов",

@@ -10,7 +10,7 @@ import FifthSlide from './FifthSlide';
 
 import Navbar from '../components/Navbar';
 import SideMenu from '../components/SideMenu';
-{/*import BackToTopBtn from '../components/BackToTopBtn';*/ }
+//import BackToTopBtn from '../components/BackToTopBtn'; 
 
 export default function Layout(props) {
     const [boxToShow, setBoxToShow] = useState(0);

@@ -25,7 +25,8 @@ const mailConfig = (testAccount) => {
 };
 
 const backend = process.env.NODE_ENV === "production" ? '' : 'localhost:9000';
-const languages = ['en', 'bg', 'fr'];
+const languages = ["bg", "en", "fr"];
+const startLanguage = "bg";
 
 module.exports = {
 	mailConfig,

@@ -8,9 +8,10 @@ import {Container} from 'react-bootstrap';
 export default function ThirdSlide() {
     const infos = useSelector((state) => state.contentReducer.tirthPage.cardsArr);
     const menu = useSelector((state) => state.contentReducer.menus.menuTwo);
+    const background = useSelector((state) => state.contentReducer.tirthPage.background); 
 
     return (
-        <div id="services" className="thirdSlide content-slide" >
+        <div id="services" className="thirdSlide content-slide"  style={{backgroundImage: `url(${require(`../images/${background}`)}`}}>
           <Container>
                 <h2>{menu}</h2>
                 <div className="box-contents">
