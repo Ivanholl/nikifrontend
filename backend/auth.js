@@ -1,8 +1,11 @@
 const jwt = require("jsonwebtoken");
+const config = require("dotenv").config();
 
 exports.login = async function (req, res) {
+    const userToCheck = config.parsed.loginuser || "niki";
+    const passToCheck = config.parsed.loginpass || "niki";
     
-    if (!req.body || !req.body.user || !req.body.pass || req.body.user !== 'niki' ||req.body.pass !== 'niki') {  
+    if (!req.body || !req.body.user || !req.body.pass || req.body.user !== userToCheck || req.body.pass !== passToCheck) {  
         res.status(403).send('invalid credentials')
     } 
 		// res.send(true);

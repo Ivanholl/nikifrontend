@@ -1,3 +1,4 @@
+const config = require("dotenv").config();
 
 const mailConfig = (testAccount) => {
     if (process.env.NODE_ENV === 'production') { // all emails are delivered to destination    
@@ -6,8 +7,8 @@ const mailConfig = (testAccount) => {
             port: 587,
             secure: false, //no SSL
             auth: {
-                user: process.env.SMTP.user,
-                pass: process.env.SMTP.pass
+                user: config.parsed.SMTPuser,
+                pass: config.parsed.SMTPpass,
             }
         };
     } else { // all emails are catched by ethereal.email    
@@ -25,7 +26,6 @@ const mailConfig = (testAccount) => {
 
 const backend = process.env.NODE_ENV === "production" ? '' : 'localhost:9000';
 const languages = ['en', 'bg', 'fr'];
-
 
 module.exports = {
 	mailConfig,
