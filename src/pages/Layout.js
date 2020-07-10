@@ -9,8 +9,8 @@ import FourthSlide from './FourthSlide';
 import FifthSlide from './FifthSlide';
 
 import Navbar from '../components/Navbar';
-import BackToTopBtn from '../components/BackToTopBtn';
 import SideMenu from '../components/SideMenu';
+{/*import BackToTopBtn from '../components/BackToTopBtn';*/ }
 
 export default function Layout(props) {
     const [boxToShow, setBoxToShow] = useState(0);
@@ -47,7 +47,7 @@ export default function Layout(props) {
 				</FullPage>
 			</div>
 
-			<BackToTopBtn setBoxToShow={(id) => setBoxToShow(id)} />
+            {/*<BackToTopBtn setBoxToShow={(id) => setBoxToShow(id)} />*/}
 		</>
 	);
 }
