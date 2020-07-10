@@ -11,4 +11,14 @@ Inside you can define a port as well and SMTP server credentials.
 
 And start the project:
 ### `npm start`
+go to /secretLogin for logging in
+
+## Development
+
+For development you need two terminals
+to start the react-app run:
+### `npm run dev` 
+
+To start the node backend i recomment installing nodemon as it will watch files for changes and autorecompile the same way as react-scripts do.
+### `nodemon index.js` or `node index.js`
 
