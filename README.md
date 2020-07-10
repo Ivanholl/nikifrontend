@@ -1,15 +1,14 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## For Deployment
 
-## Available Scripts
+Install Node.js and npm. Clone the git repository. Open terminal in same directory and install dependencies:
+### `npm install`
 
-In the project directory, you can run:
+For production build run:
+### `npm run build`
 
-### `yarn start`
+Create .env file based on example.env with Google maps API Key. There you must configure login for the admin panel as we don't use database for such a small amount of data.
+Inside you can define a port as well and SMTP server credentials. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+And start the project:
+### `npm start`
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
