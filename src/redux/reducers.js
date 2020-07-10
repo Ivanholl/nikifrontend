@@ -53,6 +53,12 @@ function userReducer(state = initialState, action) {
 
 
 const initialContent = {
+	menus: {
+		menuOne: defaultContent.menus.menuOne || "",
+		menuTwo: defaultContent.menus.menuTwo || "",
+		menuThree: defaultContent.menus.menuThree || "",
+		menuFour: defaultContent.menus.menuFour || "",
+	},
 	firstPage: {
 		title: defaultContent.firstPage.title || "",
 		cardsArr: defaultContent.firstPage.cardsArr || [],
@@ -69,7 +75,10 @@ const initialContent = {
 		cardsArr: defaultContent.tirthPage.cardsArr || "",
 	},
 	fourthPaga: {
-		title: defaultContent.fourthPaga.title || ""
+		partOne: defaultContent.fourthPaga.partOne || "",
+		partTwo: defaultContent.fourthPaga.partTwo || "",
+		link: defaultContent.fourthPaga.link || "",
+		linkText: defaultContent.fourthPaga.linkText || "",
 	},
 	fifthPage: {
 		city: defaultContent.fifthPage.city || "",
@@ -81,16 +90,28 @@ const initialContent = {
 		phoneOne: defaultContent.fifthPage.phoneOne || "",
 		phoneTwo: defaultContent.fifthPage.phoneTwo || "",
 		phoneThree: defaultContent.fifthPage.phoneThree || "",
+		showOnMap: defaultContent.fifthPage.showOnMap || "",
+		mapCoordinatesLong: defaultContent.fifthPage.mapCoordinatesLong || "",
+		mapCoordinatesLat: defaultContent.fifthPage.mapCoordinatesLat || "",
+		formFields: {
+			title: defaultContent.fifthPage.formFields.title || "",
+			name: defaultContent.fifthPage.formFields.name || "",
+			phone: defaultContent.fifthPage.formFields.phone || "",
+			email: defaultContent.fifthPage.formFields.email || "",
+			msg: defaultContent.fifthPage.formFields.msg || "",
+			error: defaultContent.fifthPage.formFields.error || "",
+			send: defaultContent.fifthPage.formFields.send || "",
+		},
 	},
-	languages: ['en'],
-	selectedLang: localStorage.getItem('language') || 'en',
+	languages: ["en"],
+	selectedLang: localStorage.getItem("language") || "en",
 	languageVariants: [],
-	selectedVariant: 'default'
+	selectedVariant: "default",
 };
 
 function contentReducer(state = initialContent, action) {
     switch (action.type) {
-		case SET_CONTENT:
+		case SET_CONTENT:			
 			let temp = { ...state, ...action.content };
 			return temp;
 		case SET_LANGUAGES:

@@ -5,6 +5,7 @@ const cors = require("cors");
 
 const Mailer = require('./backend/Mailer');
 const ContentManager = require('./backend/ContentManager');
+const auth = require("./backend/auth");
 const conf = require('./conf.js');
 
 const app = express();
@@ -31,11 +32,12 @@ app.get('/getLanguages', (req, res) => {
     res.send(conf.languages);
 });
 
-app.get('/content', ContentManager.content );
-app.get("/getAllVariants", ContentManager.getAllVariants);
-app.post('/editContent', ContentManager.editContent);
-app.post("/editContentVariant", ContentManager.editContentVariant);
-;
+app.get("/content", ContentManager.content);
+app.get("/getAllVariants", auth.checkToken, ContentManager.getAllVariants);
+app.post("/editContent", auth.checkToken, ContentManager.editContent);
+app.post("/editContentVariant", auth.checkToken,  ContentManager.editContentVariant);
+app.post("/login", auth.login);
+app.get("/me", auth.checkToken, auth.me);
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '/build', 'index.html'));
@@ -43,7 +45,6 @@ app.get('/', (req, res) => {
 app.get("/secretLogin", (req, res) => {
 	res.sendFile(path.join(__dirname, "/build", "index.html"));
 });
-
 
 app.listen(port);
 

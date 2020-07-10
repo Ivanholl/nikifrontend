@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {FullPage, Slide} from 'react-full-page';
+import { useSelector } from "react-redux";
 
 import FirstSlide from './FirstSlide';
 import SecondSlide from './SecondSlide';
@@ -14,10 +15,13 @@ import SideMenu from '../components/SideMenu';
 export default function Layout(props) {
     const [boxToShow, setBoxToShow] = useState(0);
     const [openMenu, setOpenMenu] = useState(false);
+    const isAuthenticated = useSelector((state) => state.userReducer.isAuthenticated);
 
     return (
 		<>
-			<SideMenu openMenu={openMenu} setOpenMenu={setOpenMenu} boxToShow={boxToShow}/>
+            {isAuthenticated &&
+                <SideMenu openMenu={openMenu} setOpenMenu={setOpenMenu} boxToShow={boxToShow}/>
+            }
 			<Navbar setBoxToShow={(id) => setBoxToShow(id)} />
 			<div className={openMenu ? "fullpage" : ""}>
 				<FullPage

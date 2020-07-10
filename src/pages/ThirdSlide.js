@@ -6,12 +6,13 @@ import {Container} from 'react-bootstrap';
 
 
 export default function ThirdSlide() {
-  const infos = useSelector((state) => state.contentReducer.tirthPage.cardsArr);
+    const infos = useSelector((state) => state.contentReducer.tirthPage.cardsArr);
+    const menu = useSelector((state) => state.contentReducer.menus.menuTwo);
 
     return (
         <div id="services" className="thirdSlide content-slide" >
           <Container>
-            <h2>УСЛУГИ</h2>
+                <h2>{menu}</h2>
                 <div className="box-contents">
                 {
                      infos.map((item, index) => {

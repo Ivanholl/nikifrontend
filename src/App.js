@@ -17,6 +17,7 @@ export default function App() {
 		let lang = localStorage.getItem("language") || "en";
 		dispatch(Actions.getContent(lang));
 		dispatch(Actions.getLanguages());
+		dispatch(Actions.checkIfAuth());
 	});
 	
 	return (

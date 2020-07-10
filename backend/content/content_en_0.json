@@ -1,70 +1,103 @@
 {
-	"firstPage": {
-		"title": "ALWAYS GIVE THE WORLD AND THE PEOPLE AROUND YOU THE BEST YOU CAN AND HAVE ... DESPITE EVERYTHING!",
-		"cardsArr": [
-			{ "image": "Accounting _icon1.png", "text": "Accounting services" },
-			{
-				"image": "Accounting _icon2.png",
-				"text": "Preparation of salaries"
-			},
-			{
-				"image": "Accounting _icon3.png",
-				"text": "Management reporting and budgets"
-			},
-			{
-				"image": "Accounting _icon4.png",
-				"text": "Financial and tax analysis"
-			},
-			{ "image": "Accounting _icon5.png", "text": "Asset management" },
-			{ "image": "Accounting _icon6.png", "text": "Corporate growth" }
-		]
-	},
-	"secondPage": {
-		"small": "We offer",
-		"main": "Новаторски и оригинални бизнес решения, които дават редица предимства при формиране на конкурентноспособност.",
-		"Bold": "ПроАкт Акаунтинг енд Файненс ЕООД",
-		"First": "е една от утвърдилите се компании в България, предоставяща външни услуги в областта на фирмено управление, финансово-счетоводни услуги, подбор и управление на персонал, правни и данъчни консултации. Компанията осигурява новаторски и оригинални бизнес решения, които дават на клиентите редица предимства при формиране на тяхната конкурентноспособност.",
-		"Second": "ПроАкт е учредена през 2000 година от специалисти с дългогодишен опит в изучаването и прилагането на правила и принципи на фирменото управление. Първоначално компанията се занимава със счетоводно обслужване и други административни услуги, свързани с нормалното функциониране на една фирма, но от създаването до сега непрекъснато се развива и расте.",
-		"Tirth": "Днес фирмата прилага натрупания си опит, придобива нови познания и ежедневно доказва своята квалификация и лоялност към клиентите си, за да може като консултантско дружество да предлага широк спектър услуги в областта на фирменото управление."
-	},
-	"tirthPage": {
-		"cardsArr": [
-			{
-				"image": "Accounting _icon1.png",
-				"text": "Счетоводно обслужване"
-			},
-			{
-				"image": "Accounting _icon2.png",
-				"text": "Изготвяне на заплати"
-			},
-			{
-				"image": "Accounting _icon3.png",
-				"text": "Управленска отчетност и бюджети"
-			},
-			{
-				"image": "Accounting _icon4.png",
-				"text": "Финансов и данъчен анализ"
-			},
-			{
-				"image": "Accounting _icon5.png",
-				"text": "Управление на активи"
-			},
-			{ "image": "Accounting _icon6.png", "text": "Корпоративен растеж" }
-		]
-	},
-	"fourthPaga": {
-		"title": "Вижте обявите за работа на www.jobs.bg или се свържете с нас."
-	},
-	"fifthPage": {
-		"city": "София",
-		"zip": "1421",
-		"str": "ул. Крум Попов",
-		"number": "44",
-		"building": "",
-		"floor": "етаж 1",
-		"phoneOne": "",
-		"phoneTwo": "+359 2 963 08 81",
-		"phoneThree": "+359 896 720 616"
-	},
-	"lang": "en"
+    "firstPage": {
+        "title": "ALWAYS GIVE THE WORLD AND THE PEOPLE AROUND YOU THE BEST YOU CAN AND HAVE ... DESPITE EVERYTHING!",
+        "cardsArr": [
+            {
+                "image": "Accounting _icon1.png",
+                "text": "Accounting services"
+            },
+            {
+                "image": "Accounting _icon2.png",
+                "text": "Preparation of salaries"
+            },
+            {
+                "image": "Accounting _icon3.png",
+                "text": "Management reporting and budgets"
+            },
+            {
+                "image": "Accounting _icon4.png",
+                "text": "Financial and tax analysis"
+            },
+            {
+                "image": "Accounting _icon5.png",
+                "text": "Asset management"
+            },
+            {
+                "image": "Accounting _icon6.png",
+                "text": "Corporate growth"
+            }
+        ]
+    },
+    "secondPage": {
+        "small": "We offer",
+        "main": "\nInnovative and original business solutions that provide a number of advantages in the formation of competitiveness.",
+        "Bold": " ProAct Accounting and Finance EOOD",
+        "First": "\nis one of the established companies in Bulgaria, providing external services in the field of corporate governance, financial and accounting services, selection and management of personnel, legal and tax consulting. The company provides innovative and original business solutions that give customers a number of advantages in shaping their competitiveness.",
+        "Second": "\nProAct was established in 2000 by specialists with many years of experience in studying and applying rules and principles of corporate governance. Initially, the company deals with accounting services and other administrative services related to the normal functioning of a company, but since its inception it has been constantly developing and growing.",
+        "Tirth": "Today the company applies its experience, acquires new knowledge and daily proves its qualifications and loyalty to its customers to be able as a consulting company to offer a wide range of services in the field of corporate governance."
+    },
+    "tirthPage": {
+        "cardsArr": [
+            {
+                "image": "Accounting _icon1.png",
+                "text": " Accounting services"
+            },
+            {
+                "image": "Accounting _icon2.png",
+                "text": " Preparation of salaries"
+            },
+            {
+                "image": "Accounting _icon3.png",
+                "text": " Management reporting and budgets"
+            },
+            {
+                "image": "Accounting _icon4.png",
+                "text": "Financial and tax analysis"
+            },
+            {
+                "image": "Accounting _icon5.png",
+                "text": " Asset management"
+            },
+            {
+                "image": "Accounting _icon6.png",
+                "text": "Corporate growth"
+            }
+        ]
+    },
+    "fourthPaga": {
+        "partOne": "See job postings on ",
+        "partTwo": " or contact us.",
+        "link": "https://www.jobs.bg/company/19480",
+        "linkText": "www.jobs.bg"
+    },
+    "fifthPage": {
+        "city": "Sofia",
+        "zip": "1421",
+        "str": "Krum Popov Street",
+        "number": "44",
+        "building": "",
+        "floor": "floor 1",
+        "phoneOne": "",
+        "phoneTwo": "+359 2 963 08 81",
+        "phoneThree": "+359 896 720 616",
+        "showOnMap": " SHOW ON MAP",
+        "mapCoordinatesLong": "23.3240",
+        "mapCoordinatesLat": "42.6812",
+        "formFields": {
+            "title": "Contant Us:",
+            "name": "Name",
+            "phone": "Phone",
+            "email": "E-mail",
+            "msg": "Message",
+            "error": "Please fill all fields",
+            "send": "SEND"
+        }
+    },
+    "lang": "en",
+    "menus": {
+        "menuOne": "About us",
+        "menuTwo": "Services",
+        "menuThree": "Careers",
+        "menuFour": "Contacts"
+    }
 }

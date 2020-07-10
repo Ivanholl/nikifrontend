@@ -9,11 +9,13 @@ export default function SecondSlide() {
     const First = useSelector((state) => state.contentReducer.secondPage.First);
     const Second = useSelector((state) => state.contentReducer.secondPage.Second);
     const Tirth = useSelector((state) => state.contentReducer.secondPage.Tirth);
+    const menu = useSelector((state) => state.contentReducer.menus.menuOne);
     
     return (<div id="about" className="secondSlide content-slide">
         <Container>
-            <h2>ЗА
-                <span> НАС</span>
+            <h2>
+                {menu}
+                {/* <span> НАС</span> */}
             </h2>
         </Container>
         <Container className="second-container">

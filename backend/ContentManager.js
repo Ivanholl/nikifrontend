@@ -61,10 +61,9 @@ exports.editContentVariant = async (req, res) => {
 
 
 exports.editContent = async function (req, res) {
-    console.log(req.body);
-    let lang = req.body.lang;
-    // let parsedUrl = url.parse(req.url, true);
-    // let lang = parsedUrl.query.lang;
+    
+    let parsedUrl = url.parse(req.url, true);
+    let lang = parsedUrl.query.lang;
 
     if (!lang) {
         res.send("No language Sent");
@@ -72,8 +71,8 @@ exports.editContent = async function (req, res) {
     }
 
     // let url = __dirname + `/content/content_${lang}.json`;
-    let url = contentDir + `/content_${lang}_0.json`;
+    let urlFile = contentDir + `/content_${lang}_0.json`;
 
-    let temp = await setContentJson(req.body, url);
+    let temp = await setContentJson(req.body, urlFile);
     res.send(temp);
 };

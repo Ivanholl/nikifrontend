@@ -9,6 +9,7 @@ import * as Actions from '../redux/actions';
 export default function Navbar(props) {
     const dispatch = useDispatch();
     const languages = useSelector((state) => state.contentReducer.languages);
+    const menus = useSelector((state) => state.contentReducer.menus);
     const selectedLang = useSelector((state) => state.contentReducer.selectedLang);
 
     function handleClick(num) {        
@@ -20,23 +21,23 @@ export default function Navbar(props) {
         <Nav activeKey="/home" >
             <div className="main-menu">
                 <Nav.Item>
-                    <Nav.Link href="#about" onClick={() => handleClick(1)}>За Нас</Nav.Link>
+                    <Nav.Link href="#about" onClick={() => handleClick(1)}>{menus.menuOne}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#services" onClick={() => handleClick(2)}>Услуги</Nav.Link>
+                    <Nav.Link href="#services" onClick={() => handleClick(2)}>{menus.menuTwo}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#jobs" onClick={() => handleClick(3)}>Кариери</Nav.Link>
+                <Nav.Link href="#jobs" onClick={() => handleClick(3)}>{menus.menuThree}</Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#contacts" onClick={() => handleClick(4)}>Контакти</Nav.Link>
+                <Nav.Link href="#contacts" onClick={() => handleClick(4)}>{menus.menuFour}</Nav.Link>
                 </Nav.Item>
             </div>
-            <div className="outsorce">
-                {/* <Nav.Item>
+            {/* <div className="outsorce">
+                <Nav.Item>
                     <Nav.Link eventKey="link-4">Комуникатор</Nav.Link>
-                </Nav.Item>*/}
-            </div>
+                </Nav.Item>
+            </div> */}
             {/* <div className="lang">
                 <p key={index}><a href="/">{lang}</a></p>
             </div> */}
