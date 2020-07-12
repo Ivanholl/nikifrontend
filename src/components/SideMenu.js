@@ -244,7 +244,7 @@ export default function SideMenu(props) {
 				className="open-menu"
 				onClick={() => props.setOpenMenu(!props.openMenu)}
 			>
-				{" > "}
+				{""}
 			</button>
 			<div className="form-container">
 				<p>Get Specific Variant</p>

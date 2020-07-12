@@ -35,8 +35,18 @@
 }
 body {
     background-color: #030a2b !important;
-    font-family:'Geometria';
+    font-family: 'Geometria';
     transition: 0.6s;
+
+    button {
+        box-shadow: none;
+        outline: none;
+
+        &:active, &:focus {
+            box-shadow: none !important;
+            outline: none;
+        }
+    }
 
     h2 {
         color: #fff;
@@ -98,6 +108,12 @@ body {
         justify-content: center;
         z-index: 99;
 
+        .input-group-prepend {
+            button {
+                border-radius: 5px;
+            }
+        }
+
         .btn-primary {
             color: #fff;
             background-color: #030A2B;
@@ -128,7 +144,7 @@ body {
 
         .btn-warning {
             color: #212529;
-            margin-left:2px;
+            margin-left: 2px;
             background-color: #f15d53;
             border: none;
             color: #fff;
@@ -140,7 +156,7 @@ body {
                 outline: 0;
                 border: none;
                 background-color: #f15d53;
-                color:#fff;
+                color: #fff;
             }
         }
 
@@ -157,16 +173,26 @@ body {
         }
 
         .open-menu {
-            border: 2px solid red;
-            border-radius: 50%;
+            background-image: url('../images/back-to-top-btn.png');
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            background-repeat:no-repeat;
+            background-size: contain;
             background-color: transparent;
-            color: white;
+            border: none;
             width: 3vw;
             height: 3vw;
             text-align: right;
             align-self: flex-end;
             margin-right: -1.5vw;
             z-index: 1;
+
+            .dropdown-item {
+                text-transform: uppercase;
+            }
         }
 
         .form-container {
@@ -244,6 +270,13 @@ body {
         .lang {
             button {
                 text-transform: uppercase;
+                margin-bottom: -1vw;
+
+                &:active {
+                    background-color: transparent;
+                    border-color: transparent;
+                    box-shadow: none;
+                }
             }
 
             div {
@@ -356,7 +389,7 @@ body {
     p {
         color: #fff;
         text-align: left;
-        margin-bottom: 3vw;
+        margin-bottom: 2vw;
     }
     .right-side {
         width: 40%;

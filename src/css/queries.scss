@@ -93,6 +93,14 @@ $mediaMobile: 640px;
             }
         }
     }
+   .App .side-menu-container.opened {
+        width: 80vw !important;
+    }
+    .App .side-menu-container .open-menu {
+        width: 8vw !important;
+        height: 8vw !important;
+        margin-right: -3.5vw !important;
+    }
     body .firstSlide {
         background-position: initial;
         background-size: 100vw;
@@ -183,6 +191,18 @@ $mediaMobile: 640px;
         }
         .nav {
             display: none;
+        }
+    }
+    .App .side-menu-container .open-menu {
+        width: 18vw !important;
+        height: 18vw !important;
+        margin-right: -8.5vw !important;
+    }
+    .App .side-menu-container.opened {
+        width: 96vw !important;
+
+        h3 {
+            display: block;
         }
     }
     body .firstSlide {
