@@ -9,25 +9,36 @@
 		        "background": "slide1-background.png",
 		"title": "AND THE PEOPLE AROUND YOU THE BEST YOU CAN AND HAVE ... DESPITE EVERYTHING!",
 		"cardsArr": [
-			{ "image": "Accounting _icon1.png", "text": "Accounting services" },
+			{ "image": "Accounting _icon1.png", "title": "Accounting services" },
 			{
 				"image": "Accounting _icon2.png",
-				"text": "Preparation of salaries"
+				"title": "Preparation of salaries",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon3.png",
-				"text": "Management reporting and budgets"
+				"title": "Management reporting and budgets",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon4.png",
-				"text": "Financial and tax analysis"
+				"title": "Financial and tax analysis",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
-			{ "image": "Accounting _icon5.png", "text": "Asset management" },
-			{ "image": "Accounting _icon6.png", "text": "Corporate growth" }
+			{
+				"image": "Accounting _icon5.png",
+				 "title": "Asset management" ,
+ 				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+			},
+			{
+				 "image": "Accounting _icon6.png",
+				  "title": "Corporate growth",
+  				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+			 }
 		]
 	},
 	"secondPage": {
-		        "background": "SecondSlideBackground.png",     
+		        "background": "SecondSlideBackground.png",
 		"small": "We offer",
 		"main": "Новаторски и оригинални бизнес решения, които дават редица предимства при формиране на конкурентноспособност.",
 		"Bold": "ПроАкт Акаунтинг енд Файненс ЕООД",
@@ -41,25 +52,25 @@
 		"cardsArr": [
 			{
 				"image": "Accounting _icon1.png",
-				"text": "Счетоводно обслужване"
+				"title": "Счетоводно обслужване"
 			},
 			{
 				"image": "Accounting _icon2.png",
-				"text": "Изготвяне на заплати"
+				"title": "Изготвяне на заплати"
 			},
 			{
 				"image": "Accounting _icon3.png",
-				"text": "Управленска отчетност и бюджети"
+				"title": "Управленска отчетност и бюджети"
 			},
 			{
 				"image": "Accounting _icon4.png",
-				"text": "Финансов и данъчен анализ"
+				"title": "Финансов и данъчен анализ"
 			},
 			{
 				"image": "Accounting _icon5.png",
-				"text": "Управление на активи"
+				"title": "Управление на активи"
 			},
-			{ "image": "Accounting _icon6.png", "text": "Корпоративен растеж" }
+			{ "image": "Accounting _icon6.png", "title": "Корпоративен растеж" }
 		]
 	},
 	"fourthPaga": {

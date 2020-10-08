@@ -23,7 +23,6 @@ export default function Layout(props) {
 
     function handleScroll () {
         document.addEventListener('keydown', (e) => {
-            debugger
             //down and right
             if (e.keyCode === 40 || e.keyCode === 39) {
                 e.preventDefault();

@@ -108,6 +108,10 @@ body {
         justify-content: center;
         z-index: 99;
 
+        .accordion textarea {
+            height: 7vw;
+        }
+
         .input-group-prepend {
             button {
                 border-radius: 5px;

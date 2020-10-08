@@ -8,7 +8,7 @@ import {Container} from 'react-bootstrap';
 export default function ThirdSlide() {
     const infos = useSelector((state) => state.contentReducer.tirthPage.cardsArr);
     const menu = useSelector((state) => state.contentReducer.menus.menuTwo);
-    const background = useSelector((state) => state.contentReducer.tirthPage.background); 
+    const background = useSelector((state) => state.contentReducer.tirthPage.background);
 
     return (
         <div id="services" className="thirdSlide content-slide"  style={{backgroundImage: `url(${require(`../images/${background}`)}`}}>
@@ -17,7 +17,7 @@ export default function ThirdSlide() {
                 <div className="box-contents">
                 {
                      infos.map((item, index) => {
-                         return (<InfoBox key={index} image={item.image} text={item.text}  timer={(index + 1) * 100}/>)
+                         return (<InfoBox key={index} image={item.image} text={item.text} title={item.title} timer={(index + 1) * 100}/>)
                     })
                  }
                </div>

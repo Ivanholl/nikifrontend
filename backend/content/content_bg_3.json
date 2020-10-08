@@ -12,32 +12,38 @@
 		"cardsArr": [
 			{
 				"image": "Accounting _icon1.png",
-				"text": "Счетоводно обслужване"
+				"title": "Счетоводно обслужване",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon2.png",
-				"text": "Изготвяне на заплати"
+				"title": "Изготвяне на заплати",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon3.png",
-				"text": "Управленска отчетност и бюджети"
+				"title": "Управленска отчетност и бюджети",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon4.png",
-				"text": "Финансов и данъчен анализ"
+				"title": "Финансов и данъчен анализ",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon5.png",
-				"text": "Управление на активи"
+				"title": "Управление на активи",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon6.png",
-				"text": "Корпоративен растеж"
+				"title": "Корпоративен растеж",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			}
 		]
 	},
 	"secondPage": {
-		        "background": "SecondSlideBackground.png",     
+		        "background": "SecondSlideBackground.png",
 		"small": "Ние ви предлагаме",
 		"main": "Новаторски и оригинални бизнес решения, които дават редица предимства при формиране на конкурентноспособност.",
 		"Bold": "ПроАкт Акаунтинг енд Файненс ЕООД",
@@ -51,27 +57,33 @@
 		"cardsArr": [
 			{
 				"image": "Accounting _icon1.png",
-				"text": "Счетоводно обслужване"
+				"title": "Счетоводно обслужване",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon2.png",
-				"text": "Изготвяне на заплати"
+				"title": "Изготвяне на заплати",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon3.png",
-				"text": "Управленска отчетност и бюджети"
+				"title": "Управленска отчетност и бюджети",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon4.png",
-				"text": "Финансов и данъчен анализ"
+				"title": "Финансов и данъчен анализ",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon5.png",
-				"text": "Управление на активи"
+				"title": "Управление на активи",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			},
 			{
 				"image": "Accounting _icon6.png",
-				"text": "Корпоративен растеж"
+				"title": "Корпоративен растеж",
+				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
 			}
 		]
 	},
