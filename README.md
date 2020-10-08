@@ -7,7 +7,7 @@ For production build run:
 ### `npm run build`
 
 Create .env file based on example.env with Google maps API Key. There you must configure login for the admin panel as we don't use database for such a small amount of data.
-Inside you can define a port as well and SMTP server credentials. 
+Inside you can define a port as well and SMTP server credentials.
 
 And start the project:
 ### `npm start`
@@ -17,8 +17,7 @@ go to /secretLogin for logging in
 
 For development you need two terminals
 to start the react-app run:
-### `npm run dev` 
+### `npm run dev`
 
-To start the node backend i recomment installing nodemon as it will watch files for changes and autorecompile the same way as react-scripts do.
+To start the node backend I recommend installing nodemon as it will watch files for changes and auto recompile the same way as react-scripts do.
 ### `nodemon index.js` or `node index.js`
-

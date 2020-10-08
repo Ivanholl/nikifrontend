@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {FullPage, Slide} from 'react-full-page';
 import { useSelector } from "react-redux";
 
@@ -10,12 +10,38 @@ import FifthSlide from './FifthSlide';
 
 import Navbar from '../components/Navbar';
 import SideMenu from '../components/SideMenu';
-//import BackToTopBtn from '../components/BackToTopBtn'; 
+//import BackToTopBtn from '../components/BackToTopBtn';
 
 export default function Layout(props) {
     const [boxToShow, setBoxToShow] = useState(0);
     const [openMenu, setOpenMenu] = useState(false);
     const isAuthenticated = useSelector((state) => state.userReducer.isAuthenticated);
+
+    useEffect(() => {
+        handleScroll()
+    });
+
+    function handleScroll () {
+        document.addEventListener('keydown', (e) => {
+            debugger
+            //down and right
+            if (e.keyCode === 40 || e.keyCode === 39) {
+                e.preventDefault();
+                var elm = document.getElementsByTagName("body")[0];
+                var e=document.createEvent("MouseEvents");
+                e.initMouseEvent('wheel' ,true,true, window,120,0,0,0,0,0,0,0,0,0,null);
+                elm.dispatchEvent(e);
+
+                //up and left
+            } else if (e.keyCode === 38 || e.keyCode === 37) {
+                e.preventDefault();
+                var elm = document.getElementsByTagName("body")[0];
+                var e=document.createEvent("MouseEvents");
+                e.initMouseEvent('wheel' ,true,true, window, 0, 120,0,0,0,0,0,0,0,0,null);
+                elm.dispatchEvent(e);
+            }
+        });
+    }
 
     return (
 		<>

@@ -9,7 +9,6 @@
 /coverage
 
 # production
-.env
 /build
 /src/css/*.css
 /src/css/*.css.map
