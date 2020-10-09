@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Modal } from 'react-bootstrap';
+import parseHtml from 'html-react-parser';
 
 export default function ContentModal(props) {
 
@@ -16,9 +17,9 @@ export default function ContentModal(props) {
                 </Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <p>
-                    {props.text}
-                </p>
+                {
+                    parseHtml(props.text)
+                }
             </Modal.Body>
         </Modal>
     );

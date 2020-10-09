@@ -24,7 +24,7 @@ export default function Layout(props) {
     function handleScroll () {
         document.addEventListener('keydown', (e) => {
             //down and right
-            if (e.keyCode === 40 || e.keyCode === 39) {
+            if (e.keyCode === 40) {
                 e.preventDefault();
                 var elm = document.getElementsByTagName("body")[0];
                 var e=document.createEvent("MouseEvents");
@@ -32,7 +32,7 @@ export default function Layout(props) {
                 elm.dispatchEvent(e);
 
                 //up and left
-            } else if (e.keyCode === 38 || e.keyCode === 37) {
+            } else if (e.keyCode === 38) {
                 e.preventDefault();
                 var elm = document.getElementsByTagName("body")[0];
                 var e=document.createEvent("MouseEvents");

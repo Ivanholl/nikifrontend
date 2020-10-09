@@ -1,9 +1,11 @@
-import React, { useEffect } from "react";
+import React, { Component, useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import * as Actions from '../redux/actions';
-
 import {InputGroup, FormControl, Dropdown, DropdownButton, Button, Card, Accordion } from 'react-bootstrap';
+
+import TextEditor from './TextEditor'
+
 var images = [];
 
 export default function SideMenu(props) {
@@ -13,6 +15,7 @@ export default function SideMenu(props) {
     const selectedLang = useSelector((state) => state.contentReducer.selectedLang);
     const languages = useSelector((state) => state.contentReducer.languages);
     const selectedVariant = useSelector((state) => state.contentReducer.selectedVariant);
+
 
     function getFullPageArr(array, val, key, index) {
 		let arr = [...array];
@@ -66,9 +69,10 @@ export default function SideMenu(props) {
                                     )}
                                 </DropdownButton>
                             </InputGroup>
-                            <FormControl as="textarea" value={item.text}  placeholder="infocard opened text"
+                            {/*}<FormControl as="textarea" value={item.text} placeholder="infocard opened text"
                                 onChange={(event) => dispatch({ type: "SET_CONTENT", content: { firstPage: { ...allContent.firstPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'text', index) } } }) }
-                            />
+                            />*/}
+                            <TextEditor text={item.text} handleOnChange={(outputText) => dispatch({ type: "SET_CONTENT", content: { firstPage: { ...allContent.firstPage, cardsArr: getFullPageArr(arrayToMap, outputText, 'text', index) } } })}/>
                             </>
                         </Accordion.Collapse>
                     </Card>
@@ -113,8 +117,8 @@ export default function SideMenu(props) {
                             <>
                             <InputGroup className="w-100 mb-1" >
                                 <FormControl
-                                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'text', index) } } })}
-                                    value={item.text}   placeholder="content"
+                                    onChange={(event) => dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'title', index) } } })}
+                                    value={item.title}   placeholder="content"
                                 />
                                 <DropdownButton  title={item.image}  as={InputGroup.Prepend}
                                     onSelect={(e) => dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, e, 'image', index) } } })}
@@ -124,9 +128,10 @@ export default function SideMenu(props) {
                                     )}
                                 </DropdownButton>
                             </InputGroup>
-                            <FormControl as="textarea" value={item.text}  placeholder="infocard opened text"
-                                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'text', index) } } }) }
-                            />
+                            {/*<FormControl as="textarea" value={item.text}  placeholder="infocard opened text"
+                                onChange={(event) =>  dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'text', index) } } })}
+                            />*/}
+                            <TextEditor text={item.text} handleOnChange={(outputText) =>  dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, outputText, 'text', index) } } }) }/>
                             </>
                         </Accordion.Collapse>
                     </Card>
@@ -148,6 +153,8 @@ export default function SideMenu(props) {
             <FormControl value={allContent.fourthPaga.linkText}   placeholder="text"
                 onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, linkText: event.target.value }} }) }
             />
+
+
         </>)
     }
     function fifthPageFields () {

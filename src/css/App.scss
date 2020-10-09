@@ -108,8 +108,15 @@ body {
         justify-content: center;
         z-index: 99;
 
-        .accordion textarea {
-            height: 7vw;
+        .accordion {
+            textarea {
+                height: 7vw;
+            }
+
+            .rdw-editor-wrapper {
+                overflow-y: scroll;
+                max-height: 50vh;
+            }
         }
 
         .input-group-prepend {

@@ -882,6 +882,10 @@ body a:active, body a:focus, body a:hover {
 .App .side-menu-container .accordion textarea {
   height: 7vw;
 }
+.App .side-menu-container .accordion .rdw-editor-wrapper {
+  overflow-y: scroll;
+  max-height: 50vh;
+}
 .App .side-menu-container .input-group-prepend button {
   border-radius: 5px;
 }
