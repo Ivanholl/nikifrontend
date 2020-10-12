@@ -52,6 +52,7 @@ const initialContent = {
 		First: defaultContent.secondPage.First || "",
 		Second: defaultContent.secondPage.Second || "",
 		Tirth: defaultContent.secondPage.Tirth || "",
+		content: defaultContent.secondPage.content || "",
 	},
 	tirthPage: {
 		background: defaultContent.tirthPage.background || "",
@@ -96,7 +97,7 @@ const initialContent = {
 
 function contentReducer(state = initialContent, action) {
     switch (action.type) {
-		case SET_CONTENT:			
+		case SET_CONTENT:
 			let temp = { ...state, ...action.content };
 			return temp;
 		case SET_LANGUAGES:
