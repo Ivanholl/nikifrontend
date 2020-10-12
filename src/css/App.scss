@@ -7,6 +7,7 @@
     font-family: 'Geometria';
     src: url('../fonts/Geometria.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'Geometria-Bold';
     src: url('../fonts/Geometria-Bold.otf') format('opentype');
@@ -254,6 +255,7 @@ body {
         }
     }
 }
+
 .App.MenuOpened {
     width: 130vw !important;
     .side-menu-container {

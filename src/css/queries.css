@@ -183,9 +183,11 @@
   }
 
   .App .side-menu-container.opened {
-    width: 94vw !important hr;
-    width-margin-top: 0.25rem;
-    width-margin-bottom: 0.25rem;
+    width: 94vw !important;
+  }
+  .App .side-menu-container.opened hr {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
   }
   .App .side-menu-container.opened .accordion > .card > .card-header {
     padding: 0.2rem;
@@ -207,7 +209,7 @@
     justify-content: space-evenly;
   }
   body .firstSlide .box-contents .box {
-    width: 26vw;
+    width: 40vw;
   }
 
   body .secondSlide {
@@ -329,6 +331,48 @@ body .fifthSlide .contact-info .contact-map .left-side .phones p {
   body .back-to-top img {
     height: 12vw;
     width: 12vw;
+  }
+}
+@media (max-width: 400px) {
+  .App .side-menu-container .open-menu {
+    width: 14vw !important;
+    height: 14vw !important;
+    margin-right: 0vw !important;
+    right: -9vw;
+    position: absolute;
+  }
+  .App .side-menu-container .form-container {
+    margin: 0.3rem !important;
+  }
+  .App .side-menu-container .form-container .mb-3, .App .side-menu-container .form-container .my-3 {
+    margin-bottom: 0.3rem !important;
+  }
+
+  .App .side-menu-container.opened {
+    margin-top: -1rem !important;
+    padding: 0.3rem !important;
+  }
+
+  body .secondSlide .container.second-container .about-text {
+    overflow: hidden;
+    flex-direction: column;
+  }
+  body .secondSlide .container.second-container .about-text .right-side {
+    font-size: 1em;
+    line-height: 1rem;
+  }
+  body .secondSlide .container.second-container .about-text .right-side p span {
+    line-height: 1rem;
+    font-size: 1em;
+  }
+  body .secondSlide .container.second-container .about-text .left-side {
+    line-height: 1rem;
+    min-height: 24%;
+    font-size: 1em;
+  }
+  body .secondSlide .container.second-container .about-text .left-side p span {
+    line-height: 1rem;
+    font-size: 1em;
   }
 }
 
