@@ -197,12 +197,24 @@ $mediaMobile: 640px;
         width: 18vw !important;
         height: 18vw !important;
         margin-right: -8.5vw !important;
+        position: absolute;
     }
     .App .side-menu-container.opened {
-        width: 96vw !important;
+        width: 94vw !important;
 
-        h3 {
-            display: block;
+        hr {
+            margin-top: .25rem;
+            margin-bottom: .25rem;
+        }
+        .accordion>.card>.card-header {
+            padding: 0.2rem;
+        }
+        .rdw-editor-wrapper {
+            max-height: 35vh;
+        }
+
+        h3, .variants {
+            display: none !important;
         }
     }
     body .firstSlide {

@@ -434,13 +434,24 @@
     width: 18vw !important;
     height: 18vw !important;
     margin-right: -8.5vw !important;
+    position: absolute;
   }
 
   .App .side-menu-container.opened {
-    width: 96vw !important;
+    width: 94vw !important;
   }
-  .App .side-menu-container.opened h3 {
-    display: block;
+  .App .side-menu-container.opened hr {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  .App .side-menu-container.opened .accordion > .card > .card-header {
+    padding: 0.2rem;
+  }
+  .App .side-menu-container.opened .rdw-editor-wrapper {
+    max-height: 35vh;
+  }
+  .App .side-menu-container.opened h3, .App .side-menu-container.opened .variants {
+    display: none !important;
   }
 
   body .firstSlide h1 {
@@ -848,6 +859,21 @@ body a:active, body a:focus, body a:hover {
   transition: 0.6s;
   text-decoration: none;
 }
+body .modal-custom {
+  min-width: 56vw;
+}
+body .modal-custom .modal-content {
+  min-height: 34vw;
+  border-radius: 0;
+  background: #cbeffb;
+}
+body .modal-custom .modal-content .modal-header {
+  border-bottom: none;
+  padding: 1.5rem;
+}
+body .modal-custom .modal-content .modal-body {
+  padding: 1.5rem;
+}
 
 .App {
   transition: 0.6s;
@@ -882,9 +908,17 @@ body a:active, body a:focus, body a:hover {
 .App .side-menu-container .accordion textarea {
   height: 7vw;
 }
-.App .side-menu-container .accordion .rdw-editor-wrapper {
+.App .side-menu-container .rdw-editor-wrapper {
   overflow-y: scroll;
   max-height: 50vh;
+  background: #ffffff;
+  border-left: 5px solid #0b8289;
+}
+.App .side-menu-container .rdw-editor-wrapper .rdw-editor-main {
+  padding-left: 0.8vw;
+}
+.App .side-menu-container .rdw-editor-wrapper .rdw-editor-main span {
+  color: initial;
 }
 .App .side-menu-container .input-group-prepend button {
   border-radius: 5px;

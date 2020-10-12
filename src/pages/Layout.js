@@ -23,19 +23,19 @@ export default function Layout(props) {
 
     function handleScroll () {
         document.addEventListener('keydown', (e) => {
-            //down and right
+            //down
             if (e.keyCode === 40) {
                 e.preventDefault();
-                var elm = document.getElementsByTagName("body")[0];
-                var e=document.createEvent("MouseEvents");
+                let elm = document.getElementsByTagName("body")[0];
+                let e=document.createEvent("MouseEvents");
                 e.initMouseEvent('wheel' ,true,true, window,120,0,0,0,0,0,0,0,0,0,null);
                 elm.dispatchEvent(e);
 
-                //up and left
+                //up
             } else if (e.keyCode === 38) {
                 e.preventDefault();
-                var elm = document.getElementsByTagName("body")[0];
-                var e=document.createEvent("MouseEvents");
+                let elm = document.getElementsByTagName("body")[0];
+                let e=document.createEvent("MouseEvents");
                 e.initMouseEvent('wheel' ,true,true, window, 0, 120,0,0,0,0,0,0,0,0,null);
                 elm.dispatchEvent(e);
             }

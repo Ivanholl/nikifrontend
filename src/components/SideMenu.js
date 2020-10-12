@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import * as Actions from '../redux/actions';
@@ -61,13 +61,13 @@ export default function SideMenu(props) {
                                     onChange={(event) => dispatch({ type: "SET_CONTENT", content: { firstPage: { ...allContent.firstPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'title', index) } } })}
                                     value={item.title}
                                 />
-                                <DropdownButton  title={item.image}  as={InputGroup.Prepend}
+                            {/*}<DropdownButton  title={item.image}  as={InputGroup.Prepend}
                                     onSelect={(e) => dispatch({ type: "SET_CONTENT", content: { firstPage: { ...allContent.firstPage, cardsArr: getFullPageArr(arrayToMap, e, 'image', index) } } })}
                                 >
                                     {images.map((itemInner, indexInner) =>
                                         <Dropdown.Item key={indexInner} eventKey={itemInner}>{itemInner}</Dropdown.Item>
                                     )}
-                                </DropdownButton>
+                                </DropdownButton>*/}
                             </InputGroup>
                             {/*}<FormControl as="textarea" value={item.text} placeholder="infocard opened text"
                                 onChange={(event) => dispatch({ type: "SET_CONTENT", content: { firstPage: { ...allContent.firstPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'text', index) } } }) }
@@ -88,18 +88,7 @@ export default function SideMenu(props) {
             <FormControl as="textarea" value={allContent.secondPage.main}  placeholder="main text"
                 onChange={(event) => dispatch({ type: "SET_CONTENT", content: { secondPage: { ...allContent.secondPage, main: event.target.value }} }) }
             />
-            <FormControl value={allContent.secondPage.Bold}  placeholder="bold text"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { secondPage: { ...allContent.secondPage, Bold: event.target.value }} }) }
-            />
-            <FormControl as="textarea" value={allContent.secondPage.First}  placeholder="first part"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { secondPage: { ...allContent.secondPage, First: event.target.value }} }) }
-            />
-            <FormControl  as="textarea" value={allContent.secondPage.Second}  placeholder="second part"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { secondPage: { ...allContent.secondPage, Second: event.target.value }} }) }
-            />
-            <FormControl as="textarea" value={allContent.secondPage.Tirth}  placeholder="tirth part"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { secondPage: { ...allContent.secondPage, Tirth: event.target.value }} }) }
-            />
+        <TextEditor text={allContent.secondPage.content} handleOnChange={(outputText) =>  dispatch({ type: "SET_CONTENT", content: { secondPage: { ...allContent.secondPage, content: outputText }} }) }/>
         </>)
     };
     function TirdPageFields() {
@@ -120,17 +109,14 @@ export default function SideMenu(props) {
                                     onChange={(event) => dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'title', index) } } })}
                                     value={item.title}   placeholder="content"
                                 />
-                                <DropdownButton  title={item.image}  as={InputGroup.Prepend}
+                            {/*}<DropdownButton title={item.image} as={InputGroup.Prepend}
                                     onSelect={(e) => dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, e, 'image', index) } } })}
                                 >
                                     {images.map((itemInner, indexInner) =>
                                         <Dropdown.Item key={indexInner} eventKey={itemInner}>{itemInner}</Dropdown.Item>
                                     )}
-                                </DropdownButton>
+                                </DropdownButton>*/}
                             </InputGroup>
-                            {/*<FormControl as="textarea" value={item.text}  placeholder="infocard opened text"
-                                onChange={(event) =>  dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, event.target.value, 'text', index) } } })}
-                            />*/}
                             <TextEditor text={item.text} handleOnChange={(outputText) =>  dispatch({ type: "SET_CONTENT", content: { tirthPage: { ...allContent.tirthPage, cardsArr: getFullPageArr(arrayToMap, outputText, 'text', index) } } }) }/>
                             </>
                         </Accordion.Collapse>
@@ -141,19 +127,7 @@ export default function SideMenu(props) {
     }
     function forthPageFields () {
         return (<>
-            <FormControl value={allContent.fourthPaga.partOne}   placeholder="text"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, partOne: event.target.value }} }) }
-            />
-            <FormControl value={allContent.fourthPaga.partTwo}   placeholder="text"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, partTwo: event.target.value }} }) }
-            />
-            <FormControl value={allContent.fourthPaga.link}   placeholder="text"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, link: event.target.value }} }) }
-            />
-            <FormControl value={allContent.fourthPaga.linkText}   placeholder="text"
-                onChange={(event) => dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, linkText: event.target.value }} }) }
-            />
-
+            <TextEditor text={allContent.fourthPaga.text} handleOnChange={(outputText) =>  dispatch({ type: "SET_CONTENT", content: { fourthPaga: { ...allContent.fourthPaga, text: outputText }} }) }/>
 
         </>)
     }
@@ -286,7 +260,7 @@ export default function SideMenu(props) {
 				{""}
 			</button>
 			<div className="form-container">
-				<p>Get Specific Variant</p>
+				<p className="variants">Get Specific Variant</p>
 				<InputGroup className="w-100 mb-1">
 					<DropdownButton
 						className="lang"

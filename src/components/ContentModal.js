@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Modal } from 'react-bootstrap';
 import parseHtml from 'html-react-parser';
 
@@ -8,7 +8,9 @@ export default function ContentModal(props) {
         <Modal
             show={props.show}
             onHide={() => props.setShow(false)}
-            dialogClassName="modal-90w"
+            dialogClassName="modal-custom"
+            size="lg"
+            centered
             aria-labelledby="example-custom-modal-styling-title"
         >
             <Modal.Header closeButton>
@@ -18,7 +20,7 @@ export default function ContentModal(props) {
             </Modal.Header>
             <Modal.Body>
                 {
-                    parseHtml(props.text)
+                    parseHtml(props.text || "")
                 }
             </Modal.Body>
         </Modal>

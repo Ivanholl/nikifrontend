@@ -1,22 +1,20 @@
 import React from 'react';
 import {Container} from 'react-bootstrap';
 import { useSelector } from "react-redux";
+import parseHtml from 'html-react-parser';
 
 export default function SecondSlide() {
     const small = useSelector((state) => state.contentReducer.secondPage.small);
     const main = useSelector((state) => state.contentReducer.secondPage.main);
-    const Bold = useSelector((state) => state.contentReducer.secondPage.Bold);
-    const First = useSelector((state) => state.contentReducer.secondPage.First);
-    const Second = useSelector((state) => state.contentReducer.secondPage.Second);
-    const Tirth = useSelector((state) => state.contentReducer.secondPage.Tirth);
+    const content = useSelector((state) => state.contentReducer.secondPage.content);
+
     const menu = useSelector((state) => state.contentReducer.menus.menuOne);
-    const background = useSelector((state) => state.contentReducer.secondPage.background); 
-    
+    const background = useSelector((state) => state.contentReducer.secondPage.background);
+
     return (<div id="about" className="secondSlide content-slide"  style={{backgroundImage: `url(${require(`../images/${background}`)}`}}>
         <Container>
             <h2>
                 {menu}
-                {/* <span> НАС</span> */}
             </h2>
         </Container>
         <Container className="second-container">
@@ -27,12 +25,8 @@ export default function SecondSlide() {
                         <span>{main}</span>
                     </p>
                 </div>
-                <div className={`right-side animated bounceInLeft  `}>
-                    <p>
-                        <strong>{Bold}</strong>
-                        {First}</p>
-                    <p>{Second}</p>
-                    <p>{Tirth}</p>
+                <div className="right-side animated bounceInLeft">
+                    {parseHtml(content || "")}
                 </div>
             </div>
         </Container>

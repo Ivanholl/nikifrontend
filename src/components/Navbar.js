@@ -12,7 +12,7 @@ export default function Navbar(props) {
     const menus = useSelector((state) => state.contentReducer.menus);
     const selectedLang = useSelector((state) => state.contentReducer.selectedLang);
 
-    function handleClick(num) {        
+    function handleClick(num) {
         props.setBoxToShow(num)
     }
 
@@ -41,10 +41,10 @@ export default function Navbar(props) {
             {/* <div className="lang">
                 <p key={index}><a href="/">{lang}</a></p>
             </div> */}
-            <DropdownButton className="lang" title={selectedLang} 
+            <DropdownButton className="lang" title={selectedLang}
                 onSelect={(e) => dispatch(Actions.setUpSelectedLanguage(e))}
             >
-                {languages.map((lang, index) => 
+                {languages.map((lang, index) =>
                     <Dropdown.Item key={index} eventKey={lang}>{lang}</Dropdown.Item>
                 )}
             </DropdownButton>
@@ -54,6 +54,13 @@ export default function Navbar(props) {
             <a onClick={() => handleClick(2)} className="menu-item" href="#services">Услуги</a>
             <a onClick={() => handleClick(3)} className="menu-item" href="#jobs">Кариери</a>
             <a onClick={() => handleClick(4)} className="menu-item" href="#contacts">Контакти</a>
+            <DropdownButton className="lang" title={selectedLang}
+                onSelect={(e) => dispatch(Actions.setUpSelectedLanguage(e))}
+            >
+                {languages.map((lang, index) =>
+                    <Dropdown.Item key={index} eventKey={lang}>{lang}</Dropdown.Item>
+                )}
+            </DropdownButton>
         </Menu>
     </header>);
 }

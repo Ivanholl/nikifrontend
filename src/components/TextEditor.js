@@ -1,11 +1,4 @@
-// function editorClassNamehanges(editorState) {
-//
-// }
-
-
-
-
-import React, { Component } from 'react';
+import React from 'react';
 import { EditorState, convertToRaw, ContentState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import draftToHtml from 'draftjs-to-html';

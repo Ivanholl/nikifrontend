@@ -1,121 +1,118 @@
 {
-    "firstPage": {
-                "background": "slide1-background.png",
-        "title": "ALWAYS GIVE THE WORLD AND THE PEOPLE AROUND YOU THE BEST YOU CAN AND HAVE ... DESPITE EVERYTHING!",
-        "cardsArr": [
-            {
-                "image": "Accounting _icon1.png",
-                "title": "Accounting services",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon2.png",
-                "title": "Preparation of salaries",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon3.png",
-                "title": "Management reporting and budgets",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon4.png",
-                "title": "Financial and tax analysis",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon5.png",
-                "title": "Asset management",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon6.png",
-                "title": "Corporate growth",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            }
-        ]
-    },
-    "secondPage": {
-                "background": "SecondSlideBackground.png",
-        "small": "We offer",
-        "main": "\nInnovative and original business solutions that provide a number of advantages in the formation of competitiveness.",
-        "Bold": " ProAct Accounting and Finance EOOD",
-        "First": "\nis one of the established companies in Bulgaria, providing external services in the field of corporate governance, financial and accounting services, selection and management of personnel, legal and tax consulting. The company provides innovative and original business solutions that give customers a number of advantages in shaping their competitiveness.",
-        "Second": "\nProAct was established in 2000 by specialists with many years of experience in studying and applying rules and principles of corporate governance. Initially, the company deals with accounting services and other administrative services related to the normal functioning of a company, but since its inception it has been constantly developing and growing.",
-        "Tirth": "Today the company applies its experience, acquires new knowledge and daily proves its qualifications and loyalty to its customers to be able as a consulting company to offer a wide range of services in the field of corporate governance."
-    },
-    "tirthPage": {
-        "background": "thirdSlideBackground.png",
-
-        "cardsArr": [
-            {
-                "image": "Accounting _icon1.png",
-                "title": " Accounting services",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon2.png",
-                "title": " Preparation of salaries",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon3.png",
-                "title": " Management reporting and budgets",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon4.png",
-                "title": "Financial and tax analysis",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon5.png",
-                "title": " Asset management",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            },
-            {
-                "image": "Accounting _icon6.png",
-                "title": "Corporate growth",
-				"text": "Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
-            }
-        ]
-    },
-    "fourthPaga": {
-                "background": "FourthSlideBackground.png",
-        "partOne": "See job postings on ",
-        "partTwo": " or contact us.",
-        "link": "https://www.jobs.bg/company/19480",
-        "linkText": "www.jobs.bg"
-    },
-    "fifthPage": {
-                "background": "fifthSlideBackground.png",
-        "city": "Sofia",
-        "zip": "1421",
-        "str": "Krum Popov Street",
-        "number": "44",
-        "building": "",
-        "floor": "floor 1",
-        "phoneOne": "",
-        "phoneTwo": "+359 2 963 08 81",
-        "phoneThree": "+359 896 720 616",
-        "showOnMap": " SHOW ON MAP",
-        "mapCoordinatesLong": "23.3240",
-        "mapCoordinatesLat": "42.6812",
-        "formFields": {
-            "title": "Contant Us:",
-            "name": "Name",
-            "phone": "Phone",
-            "email": "E-mail",
-            "msg": "Message",
-            "error": "Please fill all fields",
-            "send": "SEND"
-        }
-    },
-    "lang": "en",
-    "menus": {
-        "menuOne": "About us",
-        "menuTwo": "Services",
-        "menuThree": "Careers",
-        "menuFour": "Contacts"
-    }
+   "firstPage":{
+      "background":"slide1-background.png",
+      "title":"ALWAYS GIVE THE WORLD AND THE PEOPLE AROUND YOU THE BEST YOU CAN AND HAVE ... DESPITE EVERYTHING!",
+      "cardsArr":[
+         {
+            "image":"Accounting _icon1.png",
+            "title":"Accounting services",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon2.png",
+            "title":"Preparation of salaries",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon3.png",
+            "title":"Management reporting and budgets",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon4.png",
+            "title":"Financial and tax analysis",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon5.png",
+            "title":"Asset management",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon6.png",
+            "title":"Corporate growth",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         }
+      ]
+   },
+   "secondPage":{
+      "background":"SecondSlideBackground.png",
+      "small":"We offer",
+      "main":"\nInnovative and original business solutions that provide a number of advantages in the formation of competitiveness.",
+      "Bold":" ProAct Accounting and Finance EOOD",
+      "First":"\nis one of the established companies in Bulgaria, providing external services in the field of corporate governance, financial and accounting services, selection and management of personnel, legal and tax consulting. The company provides innovative and original business solutions that give customers a number of advantages in shaping their competitiveness.",
+      "Second":"\nProAct was established in 2000 by specialists with many years of experience in studying and applying rules and principles of corporate governance. Initially, the company deals with accounting services and other administrative services related to the normal functioning of a company, but since its inception it has been constantly developing and growing.",
+      "Tirth":"Today the company applies its experience, acquires new knowledge and daily proves its qualifications and loyalty to its customers to be able as a consulting company to offer a wide range of services in the field of corporate governance.",
+      "content":"<p style='text-align:left;'><span style='color: rgb(255,255,255);font-size: 16px;font-family: Geometria;'><strong>ПроАкт Акаунтинг енд Файненс ЕООД</strong></span><strong> </strong><span style='color: rgb(255,255,255);font-size: 16px;font-family: Geometria;'>е една от утвърдилите се компании в България, предоставяща външни услуги в областта на фирмено управление, финансово-счетоводни услуги, подбор и управление на персонал, правни и данъчни консултации. Компанията осигурява новаторски и оригинални бизнес решения, които дават на клиентите редица предимства при формиране на тяхната конкурентноспособност.</span></p> <p style='text-align:left;'><span style='color: rgb(255,255,255);font-size: 16px;font-family: Geometria;'>ПроАкт е учредена през 2000 година от специалисти с дългогодишен опит в изучаването и прилагането на правила и принципи на фирменото управление. Първоначално компанията се занимава със счетоводно обслужване и други административни услуги, свързани с нормалното функциониране на една фирма, но от създаването до сега непрекъснато се развива и расте.</span></p> <p style='text-align:left;'><span style='color: rgb(255,255,255);font-size: 16px;font-family: Geometria;'>Днес фирмата прилага натрупания си опит, придобива нови познания и ежедневно доказва своята квалификация и лоялност към клиентите си, за да може като консултантско дружество да предлага широк спектър услуги в областта на фирменото управление.</span>&nbsp;</p>"
+   },
+   "tirthPage":{
+      "background":"thirdSlideBackground.png",
+      "cardsArr":[
+         {
+            "image":"Accounting _icon1.png",
+            "title":" Accounting services",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon2.png",
+            "title":" Preparation of salaries",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon3.png",
+            "title":" Management reporting and budgets",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon4.png",
+            "title":"Financial and tax analysis",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon5.png",
+            "title":" Asset management",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         },
+         {
+            "image":"Accounting _icon6.png",
+            "title":"Corporate growth",
+            "text":"Ipsum molestiae natus adipisci modi eligendi? Debitis amet quae unde commodi aspernatur enim, consectetur. Cumque deleniti temporibus ipsam atque a dolores quisquam quisquam adipisci possimus laboriosam. Quibusdam facilis doloribus debitis! Sit quasi quod accusamus eos quod. Ab quos consequuntur eaque quo rem! Mollitia reiciendis porro quo magni incidunt dolore amet atque facilis ipsum deleniti rem!"
+         }
+      ]
+   },
+   "fourthPaga":{
+      "background":"FourthSlideBackground.png",
+      "text":""
+   },
+   "fifthPage":{
+      "background":"fifthSlideBackground.png",
+      "city":"Sofia",
+      "zip":"1421",
+      "str":"Krum Popov Street",
+      "number":"44",
+      "building":"",
+      "floor":"floor 1",
+      "phoneOne":"",
+      "phoneTwo":"+359 2 963 08 81",
+      "phoneThree":"+359 896 720 616",
+      "showOnMap":" SHOW ON MAP",
+      "mapCoordinatesLong":"23.3240",
+      "mapCoordinatesLat":"42.6812",
+      "formFields":{
+         "title":"Contant Us:",
+         "name":"Name",
+         "phone":"Phone",
+         "email":"E-mail",
+         "msg":"Message",
+         "error":"Please fill all fields",
+         "send":"SEND"
+      }
+   },
+   "lang":"en",
+   "menus":{
+      "menuOne":"About us",
+      "menuTwo":"Services",
+      "menuThree":"Careers",
+      "menuFour":"Contacts"
+   }
 }
