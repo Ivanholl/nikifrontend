@@ -54,13 +54,13 @@ export default function Navbar(props) {
             <a onClick={() => handleClick(2)} className="menu-item" href="#services">Услуги</a>
             <a onClick={() => handleClick(3)} className="menu-item" href="#jobs">Кариери</a>
             <a onClick={() => handleClick(4)} className="menu-item" href="#contacts">Контакти</a>
-            <DropdownButton className="lang" title={selectedLang}
-                onSelect={(e) => dispatch(Actions.setUpSelectedLanguage(e))}
-            >
-                {languages.map((lang, index) =>
-                    <Dropdown.Item key={index} eventKey={lang}>{lang}</Dropdown.Item>
-                )}
-            </DropdownButton>
+            <a className="menu-item">
+                <DropdownButton className="lang" variant="dark" title={selectedLang} onSelect={(e) => dispatch(Actions.setUpSelectedLanguage(e))} >
+                    {languages.map((lang, index) =>
+                        <Dropdown.Item key={index} eventKey={lang}>{lang}</Dropdown.Item>
+                    )}
+                </DropdownButton>
+            </a>
         </Menu>
     </header>);
 }

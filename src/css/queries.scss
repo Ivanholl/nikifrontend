@@ -370,9 +370,10 @@ $miniMobile: 400px;
 }
 
 @media (max-width: $miniMobile) {
+    body .App-header {
+        padding: 0;
+    }
     .App .side-menu-container {
-
-
 
         .open-menu {
             width: 14vw !important;

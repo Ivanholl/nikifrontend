@@ -589,6 +589,10 @@ body .fifthSlide .contact-info .contact-map .left-side .phones p {
   }
 }
 @media (max-width: 400px) {
+  body .App-header {
+    padding: 0;
+  }
+
   .App .side-menu-container .open-menu {
     width: 14vw !important;
     height: 14vw !important;
@@ -674,7 +678,7 @@ Note: Beware of modifying this element as it can break the animations - you shou
 
 /* General sidebar styles */
 .bm-menu {
-  background: #373a47;
+  background: #030a2b;
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   height: 110vh;
