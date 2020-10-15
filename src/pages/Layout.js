@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {FullPage, Slide} from 'react-full-page';
 import { useSelector } from "react-redux";
 
@@ -16,31 +16,6 @@ export default function Layout(props) {
     const [boxToShow, setBoxToShow] = useState(0);
     const [openMenu, setOpenMenu] = useState(false);
     const isAuthenticated = useSelector((state) => state.userReducer.isAuthenticated);
-
-    useEffect(() => {
-        handleScroll()
-    });
-
-    function handleScroll () {
-        document.addEventListener('keydown', (e) => {
-            //down
-            if (e.keyCode === 40) {
-                e.preventDefault();
-                let elm = document.getElementsByTagName("body")[0];
-                let e=document.createEvent("MouseEvents");
-                e.initMouseEvent('wheel' ,true,true, window,120,0,0,0,0,0,0,0,0,0,null);
-                elm.dispatchEvent(e);
-
-                //up
-            } else if (e.keyCode === 38) {
-                e.preventDefault();
-                let elm = document.getElementsByTagName("body")[0];
-                let e=document.createEvent("MouseEvents");
-                e.initMouseEvent('wheel' ,true,true, window, 0, 120,0,0,0,0,0,0,0,0,null);
-                elm.dispatchEvent(e);
-            }
-        });
-    }
 
     return (
 		<>
