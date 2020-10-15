@@ -29,19 +29,19 @@ export default function Layout(props) {
 					duration={300}
 					afterChange={(args) => setBoxToShow(args.to)}
 				>
-					<Slide style={{ width: "100%" }}>
+					<Slide style={{ width: "100vw" }}>
 						{boxToShow === 0 && <FirstSlide />}
 					</Slide>
-					<Slide style={{ width: "100%" }}>
+                    <Slide style={{ width: "100vw" }}>
 						{boxToShow === 1 && <SecondSlide />}
 					</Slide>
-					<Slide style={{ width: "100%" }}>
+                    <Slide style={{ width: "100vw" }}>
 						{boxToShow === 2 && <ThirdSlide />}
 					</Slide>
-					<Slide style={{ width: "100%" }}>
-						{boxToShow === 3 && <FourthSlide />}
+                    <Slide style={{ width: "100vw" }}>
+                        <FourthSlide animate={boxToShow === 3} />
 					</Slide>
-					<Slide style={{ width: "100%" }}>
+					<Slide style={{ width: "100vw" }}>
 						<FifthSlide animate={boxToShow === 4} />
 					</Slide>
 				</FullPage>
