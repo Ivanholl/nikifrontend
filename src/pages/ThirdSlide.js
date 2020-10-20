@@ -17,7 +17,7 @@ export default function ThirdSlide() {
                 <div className="box-contents">
                 {
                      infos.map((item, index) => {
-                         return (<InfoBox key={index} image={item.image} text={item.text} title={item.title} timer={(index + 1) * 100}/>)
+                         return (<InfoBox key={index} image={item.image} text={item.text} title={item.title} timer={(index + 1) * 100} textInBottom={true}/>)
                     })
                  }
                </div>
