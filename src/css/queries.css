@@ -1,6 +1,10 @@
 @media (max-width: 1600px) {
-  body .thirdSlide .box-contents .box {
-    width: 20vw;
+  body .box-contents {
+    margin: 4vw 5vw;
+  }
+  body .box-contents .box {
+    width: 13vw;
+    margin-bottom: 1rem;
   }
 }
 @media (max-width: 1280px) {
@@ -28,15 +32,16 @@
     margin: 0 0 7vw;
     padding: 0 38vw 0 10vw;
   }
-  body .firstSlide .box {
+
+  body .box-contents .box {
     width: 21vw;
     margin-bottom: 1rem;
   }
-  body .firstSlide .box p {
-    padding: 0.3rem;
+  body .box-contents .box p {
+    padding: 0.3rem 3rem;
     margin: 0;
   }
-  body .firstSlide .box img {
+  body .box-contents .box img {
     padding: 2rem 0rem 0rem;
   }
 
@@ -69,7 +74,7 @@
     margin: 2.5vw;
   }
 }
-@media (max-width: 960px) {
+@media (max-width: 998px) {
   body .App-header .App-logo {
     margin: 1vh 0;
     height: 3.5vmin;
@@ -78,8 +83,15 @@
     padding: 0.1rem 0.5rem;
     font-size: 1rem;
   }
+  body .App-header .nav .lang.dropdown {
+    margin-top: -5px;
+  }
   body .App-header .nav .nav-link {
     padding: 0.1rem 0.4rem;
+  }
+
+  body .bm-menu {
+    padding: 2.5em 2.5em 0;
   }
 
   .App .side-menu-container.opened {
@@ -93,8 +105,8 @@
   }
 
   body .firstSlide {
-    background-position: initial;
-    background-size: 100vw;
+    background-position: 85% 200%;
+    background-size: auto;
     background-color: #000116;
   }
   body .firstSlide h1 {
@@ -102,12 +114,13 @@
     line-height: 2.5rem;
     padding: 0 28vw 0 10vw;
   }
-  body .firstSlide .box img {
+
+  body .box-contents .box img {
     width: 4vw;
     padding: 1rem 0 0.5rem 0;
   }
-  body .firstSlide .box p {
-    padding: 0.3rem;
+  body .box-contents .box p {
+    padding: 0.3rem 2rem;
     font-size: 0.8rem;
   }
 
@@ -163,13 +176,15 @@
     text-align: left;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 720px) {
   body .App-header .bm-burger-button {
     display: block;
+    width: 26px;
+    height: 20px;
   }
   body .App-header .App-logo {
     margin: 3vh 6vw;
-    height: 7vmin;
+    height: 5vmin;
   }
   body .App-header .nav {
     display: none;
@@ -199,22 +214,30 @@
     display: none !important;
   }
 
-  body .firstSlide h1 {
+  body h1 {
     font-size: 0.8rem;
     line-height: 1.2rem;
     padding: 0 30vw 0 10vw;
   }
-  body .firstSlide .box-contents {
+  body .box-contents {
     margin: 0;
     justify-content: space-evenly;
   }
-  body .firstSlide .box-contents .box {
+  body .box-contents .box {
     width: 40vw;
+  }
+  body .box-contents .box p {
+    padding: 0.3rem 5rem;
+  }
+
+  body .firstSlide h1 {
+    line-height: 1.5rem;
+    padding: 0 28vw 0 6vw;
   }
 
   body .secondSlide {
-    background-size: 130vw 102vw;
-    background-position: -20vw 7vw;
+    background-size: 155vw 130vw;
+    background-position: 0 0;
     background-image: url("../images/SecondSlideBackground.png"), linear-gradient(#020024, #090979);
   }
   body .secondSlide h2 {
@@ -333,9 +356,44 @@ body .fifthSlide .contact-info .contact-map .left-side .phones p {
     width: 12vw;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
+  body .box-contents .box p {
+    padding: 0.3rem 3.2rem;
+  }
+
+  body .secondSlide .container.second-container .about-text {
+    overflow: hidden;
+    flex-direction: column;
+  }
+  body .secondSlide .container.second-container .about-text .right-side {
+    font-size: 1em;
+    line-height: 1rem;
+  }
+  body .secondSlide .container.second-container .about-text .right-side p span {
+    line-height: 1rem;
+    font-size: 1em;
+  }
+  body .secondSlide .container.second-container .about-text .left-side {
+    line-height: 1rem;
+    min-height: 45%;
+    font-size: 1em;
+    width: 100%;
+  }
+  body .secondSlide .container.second-container .about-text .left-side p span {
+    line-height: 1rem;
+    font-size: 1em;
+  }
+}
+@media (max-width: 430px) {
   body .App-header {
     padding: 0;
+  }
+  body .App-header .bm-burger-button {
+    top: 25px;
+  }
+
+  body .bm-menu {
+    padding: 2.5em 1.5em 0;
   }
 
   .App .side-menu-container .open-menu {
@@ -357,26 +415,8 @@ body .fifthSlide .contact-info .contact-map .left-side .phones p {
     padding: 0.3rem !important;
   }
 
-  body .secondSlide .container.second-container .about-text {
-    overflow: hidden;
-    flex-direction: column;
-  }
-  body .secondSlide .container.second-container .about-text .right-side {
-    font-size: 1em;
-    line-height: 1rem;
-  }
-  body .secondSlide .container.second-container .about-text .right-side p span {
-    line-height: 1rem;
-    font-size: 1em;
-  }
-  body .secondSlide .container.second-container .about-text .left-side {
-    line-height: 1rem;
-    min-height: 24%;
-    font-size: 1em;
-  }
-  body .secondSlide .container.second-container .about-text .left-side p span {
-    line-height: 1rem;
-    font-size: 1em;
+  body .box-contents .box p {
+    padding: 0.3rem 1rem;
   }
 }
 

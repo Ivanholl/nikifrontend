@@ -7,7 +7,6 @@
     font-family: 'Geometria';
     src: url('../fonts/Geometria.otf') format('opentype');
 }
-
 @font-face {
     font-family: 'Geometria-Bold';
     src: url('../fonts/Geometria-Bold.otf') format('opentype');
@@ -481,14 +480,7 @@ body {
 .App-link {
     color: #61dafb;
 }
-// @keyframes App-logo-spin {
-// from {
-//  transform: rotate(0deg);
-//}
-//   to {
-//     transform: rotate(360deg);
-//  }
-// }
+
 .box-contents {
     margin: 4vw 10vw;
     display: flex;
@@ -510,7 +502,7 @@ body {
         }
         p {
             color: #fff;
-            padding: 1rem;
+            padding: 1rem 2rem;
         }
     }
 }
