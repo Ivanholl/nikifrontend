@@ -255,7 +255,10 @@
   }
   body .secondSlide .container.second-container .about-text .left-side {
     align-self: flex-end;
-    width: 60%;
+    line-height: 1rem;
+    min-height: 45%;
+    font-size: 1em;
+    width: 100%;
   }
   body .secondSlide .container.second-container .about-text .left-side p span {
     font-size: 1rem;
@@ -370,16 +373,6 @@ body .fifthSlide .contact-info .contact-map .left-side .phones p {
     line-height: 1rem;
   }
   body .secondSlide .container.second-container .about-text .right-side p span {
-    line-height: 1rem;
-    font-size: 1em;
-  }
-  body .secondSlide .container.second-container .about-text .left-side {
-    line-height: 1rem;
-    min-height: 45%;
-    font-size: 1em;
-    width: 100%;
-  }
-  body .secondSlide .container.second-container .about-text .left-side p span {
     line-height: 1rem;
     font-size: 1em;
   }

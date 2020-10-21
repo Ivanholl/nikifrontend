@@ -7,8 +7,7 @@ const defaultContent = {
 	},
 	firstPage: {
 		background: "slide1-background.png",
-		title:
-			"ВИНАГИ ДАВАЙ НА СВЕТА И ХОРАТА ОКОЛО ТЕБ НАЙ-ДОБРОТО, КОЕТО МОЖЕШ И ИМАШ...ВЪПРЕКИ ВСИЧКО!",
+		title: "ВИНАГИ ДАВАЙ НА СВЕТА И ХОРАТА ОКОЛО ТЕБ НАЙ-ДОБРОТО, КОЕТО МОЖЕШ И ИМАШ...ВЪПРЕКИ ВСИЧКО!",
 		cardsArr: [
 			{
 				image: "Accounting _icon1.png",

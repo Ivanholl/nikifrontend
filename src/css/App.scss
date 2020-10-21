@@ -7,6 +7,7 @@
     font-family: 'Geometria';
     src: url('../fonts/Geometria.otf') format('opentype');
 }
+
 @font-face {
     font-family: 'Geometria-Bold';
     src: url('../fonts/Geometria-Bold.otf') format('opentype');
@@ -414,7 +415,7 @@ body {
             height: 100%;
 
             .left-side {
-                width: 40%;
+                width: 45%;
                 display: flex;
                 flex-direction: row;
                 justify-content: flex-end;
@@ -428,6 +429,7 @@ body {
                     span {
                         color: #0fb6b7;
                         font-size: calc(12px + 2vmin);
+                        line-height: 2rem;
                     }
                 }
             }

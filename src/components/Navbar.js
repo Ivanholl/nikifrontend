@@ -3,7 +3,8 @@ import { Nav, DropdownButton, Dropdown } from 'react-bootstrap';
 import { slide as Menu } from 'react-burger-menu'
 import { useSelector, useDispatch } from "react-redux";
 
-import logo from '../images/Logo-proakt.png';
+import logoBg from '../images/Logo-proakt.png';
+import logoEn from '../images/Logo-proakt-en.png';
 import * as Actions from '../redux/actions';
 
 export default function Navbar(props) {
@@ -17,7 +18,7 @@ export default function Navbar(props) {
     }
 
     return (<header className="App-header">
-        <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
+        <a href="/"><img src={selectedLang === 'bg'? logoBg : logoEn} className="App-logo" alt="logo" /></a>
         <Nav activeKey="/home" >
             <div className="main-menu">
                 <Nav.Item>
@@ -50,7 +51,7 @@ export default function Navbar(props) {
             </DropdownButton>
         </Nav>
         <Menu right={true} fallDown={'fallDown'}>
-            <a onClick={() => handleClick(1)} className="menu-item" href="#about">За Нас</a>
+            <a onClick={() => handleClick(1)} className="menu-item" href="#about">ЗА НАС</a>
             <a onClick={() => handleClick(2)} className="menu-item" href="#services">Услуги</a>
             <a onClick={() => handleClick(3)} className="menu-item" href="#jobs">Кариери</a>
             <a onClick={() => handleClick(4)} className="menu-item" href="#contacts">Контакти</a>

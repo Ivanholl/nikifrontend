@@ -275,8 +275,12 @@ $miniMobile: 430px;
                 flex-direction: column;
 
                 .left-side {
-                    align-self: flex-end;
-                    width: 60%;
+                    align-self: flex-end;                
+                    line-height: 1rem;
+                    min-height: 45%;
+                    font-size: 1em;
+                    width: 100%;
+
                     p span {
                        font-size: 1rem;
                        line-height: 1.4rem;
@@ -403,17 +407,6 @@ $miniMobile: 430px;
         .right-side {
             font-size: 1em;
             line-height: 1rem;
-
-            p span {
-                line-height: 1rem;
-                font-size: 1em;
-            }
-        }
-        .left-side {
-            line-height: 1rem;
-            min-height: 45%;
-            font-size: 1em;
-            width: 100%;
 
             p span {
                 line-height: 1rem;
