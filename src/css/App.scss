@@ -17,7 +17,7 @@
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #fff;
     border-radius: 5px;
-    display:none;
+    display: none;
 }
 
 ::-webkit-scrollbar {
@@ -37,7 +37,7 @@
     border-color: inherit;
     -webkit-box-shadow: none;
     box-shadow: none;
-    outline:0;
+    outline: 0;
 }
 
 body {
@@ -79,20 +79,32 @@ body {
             text-decoration: none;
         }
     }
+
+    .modal-dialog {
+        margin: 8.5vh auto;
+    }
+
     .modal-custom {
-        min-width: 56vw;
+        min-width: 72.5vw;
 
         .modal-content {
-            min-height: 34vw;
+            min-height: 37vw;
             border-radius: 0;
-            background: #cbeffb;
+            background: #fff;
 
             .modal-header {
                 border-bottom: none;
                 padding: 1.5rem;
             }
+
             .modal-body {
                 padding: 1.5rem;
+            }
+        }
+
+        .close {
+            span {
+                color: red;
             }
         }
     }
@@ -138,8 +150,8 @@ body {
             textarea {
                 height: 7vw;
             }
-
         }
+
         .rdw-editor-wrapper {
             overflow-y: scroll;
             max-height: 50vh;
@@ -226,7 +238,7 @@ body {
             -o-transform: rotate(90deg);
             -ms-transform: rotate(90deg);
             transform: rotate(90deg);
-            background-repeat:no-repeat;
+            background-repeat: no-repeat;
             background-size: contain;
             background-color: transparent;
             border: none;
@@ -263,11 +275,12 @@ body {
 
 .App.MenuOpened {
     width: 130vw !important;
+
     .side-menu-container {
         width: 30vw;
 
         h3 {
-                display: block;
+            display: block;
         }
     }
 }
@@ -278,7 +291,7 @@ body {
     font-size: calc(12px + 1vmin);
     color: white;
     padding: 0 10vw;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 9;
@@ -369,6 +382,7 @@ body {
         }
     }
 }
+
 .content-slide {
     display: flex;
     flex-direction: column;
@@ -382,7 +396,7 @@ body {
     justify-content: flex-end;
     // background-image: url("../images/slide1-background.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 100% 57%;
     background-size: 100vw;
 
     h1 {
@@ -390,7 +404,7 @@ body {
         text-align: left;
         font-size: calc(14px + 2vmin);
         line-height: calc(16px + 3vmin);
-        margin: 0 0 3vw;
+        margin: 0 0 15vh;
         padding: 0 38vw 0 15vw;
     }
 }
@@ -428,39 +442,50 @@ body {
 
                     span {
                         color: #0fb6b7;
-                        font-size: calc(12px + 2vmin);
+                        font-size: calc(15px + 2vmin);
                         line-height: 2rem;
                     }
                 }
             }
         }
     }
+
     p {
         color: #fff;
         text-align: left;
         margin-bottom: 1vw;
     }
+
     .right-side {
         width: 40%;
     }
 }
 
 .thirdSlide {
-    // background-image: url("../images/thirdSlideBackground.png");
     background-repeat: no-repeat;
     background-size: 100vw;
-    // background-color: #030a2b;
     padding: 4vw 0 0;
 
     .box-contents {
-        margin: 7vw 0 0;
+        margin: 5vw 0 0;
 
         .box {
-            width: 15vw;
-            margin: 0 1vw 3vw 1vw;
+            width: 18vw;
+            height: 29vh;
+            margin: 0 1vw 1vw 0;
+            opacity: 1;
+
+            img {
+                padding: 4.7rem 3rem 1rem;
+            }
+        }
+
+        p {
+            color: #fff;
         }
     }
 }
+
 .fourthSlide {
     // background: url("../images/FourthSlideBackground.png") no-repeat;
     background-repeat: no-repeat;
@@ -468,7 +493,7 @@ body {
     background-size: 100vw;
     text-align: left;
     padding: 10vh 0;
-    height:100vh;
+    height: 100vh;
 
     p {
         font-size: calc(10px + 2vmin);
@@ -491,23 +516,29 @@ body {
     flex-wrap: wrap;
 
     .box {
-        background-color: #0b8289;
+        background-color: #0E8986;
         width: 11vw;
-        height: 100%;
+        height: 93%;
         border-top: 3px solid #f15d53;
-        opacity: 0.7;
+        opacity: 0.9;
         cursor: pointer;
         transition: 0.6s;
 
         img {
-            padding: 3rem 3rem 1rem;
+            padding: 2.7rem 3rem 1rem;
         }
+
         p {
             color: #fff;
             padding: 1rem 2rem;
         }
     }
+
+    .animated {
+        padding-left: 0;
+    }
 }
+
 .fifthSlide {
     background-repeat: no-repeat;
     background-size: 100vw;

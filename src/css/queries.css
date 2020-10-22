@@ -1,416 +1,314 @@
-@media (max-width: 1600px) {
+﻿@media (max-width: 1600px) {
   body .box-contents {
-    margin: 4vw 5vw;
-  }
-  body .box-contents .box {
-    width: 13vw;
-    margin-bottom: 1rem;
-  }
-}
-@media (max-width: 1280px) {
-  body .App-header {
-    padding: 2vw 5vw;
-  }
-  body .App-header .App-logo {
-    margin: 1vh 0;
-    height: 5vmin;
-  }
-  body .App-header .nav {
-    padding: 0.2rem;
-  }
+    margin: 0 8vw; }
+    body .box-contents .box {
+      width: 12vw;
+      margin-bottom: 1rem; } }
 
-  body .box-contents {
-    margin: 2vw 10vw;
-  }
-
-  body .firstSlide {
-    background-size: initial;
-  }
-  body .firstSlide h1 {
-    font-size: calc(14px + 1vmin);
-    line-height: calc(16px + 2vmin);
-    margin: 0 0 7vw;
-    padding: 0 38vw 0 10vw;
-  }
-
-  body .box-contents .box {
-    width: 21vw;
-    margin-bottom: 1rem;
-  }
-  body .box-contents .box p {
-    padding: 0.3rem 3rem;
-    margin: 0;
-  }
-  body .box-contents .box img {
-    padding: 2rem 0rem 0rem;
-  }
-
-  body .secondSlide {
-    padding: 3vw 0;
-  }
-  body .secondSlide .container {
-    max-width: 90vw;
-    height: 87%;
-  }
-  body .secondSlide .container .about-text {
-    height: 100%;
-  }
-  body .secondSlide .container .about-text .left-side {
-    justify-content: center;
-  }
-  body .secondSlide .container .right-side {
-    width: 50%;
-    margin-top: -6vw;
-  }
-
+@media (max-width: 1440px) {
+  .thirdSlide .box-contents .box img {
+    padding: 4vw; }
   body .thirdSlide .box-contents {
     padding-top: 5vw;
-  }
-  body .thirdSlide .box-contents .box {
-    width: 21.2vw;
-  }
+    float: left; }
+  body .thirdSlide .box-contents {
+    padding-top: 0; }
+  body .thirdSlide .box-contents {
+    margin: 2vw 0 0; } }
 
+@media (max-width: 1280px) {
+  body .App-header {
+    padding: 2vw 5vw; }
+    body .App-header .App-logo {
+      margin: 1vh 0;
+      height: 5vmin; }
+    body .App-header .nav {
+      padding: 0.2rem; }
+  body .box-contents {
+    margin: 2vw 10vw; }
+  body .firstSlide {
+    background-size: initial; }
+    body .firstSlide h1 {
+      font-size: calc(14px + 1vmin);
+      line-height: calc(16px + 2vmin);
+      padding: 0 38vw 0 10vw;
+      margin: 0; }
+  body .box-contents .box {
+    width: 21vw;
+    margin-bottom: 1rem; }
+    body .box-contents .box p {
+      padding: 0.3rem 3rem;
+      margin: 0; }
+    body .box-contents .box img {
+      padding: 2rem 0rem 0rem; }
+  body .secondSlide {
+    padding: 3vw 0; }
+    body .secondSlide .container {
+      max-width: 90vw;
+      height: 87%; }
+      body .secondSlide .container .about-text {
+        height: 100%; }
+        body .secondSlide .container .about-text .left-side {
+          justify-content: center; }
+      body .secondSlide .container .right-side {
+        width: 50%;
+        margin-top: -6vw; }
+  body .thirdSlide .box-contents {
+    padding-top: 5vw; }
+    body .thirdSlide .box-contents .box {
+      width: 21.2vw; }
   body .back-to-top {
-    margin: 2.5vw;
-  }
-}
+    margin: 2.5vw; } }
+
+@media (max-width: 1024px) {
+  body .thirdSlide .box-contents .box {
+    width: 25vw; }
+  body .thirdSlide .box-contents {
+    padding-top: 0; }
+  body .firstSlide {
+    background-position: 82% 120%; } }
+
 @media (max-width: 998px) {
+  .firstSlide {
+    background-position: center; }
   body .App-header .App-logo {
     margin: 1vh 0;
-    height: 3.5vmin;
-  }
+    height: 3.5vmin; }
   body .App-header .nav {
-    padding: 0.1rem 0.5rem;
-    font-size: 1rem;
-  }
-  body .App-header .nav .lang.dropdown {
-    margin-top: -5px;
-  }
-  body .App-header .nav .nav-link {
-    padding: 0.1rem 0.4rem;
-  }
-
+    padding: .1rem .5rem;
+    font-size: 1rem; }
+    body .App-header .nav .lang.dropdown {
+      margin-top: -5px; }
+    body .App-header .nav .nav-link {
+      padding: .1rem .4rem; }
   body .bm-menu {
-    padding: 2.5em 2.5em 0;
-  }
-
+    padding: 2.5em 2.5em 0; }
   .App .side-menu-container.opened {
-    width: 80vw !important;
-  }
-
+    width: 80vw !important; }
   .App .side-menu-container .open-menu {
     width: 8vw !important;
     height: 8vw !important;
-    margin-right: -3.5vw !important;
-  }
-
+    margin-right: -3.5vw !important; }
   body .firstSlide {
-    background-position: 85% 200%;
     background-size: auto;
-    background-color: #000116;
-  }
-  body .firstSlide h1 {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-    padding: 0 28vw 0 10vw;
-  }
-
+    background-color: #000116; }
+    body .firstSlide h1 {
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      padding: 0 28vw 0 10vw; }
   body .box-contents .box img {
     width: 4vw;
-    padding: 1rem 0 0.5rem 0;
-  }
+    padding: 1rem 0 0.5rem 0; }
   body .box-contents .box p {
     padding: 0.3rem 2rem;
-    font-size: 0.8rem;
-  }
-
+    font-size: .8rem; }
   body .secondSlide {
     background-size: 135vw 105vw;
-    background-position: -115px 0;
-  }
-  body .secondSlide .container .right-side {
-    font-size: 0.8rem;
-  }
-  body .secondSlide .container .about-text .left-side {
-    justify-content: end;
-  }
-  body .secondSlide .container .about-text .left-side p span {
-    font-size: calc(12px + 1.4vmin);
-  }
-
+    background-position: -115px 0; }
+    body .secondSlide .container .right-side {
+      font-size: .8rem; }
+    body .secondSlide .container .about-text .left-side {
+      justify-content: end; }
+      body .secondSlide .container .about-text .left-side p span {
+        font-size: calc(12px + 1.4vmin); }
   body .thirdSlide {
-    padding: 3vh 0;
-  }
-  body .thirdSlide .container {
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-  body .thirdSlide .container h2 {
-    width: fit-content;
-  }
-  body .thirdSlide .container .box-contents .box {
-    width: 23vw;
-  }
-  body .thirdSlide .container .box-contents .box img {
-    width: 4vw;
-    padding: 1.6rem 1px 0.5rem 0;
-  }
-  body .thirdSlide .container .box-contents .box p {
-    padding: 0;
-  }
-
+    padding: 3vh 0; }
+    body .thirdSlide .container {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column; }
+      body .thirdSlide .container h2 {
+        width: fit-content; }
+      body .thirdSlide .container .box-contents .box {
+        width: 23vw; }
+        body .thirdSlide .container .box-contents .box img {
+          width: 4vw;
+          padding: 1.6rem 1px 0.5rem 0; }
+        body .thirdSlide .container .box-contents .box p {
+          padding: 0; }
   body .fifthSlide {
     justify-content: center;
     max-width: initial;
     padding: 1vh 4vw 6vh 4vw;
-    margin: 0;
-  }
-  body .fifthSlide .contact-info .contact-map {
-    margin-top: 10vh;
-    width: 47%;
-  }
-  body .fifthSlide .contact-info .right-side {
-    width: 47%;
-    text-align: left;
-  }
-}
+    margin: 0; }
+    body .fifthSlide .contact-info .contact-map {
+      margin-top: 10vh;
+      width: 47%; }
+    body .fifthSlide .contact-info .right-side {
+      width: 47%;
+      text-align: left; } }
+
 @media (max-width: 720px) {
   body .App-header .bm-burger-button {
     display: block;
     width: 26px;
-    height: 20px;
-  }
+    height: 20px; }
   body .App-header .App-logo {
     margin: 3vh 6vw;
-    height: 5vmin;
-  }
+    height: 5vmin; }
   body .App-header .nav {
-    display: none;
-  }
-
+    display: none; }
   .App .side-menu-container .open-menu {
     width: 18vw !important;
     height: 18vw !important;
     margin-right: -8.5vw !important;
-    position: absolute;
-  }
-
+    position: absolute; }
   .App .side-menu-container.opened {
-    width: 94vw !important;
-  }
-  .App .side-menu-container.opened hr {
-    margin-top: 0.25rem;
-    margin-bottom: 0.25rem;
-  }
-  .App .side-menu-container.opened .accordion > .card > .card-header {
-    padding: 0.2rem;
-  }
-  .App .side-menu-container.opened .rdw-editor-wrapper {
-    max-height: 35vh;
-  }
-  .App .side-menu-container.opened h3, .App .side-menu-container.opened .variants {
-    display: none !important;
-  }
-
+    width: 94vw !important; }
+    .App .side-menu-container.opened hr {
+      margin-top: .25rem;
+      margin-bottom: .25rem; }
+    .App .side-menu-container.opened .accordion > .card > .card-header {
+      padding: 0.2rem; }
+    .App .side-menu-container.opened .rdw-editor-wrapper {
+      max-height: 35vh; }
+    .App .side-menu-container.opened h3, .App .side-menu-container.opened .variants {
+      display: none !important; }
   body h1 {
-    font-size: 0.8rem;
+    font-size: .8rem;
     line-height: 1.2rem;
-    padding: 0 30vw 0 10vw;
-  }
+    padding: 0 30vw 0 10vw; }
   body .box-contents {
     margin: 0;
-    justify-content: space-evenly;
-  }
-  body .box-contents .box {
-    width: 40vw;
-  }
-  body .box-contents .box p {
-    padding: 0.3rem 5rem;
-  }
-
+    justify-content: space-evenly; }
+    body .box-contents .box {
+      width: 40vw; }
+      body .box-contents .box p {
+        padding: 0.3rem 5rem; }
   body .firstSlide h1 {
     line-height: 1.5rem;
-    padding: 0 28vw 0 6vw;
-  }
-
+    padding: 0 28vw 0 6vw; }
   body .secondSlide {
     background-size: 155vw 130vw;
     background-position: 0 0;
-    background-image: url("../images/SecondSlideBackground.png"), linear-gradient(#020024, #090979);
-  }
-  body .secondSlide h2 {
-    font-size: 1.5rem;
-  }
-  body .secondSlide .container {
-    height: 0;
-  }
-  body .secondSlide .container.second-container {
-    padding: 0;
-    height: 100%;
-  }
-  body .secondSlide .container.second-container .about-text {
-    flex-direction: column;
-  }
-  body .secondSlide .container.second-container .about-text .left-side {
-    align-self: flex-end;
-    line-height: 1rem;
-    min-height: 45%;
-    font-size: 1em;
-    width: 100%;
-  }
-  body .secondSlide .container.second-container .about-text .left-side p span {
-    font-size: 1rem;
-    line-height: 1.4rem;
-  }
-  body .secondSlide .container.second-container .about-text .right-side {
-    width: 100%;
-    margin: 0;
-    font-size: 0.7rem;
-  }
-
+    background-image: url("../images/SecondSlideBackground.png"), linear-gradient(#020024, #090979); }
+    body .secondSlide h2 {
+      font-size: 1.5rem; }
+    body .secondSlide .container {
+      height: 0; }
+    body .secondSlide .container.second-container {
+      padding: 0;
+      height: 100%; }
+      body .secondSlide .container.second-container .about-text {
+        flex-direction: column; }
+        body .secondSlide .container.second-container .about-text .left-side {
+          align-self: flex-end;
+          line-height: 1rem;
+          min-height: 45%;
+          font-size: 1em;
+          width: 100%; }
+          body .secondSlide .container.second-container .about-text .left-side p span {
+            font-size: 1rem;
+            line-height: 1.4rem; }
+        body .secondSlide .container.second-container .about-text .right-side {
+          width: 100%;
+          margin: 0;
+          font-size: 0.7rem; }
   body .thirdSlide .container h2 {
-    margin-left: 7vw;
-  }
+    margin-left: 7vw; }
   body .thirdSlide .container .box-contents {
-    justify-content: space-evenly;
-  }
-  body .thirdSlide .container .box-contents .box {
-    width: 40vw;
-  }
-  body .thirdSlide .container .box-contents .box img {
-    width: 6vw;
-  }
-  body .thirdSlide .container .box-contents .box p {
-    font-size: 0.8rem;
-  }
-
+    justify-content: space-evenly; }
+    body .thirdSlide .container .box-contents .box {
+      width: 40vw; }
+      body .thirdSlide .container .box-contents .box img {
+        width: 6vw; }
+      body .thirdSlide .container .box-contents .box p {
+        font-size: .8rem; }
   body .fifthSlide {
     padding: 0 4vw;
-    justify-content: space-evenly;
-  }
-  body .fifthSlide h2 {
-    font-size: 1.5rem;
-    padding-bottom: 1vh;
-  }
-  body .fifthSlide .contact-info {
-    flex-direction: column;
-    font-size: 0.8rem;
-    height: 85%;
-  }
-  body .fifthSlide .contact-info .contact-map {
-    margin-top: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  body .fifthSlide .contact-info .contact-map .left-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    width: 40%;
-  }
-  body .fifthSlide .contact-info .contact-map .left-side .adress p,
-body .fifthSlide .contact-info .contact-map .left-side .phones p {
-    text-align: left;
-    margin: 0;
-  }
-  body .fifthSlide .contact-info .contact-map .left-side .phones h3 {
-    display: none;
-  }
-  body .fifthSlide .contact-info .contact-map .map-component {
-    height: 100%;
-    width: 60%;
-    margin-top: 0;
-    min-height: 25vh;
-  }
-  body .fifthSlide .contact-info .contact-map .map-component p {
-    display: none;
-  }
-  body .fifthSlide .contact-info .right-side {
-    width: 100%;
-  }
-  body .fifthSlide .contact-info .right-side form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  body .fifthSlide .contact-info .right-side form p {
-    width: 100%;
-  }
-  body .fifthSlide .contact-info .right-side form .form-group {
-    width: 100%;
-  }
-  body .fifthSlide .contact-info .right-side form .form-group label {
-    font-size: 0.6rem;
-  }
-  body .fifthSlide .contact-info .right-side form .form-group input, body .fifthSlide .contact-info .right-side form .form-group textarea {
-    height: calc(1rem + 2px);
-  }
-
+    justify-content: space-evenly; }
+    body .fifthSlide h2 {
+      font-size: 1.5rem;
+      padding-bottom: 1vh; }
+    body .fifthSlide .contact-info {
+      flex-direction: column;
+      font-size: 0.8rem;
+      height: 85%; }
+      body .fifthSlide .contact-info .contact-map {
+        margin-top: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row; }
+        body .fifthSlide .contact-info .contact-map .left-side {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          width: 40%; }
+          body .fifthSlide .contact-info .contact-map .left-side .adress p,
+          body .fifthSlide .contact-info .contact-map .left-side .phones p {
+            text-align: left;
+            margin: 0; }
+          body .fifthSlide .contact-info .contact-map .left-side .phones h3 {
+            display: none; }
+        body .fifthSlide .contact-info .contact-map .map-component {
+          height: 100%;
+          width: 60%;
+          margin-top: 0;
+          min-height: 25vh; }
+          body .fifthSlide .contact-info .contact-map .map-component p {
+            display: none; }
+      body .fifthSlide .contact-info .right-side {
+        width: 100%; }
+        body .fifthSlide .contact-info .right-side form {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap; }
+          body .fifthSlide .contact-info .right-side form p {
+            width: 100%; }
+          body .fifthSlide .contact-info .right-side form .form-group {
+            width: 100%; }
+            body .fifthSlide .contact-info .right-side form .form-group label {
+              font-size: .6rem; }
+            body .fifthSlide .contact-info .right-side form .form-group input, body .fifthSlide .contact-info .right-side form .form-group textarea {
+              height: calc(1rem + 2px); }
   body .back-to-top {
     height: 14vw;
-    width: 14vw;
-  }
-  body .back-to-top img {
-    height: 12vw;
-    width: 12vw;
-  }
-}
+    width: 14vw; }
+    body .back-to-top img {
+      height: 12vw;
+      width: 12vw; } }
+
 @media (max-width: 600px) {
   body .box-contents .box p {
-    padding: 0.3rem 3.2rem;
-  }
-
+    padding: 0.3rem 3.2rem; }
   body .secondSlide .container.second-container .about-text {
     overflow: hidden;
-    flex-direction: column;
-  }
-  body .secondSlide .container.second-container .about-text .right-side {
-    font-size: 1em;
-    line-height: 1rem;
-  }
-  body .secondSlide .container.second-container .about-text .right-side p span {
-    line-height: 1rem;
-    font-size: 1em;
-  }
-}
+    flex-direction: column; }
+    body .secondSlide .container.second-container .about-text .right-side {
+      font-size: 1em;
+      line-height: 1rem; }
+      body .secondSlide .container.second-container .about-text .right-side p span {
+        line-height: 1rem;
+        font-size: 1em; } }
+
 @media (max-width: 430px) {
   body .App-header {
-    padding: 0;
-  }
-  body .App-header .bm-burger-button {
-    top: 25px;
-  }
-
+    padding: 0; }
+    body .App-header .bm-burger-button {
+      top: 25px; }
+  body .firstSlide h1 {
+    font-size: calc(8px + 2vmin);
+    margin-bottom: 5vh; }
+  body .thirdSlide .animated {
+    width: 40vw; }
+  body .thirdSlide .box-contents .box {
+    height: 13vh; }
   body .bm-menu {
-    padding: 2.5em 1.5em 0;
-  }
-
+    padding: 2.5em 1.5em 0; }
   .App .side-menu-container .open-menu {
     width: 14vw !important;
     height: 14vw !important;
     margin-right: 0vw !important;
     right: -9vw;
-    position: absolute;
-  }
+    position: absolute; }
   .App .side-menu-container .form-container {
-    margin: 0.3rem !important;
-  }
-  .App .side-menu-container .form-container .mb-3, .App .side-menu-container .form-container .my-3 {
-    margin-bottom: 0.3rem !important;
-  }
-
+    margin: 0.3rem !important; }
+    .App .side-menu-container .form-container .mb-3, .App .side-menu-container .form-container .my-3 {
+      margin-bottom: .3rem !important; }
   .App .side-menu-container.opened {
     margin-top: -1rem !important;
-    padding: 0.3rem !important;
-  }
-
+    padding: 0.3rem !important; }
   body .box-contents .box p {
-    padding: 0.3rem 1rem;
-  }
-}
-
-/*# sourceMappingURL=queries.css.map */
+    padding: 0.3rem 1rem; } }

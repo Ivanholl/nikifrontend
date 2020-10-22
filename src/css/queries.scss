@@ -1,5 +1,7 @@
 $mediaAverageScreen: 1600px;
+$mediaMidScreen: 1440px;
 $mediaDesktop: 1280px;
+$mediaiPadPro: 1024px;
 $mediaTablet: 998px;
 $mediaMobileLarge: 720px;
 $mediaMobile: 600px;
@@ -7,451 +9,544 @@ $miniMobile: 430px;
 
 @media (max-width: $mediaAverageScreen) {
     body .box-contents {
-        margin: 4vw 5vw;
+        margin: 0 8vw;
 
         .box {
-            width: 13vw;
+            width: 12vw;
             margin-bottom: 1rem;
         }
     }
 }
 
-@media (max-width: $mediaDesktop) {
-    body .App-header {
-        padding: 2vw 5vw;
+@media (max-width: $mediaMidScreen){
 
-        .App-logo {
-            margin: 1vh 0;
-            height: 5vmin;
-        }
-        .nav {
-            padding: 0.2rem;
-        }
+   .thirdSlide .box-contents .box img {
+        padding: 4vw;
     }
-    body .box-contents {
-        margin: 2vw 10vw;
+    body .thirdSlide .box-contents {
+        padding-top: 5vw;
+        float: left;
     }
-    body .firstSlide {
-        background-size: initial;
-
-        h1 {
-            font-size: calc(14px + 1vmin);
-            line-height: calc(16px + 2vmin);
-            margin: 0 0 7vw;
-            padding: 0 38vw 0 10vw;
-        }
+    body .thirdSlide .box-contents {
+        padding-top: 0;
     }
-    body .box-contents .box {
-        width: 21vw;
-        margin-bottom: 1rem;
-        p {
-            padding: 0.3rem 3rem;
-            margin: 0;
-        }
-        img {
-            padding: 2rem 0rem 0rem;
-        }
-    }
-    body .secondSlide {
-        padding: 3vw 0;
-
-        .container{
-            max-width: 90vw;
-            height: 87%;
-
-            .about-text {
-                height: 100%;
-
-                .left-side {
-                    justify-content: center;
-                }
-            }
-            .right-side {
-                width: 50%;
-                margin-top: -6vw;
-            }
-        }
-    }
-    body .thirdSlide {
-        .box-contents {
-            padding-top: 5vw;
-            .box {
-                // width: 23vw;
-                width: 21.2vw;
-            }
-        }
-    }
-    body .back-to-top {
-        margin: 2.5vw;
+    body .thirdSlide .box-contents {
+        margin: 2vw 0 0;
     }
 }
 
-@media (max-width: $mediaTablet) {
-    body .App-header {
-        .App-logo {
-            margin: 1vh 0;
-            height: 3.5vmin;
-        }
-        .nav {
-            padding: .1rem .5rem;
-            font-size: 1rem;
-            .lang.dropdown {
-                margin-top: -5px;
+    @media (max-width: $mediaDesktop) {
+        body .App-header {
+            padding: 2vw 5vw;
+
+            .App-logo {
+                margin: 1vh 0;
+                height: 5vmin;
             }
-            .nav-link {
-                padding: .1rem .4rem;
+
+            .nav {
+                padding: 0.2rem;
             }
         }
-    }
-    body .bm-menu {
-        padding: 2.5em 2.5em 0;
-    }
-   .App .side-menu-container.opened {
-        width: 80vw !important;
-    }
-    .App .side-menu-container .open-menu {
-        width: 8vw !important;
-        height: 8vw !important;
-        margin-right: -3.5vw !important;
-    }
-    body .firstSlide {
-        background-position: 85% 200%;
-        background-size: auto;
-        background-color: #000116;
 
-        h1 {
-            font-size: 1.2rem;
-            line-height: 2.5rem;
-            padding: 0 28vw 0 10vw;
+        body .box-contents {
+            margin: 2vw 10vw;
         }
 
-    }
-    body .box-contents .box {
-        img {
-            width: 4vw;
-            padding: 1rem 0 0.5rem 0;
-        }
-        p {
-            padding: 0.3rem 2rem;
-            font-size: .8rem;
-        }
-    }
+        body .firstSlide {
+            background-size: initial;
 
-    body .secondSlide {
-        background-size: 135vw 105vw;
-        background-position: -115px 0;
-
-        .container .right-side {
-            font-size: .8rem;
-        }
-        .container .about-text .left-side {
-            justify-content: end;
-            p span {
-                font-size: calc(12px + 1.4vmin);
+            h1 {
+                font-size: calc(14px + 1vmin);
+                line-height: calc(16px + 2vmin);
+                padding: 0 38vw 0 10vw;
+                margin:0;
             }
         }
-    }
-    body .thirdSlide {
-        padding: 3vh 0;
 
-        .container {
-            padding: 0;
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
+        body .box-contents .box {
+            width: 21vw;
+            margin-bottom: 1rem;
 
-            h2 {
-                width: fit-content;
+            p {
+                padding: 0.3rem 3rem;
+                margin: 0;
             }
-            .box-contents .box {
-                width: 23vw;
 
-                img {
-                    width: 4vw;
-                    padding: 1.6rem 1px 0.5rem 0;
-                }
-                p {
-                    padding: 0;
-                }
+            img {
+                padding: 2rem 0rem 0rem;
             }
         }
-    }
-    body .fifthSlide {
-        justify-content: center;
-        max-width: initial;
-        padding: 1vh 4vw 6vh 4vw;
-        margin: 0;
 
-        .contact-info {
-            .contact-map {
-                margin-top: 10vh;
-                width: 47%;
-            }
-            .right-side {
-                width: 47%;
-                text-align: left;
-            }
-        }
-    }
-}
+        body .secondSlide {
+            padding: 3vw 0;
 
-@media (max-width: $mediaMobileLarge) {
-    body .App-header {
-        .bm-burger-button  {
-            display: block;
-            width: 26px;
-            height: 20px;
-        }
-        .App-logo {
-            margin: 3vh 6vw;
-            height: 5vmin;
-        }
-        .nav {
-            display: none;
-        }
-    }
-    .App .side-menu-container .open-menu {
-        width: 18vw !important;
-        height: 18vw !important;
-        margin-right: -8.5vw !important;
-        position: absolute;
-    }
-    .App .side-menu-container.opened {
-        width: 94vw !important;
+            .container {
+                max-width: 90vw;
+                height: 87%;
 
-        hr {
-            margin-top: .25rem;
-            margin-bottom: .25rem;
-        }
-        .accordion>.card>.card-header {
-            padding: 0.2rem;
-        }
-        .rdw-editor-wrapper {
-            max-height: 35vh;
-        }
+                .about-text {
+                    height: 100%;
 
-        h3, .variants {
-            display: none !important;
-        }
-    }
-    body {
-        h1 {
-            font-size: .8rem;
-            line-height: 1.2rem;
-            padding: 0 30vw 0 10vw;
-        }
-        .box-contents {
-            margin: 0;
-            justify-content: space-evenly;
-
-            .box {
-                width: 40vw;
-                p {
-                    padding: 0.3rem 5rem;
-                }
-            }
-        }
-    }
-    body .firstSlide h1 {
-        line-height: 1.5rem;
-        padding: 0 28vw 0 6vw;
-    }
-    body .secondSlide {
-        background-size: 155vw 130vw;
-        background-position: 0 0;
-        background-image: url("../images/SecondSlideBackground.png"), linear-gradient(rgba(2,0,36,1), rgba(9,9,121,1));
-
-        h2 {
-            font-size: 1.5rem;
-        }
-        .container {
-            height: 0;
-        }
-        .container.second-container {
-            padding: 0;
-            height: 100%;
-
-            .about-text {
-                flex-direction: column;
-
-                .left-side {
-                    align-self: flex-end;                
-                    line-height: 1rem;
-                    min-height: 45%;
-                    font-size: 1em;
-                    width: 100%;
-
-                    p span {
-                       font-size: 1rem;
-                       line-height: 1.4rem;
+                    .left-side {
+                        justify-content: center;
                     }
                 }
+
                 .right-side {
-                    width: 100%;
-                    margin: 0;
-                    font-size: 0.7rem;
+                    width: 50%;
+                    margin-top: -6vw;
+                }
+            }
+        }
+
+        body .thirdSlide {
+            .box-contents {
+                padding-top: 5vw;
+
+                .box {
+                    // width: 23vw;
+                    width: 21.2vw;
+                }
+            }
+        }
+
+        body .back-to-top {
+            margin: 2.5vw;
+        }
+    }
+    @media (max-width: $mediaiPadPro) {
+        body .thirdSlide .box-contents .box {
+            width: 25vw;
+        }
+        body .thirdSlide .box-contents {
+            padding-top: 0;
+        }
+        body .firstSlide {
+            background-position: 82% 120%;
+        }
+    }
+    @media (max-width: $mediaTablet) {
+        .firstSlide {
+            background-position: center;
+        }
+        body .App-header {
+            .App-logo {
+                margin: 1vh 0;
+                height: 3.5vmin;
+            }
+
+            .nav {
+                padding: .1rem .5rem;
+                font-size: 1rem;
+
+                .lang.dropdown {
+                    margin-top: -5px;
+                }
+
+                .nav-link {
+                    padding: .1rem .4rem;
+                }
+            }
+        }
+
+        body .bm-menu {
+            padding: 2.5em 2.5em 0;
+        }
+
+        .App .side-menu-container.opened {
+            width: 80vw !important;
+        }
+
+        .App .side-menu-container .open-menu {
+            width: 8vw !important;
+            height: 8vw !important;
+            margin-right: -3.5vw !important;
+        }
+
+        body .firstSlide {
+            background-size: auto;
+            background-color: #000116;
+
+            h1 {
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+                padding: 0 28vw 0 10vw;
+            }
+        }
+
+        body .box-contents .box {
+            img {
+                width: 4vw;
+                padding: 1rem 0 0.5rem 0;
+            }
+
+            p {
+                padding: 0.3rem 2rem;
+                font-size: .8rem;
+            }
+        }
+
+        body .secondSlide {
+            background-size: 135vw 105vw;
+            background-position: -115px 0;
+
+            .container .right-side {
+                font-size: .8rem;
+            }
+
+            .container .about-text .left-side {
+                justify-content: end;
+
+                p span {
+                    font-size: calc(12px + 1.4vmin);
+                }
+            }
+        }
+
+        body .thirdSlide {
+            padding: 3vh 0;
+
+            .container {
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+
+                h2 {
+                    width: fit-content;
+                }
+
+                .box-contents .box {
+                    width: 23vw;
+
+                    img {
+                        width: 4vw;
+                        padding: 1.6rem 1px 0.5rem 0;
+                    }
+
+                    p {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        body .fifthSlide {
+            justify-content: center;
+            max-width: initial;
+            padding: 1vh 4vw 6vh 4vw;
+            margin: 0;
+
+            .contact-info {
+                .contact-map {
+                    margin-top: 10vh;
+                    width: 47%;
+                }
+
+                .right-side {
+                    width: 47%;
+                    text-align: left;
                 }
             }
         }
     }
-    body .thirdSlide {
-        .container {
-            h2 {
-                margin-left: 7vw;
+
+    @media (max-width: $mediaMobileLarge) {
+        body .App-header {
+            .bm-burger-button {
+                display: block;
+                width: 26px;
+                height: 20px;
+            }
+
+            .App-logo {
+                margin: 3vh 6vw;
+                height: 5vmin;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+
+        .App .side-menu-container .open-menu {
+            width: 18vw !important;
+            height: 18vw !important;
+            margin-right: -8.5vw !important;
+            position: absolute;
+        }
+
+        .App .side-menu-container.opened {
+            width: 94vw !important;
+
+            hr {
+                margin-top: .25rem;
+                margin-bottom: .25rem;
+            }
+
+            .accordion > .card > .card-header {
+                padding: 0.2rem;
+            }
+
+            .rdw-editor-wrapper {
+                max-height: 35vh;
+            }
+
+            h3, .variants {
+                display: none !important;
+            }
+        }
+
+        body {
+            h1 {
+                font-size: .8rem;
+                line-height: 1.2rem;
+                padding: 0 30vw 0 10vw;
             }
 
             .box-contents {
+                margin: 0;
                 justify-content: space-evenly;
 
                 .box {
                     width: 40vw;
-                    img {
-                        width: 6vw;
-                    }
+
                     p {
-                        font-size: .8rem;
+                        padding: 0.3rem 5rem;
                     }
                 }
             }
         }
-    }
-    body .fifthSlide {
-        padding: 0 4vw;
-        justify-content: space-evenly;
 
-        h2 {
-            font-size: 1.5rem;
-            padding-bottom: 1vh;
+        body .firstSlide h1 {
+            line-height: 1.5rem;
+            padding: 0 28vw 0 6vw;
         }
-        .contact-info {
-            flex-direction: column;
-            font-size: 0.8rem;
-            height: 85%;
 
-            .contact-map {
-                margin-top: 0;
-                width: 100%;
-                display: flex;
-                flex-direction: row;
+        body .secondSlide {
+            background-size: 155vw 130vw;
+            background-position: 0 0;
+            background-image: url("../images/SecondSlideBackground.png"), linear-gradient(rgba(2,0,36,1), rgba(9,9,121,1));
 
-                .left-side {
-                    display: flex;
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .container {
+                height: 0;
+            }
+
+            .container.second-container {
+                padding: 0;
+                height: 100%;
+
+                .about-text {
                     flex-direction: column;
-                    justify-content: flex-start;
-                    width: 40%;
 
-                    .adress p,
-                    .phones p{
-                        text-align: left;
-                        margin: 0
-                    }
-                    .phones h3 {
-                        display: none;
-                    }
-                }
-                .map-component {
-                    height: 100%;
-                    width: 60%;
-                    margin-top: 0;
-                    min-height: 25vh;
+                    .left-side {
+                        align-self: flex-end;
+                        line-height: 1rem;
+                        min-height: 45%;
+                        font-size: 1em;
+                        width: 100%;
 
-                    p {
-                        display: none;
+                        p span {
+                            font-size: 1rem;
+                            line-height: 1.4rem;
+                        }
+                    }
+
+                    .right-side {
+                        width: 100%;
+                        margin: 0;
+                        font-size: 0.7rem;
                     }
                 }
             }
-            .right-side {
-                width: 100%;
-                form {
+        }
+
+        body .thirdSlide {
+            .container {
+                h2 {
+                    margin-left: 7vw;
+                }
+
+                .box-contents {
+                    justify-content: space-evenly;
+
+                    .box {
+                        width: 40vw;
+
+                        img {
+                            width: 6vw;
+                        }
+
+                        p {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        body .fifthSlide {
+            padding: 0 4vw;
+            justify-content: space-evenly;
+
+            h2 {
+                font-size: 1.5rem;
+                padding-bottom: 1vh;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                font-size: 0.8rem;
+                height: 85%;
+
+                .contact-map {
+                    margin-top: 0;
+                    width: 100%;
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;
-                    flex-wrap: wrap;
 
-                    p {
-                        width: 100%;
-                    }
-                    .form-group {
-                        width: 100%;
+                    .left-side {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        width: 40%;
 
-                        label {
-                            font-size: .6rem;
+                        .adress p,
+                        .phones p {
+                            text-align: left;
+                            margin: 0
                         }
-                        input, textarea {
-                            height: calc(1rem + 2px);
+
+                        .phones h3 {
+                            display: none;
+                        }
+                    }
+
+                    .map-component {
+                        height: 100%;
+                        width: 60%;
+                        margin-top: 0;
+                        min-height: 25vh;
+
+                        p {
+                            display: none;
+                        }
+                    }
+                }
+
+                .right-side {
+                    width: 100%;
+
+                    form {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+
+                        p {
+                            width: 100%;
+                        }
+
+                        .form-group {
+                            width: 100%;
+
+                            label {
+                                font-size: .6rem;
+                            }
+
+                            input, textarea {
+                                height: calc(1rem + 2px);
+                            }
                         }
                     }
                 }
             }
         }
-    }
-    body .back-to-top {
-        height: 14vw;
-        width: 14vw;
 
-        img {
-            height: 12vw;
-            width: 12vw;
+        body .back-to-top {
+            height: 14vw;
+            width: 14vw;
+
+            img {
+                height: 12vw;
+                width: 12vw;
+            }
         }
     }
-}
 
-@media (max-width: $mediaMobile) {
-    body .box-contents .box p {
+    @media (max-width: $mediaMobile) {
+        body .box-contents .box p {
             padding: 0.3rem 3.2rem;
-    }
-    body .secondSlide .container.second-container .about-text {
+        }
+
+        body .secondSlide .container.second-container .about-text {
             overflow: hidden;
             flex-direction: column;
 
-        .right-side {
-            font-size: 1em;
-            line-height: 1rem;
-
-            p span {
-                line-height: 1rem;
+            .right-side {
                 font-size: 1em;
-            }
-        }
-    }
-}
+                line-height: 1rem;
 
-@media (max-width: $miniMobile) {
-    body .App-header {
-        padding: 0;
-        .bm-burger-button {
-            top: 25px;
-        }
-    }
-    body .bm-menu {
-        padding: 2.5em 1.5em 0;
-    }
-    .App .side-menu-container {
-
-        .open-menu {
-            width: 14vw !important;
-            height: 14vw !important;
-            margin-right: 0vw !important;
-            right: -9vw;
-            position: absolute;
-        }
-        .form-container {
-            margin: 0.3rem !important;
-
-            .mb-3, .my-3 {
-                margin-bottom: .3rem!important;
+                p span {
+                    line-height: 1rem;
+                    font-size: 1em;
+                }
             }
         }
     }
 
-    .App .side-menu-container.opened {
-        margin-top: -1rem !important;
-        padding: 0.3rem !important;
-    }
+    @media (max-width: $miniMobile) {
+        body .App-header {
+            padding: 0;
 
-    body .box-contents .box p {
+            .bm-burger-button {
+                top: 25px;
+            }
+        }
+        body .firstSlide h1 {
+            font-size: calc(8px + 2vmin);
+            margin-bottom: 5vh;
+        }
+        body .thirdSlide .animated {
+            width: 40vw;
+        }
+        body .thirdSlide .box-contents .box {
+            height: 13vh;
+        }
+        body .bm-menu {
+            padding: 2.5em 1.5em 0;
+        }
+
+        .App .side-menu-container {
+
+            .open-menu {
+                width: 14vw !important;
+                height: 14vw !important;
+                margin-right: 0vw !important;
+                right: -9vw;
+                position: absolute;
+            }
+
+            .form-container {
+                margin: 0.3rem !important;
+
+                .mb-3, .my-3 {
+                    margin-bottom: .3rem !important;
+                }
+            }
+        }
+
+        .App .side-menu-container.opened {
+            margin-top: -1rem !important;
+            padding: 0.3rem !important;
+        }
+
+        body .box-contents .box p {
             padding: 0.3rem 1rem;
+        }
     }
-
-
-}

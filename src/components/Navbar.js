@@ -18,7 +18,9 @@ export default function Navbar(props) {
     }
 
     return (<header className="App-header">
-        <a href="/"><img src={selectedLang === 'bg'? logoBg : logoEn} className="App-logo" alt="logo" /></a>
+        {props.boxToShow == 0 && 
+            <a href="/"><img src={selectedLang === 'bg' ? logoBg : logoEn} className="App-logo" alt="logo" /></a>
+        }
         <Nav activeKey="/home" >
             <div className="main-menu">
                 <Nav.Item>

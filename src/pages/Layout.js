@@ -22,7 +22,7 @@ export default function Layout(props) {
             {isAuthenticated &&
                 <SideMenu openMenu={openMenu} setOpenMenu={setOpenMenu} boxToShow={boxToShow}/>
             }
-			<Navbar setBoxToShow={(id) => setBoxToShow(id)} />
+            <Navbar boxToShow={boxToShow} setBoxToShow={(id) => setBoxToShow(id)} />
 			<div className={openMenu ? "fullpage" : ""}>
 				<FullPage
 					initialSlide={0}
