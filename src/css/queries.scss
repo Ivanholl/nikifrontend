@@ -130,6 +130,14 @@ $miniMobile: 430px;
         .firstSlide {
             background-position: center;
         }
+        .btn-dark, .btn-dark:focus, .btn-dark:hover {
+            background-color: #0E8986;
+            border-color: #0E8986;
+            border-radius:0;
+        }
+        .dropdown-menu.show {
+            border-radius: 0;
+        }
         body .App-header {
             .App-logo {
                 margin: 1vh 0;
@@ -253,6 +261,9 @@ $miniMobile: 430px;
     }
 
     @media (max-width: $mediaMobileLarge) {
+        h2 {
+            font-size: 1.5rem !important;
+        }
         body .App-header {
             .bm-burger-button {
                 display: block;
@@ -369,7 +380,7 @@ $miniMobile: 430px;
         body .thirdSlide {
             .container {
                 h2 {
-                    margin-left: 7vw;
+                    margin-left: 5vw;
                 }
 
                 .box-contents {
@@ -513,7 +524,7 @@ $miniMobile: 430px;
             margin-bottom: 5vh;
         }
         body .thirdSlide .animated {
-            width: 40vw;
+            width: 43vw;
         }
         body .thirdSlide .box-contents .box {
             height: 13vh;
@@ -548,5 +559,24 @@ $miniMobile: 430px;
 
         body .box-contents .box p {
             padding: 0.3rem 1rem;
+        }
+        body .firstSlide {
+            background-position: 82% 78%;
+        }
+        body .secondSlide .container.second-container .about-text .left-side p span {
+            font-size: 1rem;
+            line-height: 1rem;
+        }
+        body .secondSlide .container.second-container .about-text .left-side {
+            min-height: 31%;
+        }
+        body .secondSlide {
+            background-size: 155vw;
+        }
+        body .secondSlide h2{
+            margin-left:-3vw;
+        }
+        body .fifthSlide .contact-info {
+            height: 82%;
         }
     }

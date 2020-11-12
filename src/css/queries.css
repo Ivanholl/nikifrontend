@@ -71,6 +71,12 @@
 @media (max-width: 998px) {
   .firstSlide {
     background-position: center; }
+  .btn-dark, .btn-dark:focus, .btn-dark:hover {
+    background-color: #0E8986;
+    border-color: #0E8986;
+    border-radius: 0; }
+  .dropdown-menu.show {
+    border-radius: 0; }
   body .App-header .App-logo {
     margin: 1vh 0;
     height: 3.5vmin; }
@@ -140,6 +146,8 @@
       text-align: left; } }
 
 @media (max-width: 720px) {
+  h2 {
+    font-size: 1.5rem !important; }
   body .App-header .bm-burger-button {
     display: block;
     width: 26px;
@@ -206,7 +214,7 @@
           margin: 0;
           font-size: 0.7rem; }
   body .thirdSlide .container h2 {
-    margin-left: 7vw; }
+    margin-left: 5vw; }
   body .thirdSlide .container .box-contents {
     justify-content: space-evenly; }
     body .thirdSlide .container .box-contents .box {
@@ -292,7 +300,7 @@
     font-size: calc(8px + 2vmin);
     margin-bottom: 5vh; }
   body .thirdSlide .animated {
-    width: 40vw; }
+    width: 43vw; }
   body .thirdSlide .box-contents .box {
     height: 13vh; }
   body .bm-menu {
@@ -311,4 +319,17 @@
     margin-top: -1rem !important;
     padding: 0.3rem !important; }
   body .box-contents .box p {
-    padding: 0.3rem 1rem; } }
+    padding: 0.3rem 1rem; }
+  body .firstSlide {
+    background-position: 82% 78%; }
+  body .secondSlide .container.second-container .about-text .left-side p span {
+    font-size: 1rem;
+    line-height: 1rem; }
+  body .secondSlide .container.second-container .about-text .left-side {
+    min-height: 31%; }
+  body .secondSlide {
+    background-size: 155vw; }
+  body .secondSlide h2 {
+    margin-left: -3vw; }
+  body .fifthSlide .contact-info {
+    height: 82%; } }
